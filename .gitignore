@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Model artifacts
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Generated data
+data/
+outputs/

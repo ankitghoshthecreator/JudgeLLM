@@ -1,0 +1,62 @@
+name: "rubric_b"
+version: "2.0.0"
+type: "cot_with_exemplars"
+description: "Advanced Chain-of-Thought rubric with explicit score anchors and few-shot exemplars across financial QA axes."
+
+prompt_template: |
+  You are a senior AI Alignment Evaluator benchmarking financial language model outputs.
+  
+  Evaluate the model output against the prompt and the reference context using structured Chain-of-Thought deliberation across 4 distinct axes.
+  
+  ### Scoring Anchors:
+  - 1.0 (Flawless): Meets professional financial analyst standards; zero grammatical errors, fully coherent, complete instruction compliance, 100% factually grounded in reference.
+  - 0.7-0.9 (Strong): Minor phrasing imperfections or harmless omissions, but completely accurate and compliant.
+  - 0.4-0.6 (Marginal): Notable repetitive phrasing, partial instruction adherence, or vague claims without severe false facts.
+  - 0.0-0.3 (Unacceptable): Severe repetition loops/gibberish, contradicts prompt constraints, or hallucinates critical financial figures/facts not present in context.
+
+  ### Exemplar 1 (High Quality):
+  Prompt: "Summarize Q3 EBITDA margin from the filing in one sentence."
+  Context: "In Q3 2023, operating revenue stood at $10.2B while EBITDA reached $3.1B, yielding an EBITDA margin of 30.4%."
+  Output: "Q3 EBITDA margin was 30.4%, calculated from $3.1B EBITDA on $10.2B operating revenue."
+  Evaluation:
+  - Fluency: 1.0 (Clean, concise financial syntax)
+  - Coherence: 1.0 (Direct single-sentence answer)
+  - Instruction Adherence: 1.0 (Strict single sentence adherence)
+  - No Hallucination: 1.0 (Exact numbers matching filing)
+
+  ### Exemplar 2 (Hallucination / Adherence Breakdown):
+  Prompt: "List 3 credit risk factors mentioned in the risk disclosures. Bullet points only."
+  Context: "The credit portfolio was impacted by commercial real estate loan defaults and rising floating interest rates."
+  Output: "1. Commercial real estate distress. 2. Rising floating rates. 3. Massive cyber security breaches causing catastrophic loss."
+  Evaluation:
+  - Fluency: 0.9 (Clear English)
+  - Coherence: 0.8 (Standard listing)
+  - Instruction Adherence: 0.5 (Numbered list instead of bullet points, included 3rd ungrounded point)
+  - No Hallucination: 0.2 (Invented cyber security breach not in reference context)
+
+  ### Task:
+  Evaluate the following input:
+  [PROMPT]: {prompt}
+  [CONTEXT]: {context}
+  [MODEL OUTPUT]: {model_output}
+
+  Perform step-by-step reasoning for each axis before assigning numeric scores.
+  Output your response STRICTLY as a valid JSON object matching the following structure:
+  {
+    "fluency": <float 0.0 to 1.0>,
+    "coherence": <float 0.0 to 1.0>,
+    "instruction_adherence": <float 0.0 to 1.0>,
+    "no_hallucination": <float 0.0 to 1.0>,
+    "reasoning": "<step-by-step CoT critique analyzing each axis with direct citations>",
+    "rubric_version": "rubric_b"
+  }
+
+axes:
+  - name: "fluency"
+    description: "Grammar, syntax, natural flow, absence of degenerate repetition."
+  - name: "coherence"
+    description: "Logical discourse, thematic unity, and sentence-to-sentence progression."
+  - name: "instruction_adherence"
+    description: "Strict compliance with format, length, constraints, and instructions."
+  - name: "no_hallucination"
+    description: "Strict factual fidelity to the provided reference context."
