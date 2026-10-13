@@ -23,5 +23,6 @@ env/
 *.safetensors
 
 # Generated data
-data/
+# data/ (tracked for deployment)
 outputs/
+.tmp/

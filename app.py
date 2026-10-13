@@ -28,20 +28,32 @@ FIGURES_DIR = BASE_DIR / "figures"
 
 @st.cache_data
 def load_data() -> Dict[str, Any]:
-    with open(DATA_DIR / "probe_outputs_200.json", "r", encoding="utf-8") as f:
+    # Self-healing: if deployed in an environment where data files are not pre-committed,
+    # auto-execute the pipeline to generate all datasets and figures in ~3 seconds.
+    probes_file = DATA_DIR / "probe_outputs_200.json"
+    metrics_file = DATA_DIR / "agreement_metrics.json"
+    failures_file = DATA_DIR / "failure_modes_report.json"
+    rubric_b_file = DATA_DIR / "judge_scores" / "rubric_b.json"
+
+    if not (probes_file.exists() and metrics_file.exists() and failures_file.exists() and rubric_b_file.exists()):
+        from run_pipeline import run_pipeline
+        run_pipeline(mock_mode=True, force_generate=True)
+
+    with open(probes_file, "r", encoding="utf-8") as f:
         probes = {item["id"]: item for item in json.load(f)}
     with open(DATA_DIR / "human_annotations.json", "r", encoding="utf-8") as f:
         human = {item["id"]: item for item in json.load(f)}
     with open(DATA_DIR / "judge_scores" / "rubric_a.json", "r", encoding="utf-8") as f:
         judge_a = {item["id"]: item for item in json.load(f)}
-    with open(DATA_DIR / "judge_scores" / "rubric_b.json", "r", encoding="utf-8") as f:
+    with open(rubric_b_file, "r", encoding="utf-8") as f:
         judge_b = {item["id"]: item for item in json.load(f)}
     with open(DATA_DIR / "local_scores.json", "r", encoding="utf-8") as f:
         local = {item["id"]: item for item in json.load(f)}
-    with open(DATA_DIR / "agreement_metrics.json", "r", encoding="utf-8") as f:
+    with open(metrics_file, "r", encoding="utf-8") as f:
         metrics = json.load(f)
-    with open(DATA_DIR / "failure_modes_report.json", "r", encoding="utf-8") as f:
+    with open(failures_file, "r", encoding="utf-8") as f:
         failures = json.load(f)
+
 
     return {
         "probes": probes,

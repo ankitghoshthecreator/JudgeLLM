@@ -1,0 +1,6402 @@
+[
+  {
+    "id": "probe_001",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_002",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_003",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_004",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_005",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_006",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_007",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.333,
+      "instruction_adherence": 0.778,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_008",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_009",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_010",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_011",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_012",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_013",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_014",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_015",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_016",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_017",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_018",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_019",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 0,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_020",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_021",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_022",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_023",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_024",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_025",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_026",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_027",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "fluency",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.667,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_028",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_029",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_030",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_031",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_032",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_033",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 0.778,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_034",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "fluency",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 0,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_035",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_036",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_037",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 0
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 0.778,
+      "no_hallucination": 0.222
+    }
+  },
+  {
+    "id": "probe_038",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_039",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "fluency",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 0,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_040",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_041",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_042",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_043",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_044",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_045",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_046",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_047",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_048",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_049",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_050",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_051",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_052",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_053",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_054",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_055",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_056",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_057",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.556,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_058",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_059",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_060",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 0.889,
+      "instruction_adherence": 0.778,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_061",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_062",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_063",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_064",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_065",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_066",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_067",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_068",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_069",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_070",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_071",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_072",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_073",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_074",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.444,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_075",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.444,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_076",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_077",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_078",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_079",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_080",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_081",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_082",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.778,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_083",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_084",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 1.0,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_085",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.556,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_086",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 0
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_087",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_088",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_089",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.444,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_090",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_091",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_092",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_093",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_094",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_095",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_096",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_097",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 0,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_098",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_099",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_100",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_101",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_102",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 0.778,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_103",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 0,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.667,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_104",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.667,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_105",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_106",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_107",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_108",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_109",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_110",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_111",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_112",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_113",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 0
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.667,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_114",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_115",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_116",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_117",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_118",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_119",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_120",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_121",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_122",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_123",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.333,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_124",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_125",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_126",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_127",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_128",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 0.667,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_129",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_130",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_131",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_132",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_133",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_134",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_135",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_136",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_137",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 0,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_138",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_139",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 0.778,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_140",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_141",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_142",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_143",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_144",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.778
+    }
+  },
+  {
+    "id": "probe_145",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_146",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_147",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_148",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_149",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_150",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "fluency",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 0,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_151",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_152",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_153",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_154",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.667,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_155",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_156",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_157",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_158",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_159",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 1.0,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_160",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.889
+    }
+  },
+  {
+    "id": "probe_161",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_162",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_163",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "fluency",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.667,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_164",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_165",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 1,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_166",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_167",
+    "category": "instruction_violation",
+    "research_disagreement_type": "genuine_model_failure",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 0.667,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_168",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_169",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_170",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 1.0,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_171",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_172",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_173",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_174",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_175",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_176",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_177",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_178",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_179",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_180",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_181",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_182",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_183",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "fluency",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_184",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.778,
+      "instruction_adherence": 0.889,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_185",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 1,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 0.333,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_186",
+    "category": "hallucination",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.889,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_187",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_188",
+    "category": "high_quality",
+    "research_disagreement_type": "judge_false_negative",
+    "target_disagreement_axis": "instruction_adherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_189",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_190",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_191",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "no_hallucination",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 0
+      },
+      "annotator_3": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_192",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_193",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 2,
+        "coherence": 0,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.778,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_194",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_195",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_196",
+    "category": "fluency_degraded",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 1,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.333,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_197",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 1.0,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  },
+  {
+    "id": "probe_198",
+    "category": "hallucination",
+    "research_disagreement_type": "judge_false_positive",
+    "target_disagreement_axis": "coherence",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 1,
+        "instruction_adherence": 3,
+        "no_hallucination": 1
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.333,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.333
+    }
+  },
+  {
+    "id": "probe_199",
+    "category": "ambiguous",
+    "research_disagreement_type": "rubric_ambiguity",
+    "target_disagreement_axis": "fluency",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 2,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_2": {
+        "fluency": 0,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      },
+      "annotator_3": {
+        "fluency": 1,
+        "coherence": 2,
+        "instruction_adherence": 2,
+        "no_hallucination": 2
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 0.333,
+      "coherence": 0.667,
+      "instruction_adherence": 0.667,
+      "no_hallucination": 0.667
+    }
+  },
+  {
+    "id": "probe_200",
+    "category": "high_quality",
+    "research_disagreement_type": "aligned",
+    "target_disagreement_axis": "none",
+    "ratings": {
+      "annotator_1": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_2": {
+        "fluency": 3,
+        "coherence": 2,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      },
+      "annotator_3": {
+        "fluency": 3,
+        "coherence": 3,
+        "instruction_adherence": 3,
+        "no_hallucination": 3
+      }
+    },
+    "consensus_normalized": {
+      "fluency": 1.0,
+      "coherence": 0.889,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 1.0
+    }
+  }
+]

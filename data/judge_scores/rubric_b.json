@@ -1,0 +1,2202 @@
+[
+  {
+    "id": "probe_001",
+    "scores": {
+      "fluency": 0.903,
+      "coherence": 0.853,
+      "instruction_adherence": 0.78,
+      "no_hallucination": 0.294
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.85, Adherence: 0.78, Grounding: 0.29.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_002",
+    "scores": {
+      "fluency": 0.31,
+      "coherence": 0.31,
+      "instruction_adherence": 0.436,
+      "no_hallucination": 0.664
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.31, Coherence: 0.31, Adherence: 0.44, Grounding: 0.66.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_003",
+    "scores": {
+      "fluency": 0.871,
+      "coherence": 0.929,
+      "instruction_adherence": 0.878,
+      "no_hallucination": 0.898
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.87, Coherence: 0.93, Adherence: 0.88, Grounding: 0.90.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_004",
+    "scores": {
+      "fluency": 0.901,
+      "coherence": 0.924,
+      "instruction_adherence": 0.898,
+      "no_hallucination": 0.906
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.92, Adherence: 0.90, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_005",
+    "scores": {
+      "fluency": 0.972,
+      "coherence": 0.943,
+      "instruction_adherence": 0.895,
+      "no_hallucination": 0.902
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.94, Adherence: 0.90, Grounding: 0.90.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_006",
+    "scores": {
+      "fluency": 0.931,
+      "coherence": 0.932,
+      "instruction_adherence": 0.958,
+      "no_hallucination": 1.0
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.93, Adherence: 0.96, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_007",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.88,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.31
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on coherence; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_008",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_009",
+    "scores": {
+      "fluency": 0.888,
+      "coherence": 0.856,
+      "instruction_adherence": 0.93,
+      "no_hallucination": 0.995
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.86, Adherence: 0.93, Grounding: 0.99.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_010",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.15,
+      "instruction_adherence": 0.27,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_011",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.832,
+      "instruction_adherence": 0.882,
+      "no_hallucination": 0.98
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.83, Adherence: 0.88, Grounding: 0.98.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_012",
+    "scores": {
+      "fluency": 0.933,
+      "coherence": 0.951,
+      "instruction_adherence": 0.987,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.95, Adherence: 0.99, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_013",
+    "scores": {
+      "fluency": 0.972,
+      "coherence": 0.894,
+      "instruction_adherence": 0.925,
+      "no_hallucination": 1.0
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.89, Adherence: 0.93, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_014",
+    "scores": {
+      "fluency": 0.89,
+      "coherence": 0.872,
+      "instruction_adherence": 0.996,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.87, Adherence: 1.00, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_015",
+    "scores": {
+      "fluency": 0.877,
+      "coherence": 0.912,
+      "instruction_adherence": 0.935,
+      "no_hallucination": 0.992
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.88, Coherence: 0.91, Adherence: 0.94, Grounding: 0.99.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_016",
+    "scores": {
+      "fluency": 0.236,
+      "coherence": 0.297,
+      "instruction_adherence": 0.569,
+      "no_hallucination": 0.795
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.24, Coherence: 0.30, Adherence: 0.57, Grounding: 0.80.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_017",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.71,
+      "instruction_adherence": 0.15,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_018",
+    "scores": {
+      "fluency": 0.875,
+      "coherence": 0.841,
+      "instruction_adherence": 0.955,
+      "no_hallucination": 0.958
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.88, Coherence: 0.84, Adherence: 0.96, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_019",
+    "scores": {
+      "fluency": 0.84,
+      "coherence": 0.85,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_020",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.88,
+      "no_hallucination": 0.31
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on instruction_adherence; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_021",
+    "scores": {
+      "fluency": 0.909,
+      "coherence": 0.874,
+      "instruction_adherence": 0.968,
+      "no_hallucination": 0.899
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.87, Adherence: 0.97, Grounding: 0.90.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_022",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.89,
+      "instruction_adherence": 0.35,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_023",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.71,
+      "instruction_adherence": 0.15,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_024",
+    "scores": {
+      "fluency": 0.915,
+      "coherence": 0.84,
+      "instruction_adherence": 0.902,
+      "no_hallucination": 0.924
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.84, Adherence: 0.90, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_025",
+    "scores": {
+      "fluency": 0.95,
+      "coherence": 0.968,
+      "instruction_adherence": 0.955,
+      "no_hallucination": 0.891
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.95, Coherence: 0.97, Adherence: 0.96, Grounding: 0.89.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_026",
+    "scores": {
+      "fluency": 0.241,
+      "coherence": 0.436,
+      "instruction_adherence": 0.486,
+      "no_hallucination": 0.838
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.24, Coherence: 0.44, Adherence: 0.49, Grounding: 0.84.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_027",
+    "scores": {
+      "fluency": 0.15,
+      "coherence": 0.71,
+      "instruction_adherence": 0.27,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on fluency.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_028",
+    "scores": {
+      "fluency": 0.915,
+      "coherence": 0.926,
+      "instruction_adherence": 0.981,
+      "no_hallucination": 0.951
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.93, Adherence: 0.98, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_029",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_030",
+    "scores": {
+      "fluency": 0.913,
+      "coherence": 0.848,
+      "instruction_adherence": 0.997,
+      "no_hallucination": 0.909
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.85, Adherence: 1.00, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_031",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.15,
+      "instruction_adherence": 0.27,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_032",
+    "scores": {
+      "fluency": 0.88,
+      "coherence": 0.954,
+      "instruction_adherence": 0.988,
+      "no_hallucination": 0.955
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.88, Coherence: 0.95, Adherence: 0.99, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_033",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_034",
+    "scores": {
+      "fluency": 0.85,
+      "coherence": 0.76,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on fluency.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_035",
+    "scores": {
+      "fluency": 0.379,
+      "coherence": 0.432,
+      "instruction_adherence": 0.645,
+      "no_hallucination": 0.702
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.38, Coherence: 0.43, Adherence: 0.65, Grounding: 0.70.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_036",
+    "scores": {
+      "fluency": 0.971,
+      "coherence": 0.954,
+      "instruction_adherence": 0.923,
+      "no_hallucination": 0.964
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.95, Adherence: 0.92, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_037",
+    "scores": {
+      "fluency": 0.937,
+      "coherence": 0.865,
+      "instruction_adherence": 0.852,
+      "no_hallucination": 0.165
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.86, Adherence: 0.85, Grounding: 0.17.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_038",
+    "scores": {
+      "fluency": 0.924,
+      "coherence": 0.865,
+      "instruction_adherence": 0.76,
+      "no_hallucination": 0.317
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.86, Adherence: 0.76, Grounding: 0.32.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_039",
+    "scores": {
+      "fluency": 0.85,
+      "coherence": 0.76,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on fluency.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_040",
+    "scores": {
+      "fluency": 0.989,
+      "coherence": 0.879,
+      "instruction_adherence": 0.977,
+      "no_hallucination": 0.995
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.99, Coherence: 0.88, Adherence: 0.98, Grounding: 0.99.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_041",
+    "scores": {
+      "fluency": 0.922,
+      "coherence": 0.869,
+      "instruction_adherence": 0.879,
+      "no_hallucination": 0.983
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.87, Adherence: 0.88, Grounding: 0.98.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_042",
+    "scores": {
+      "fluency": 0.958,
+      "coherence": 0.948,
+      "instruction_adherence": 0.913,
+      "no_hallucination": 0.893
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.95, Adherence: 0.91, Grounding: 0.89.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_043",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.88,
+      "no_hallucination": 0.31
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on instruction_adherence; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_044",
+    "scores": {
+      "fluency": 0.915,
+      "coherence": 0.94,
+      "instruction_adherence": 0.927,
+      "no_hallucination": 1.0
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.94, Adherence: 0.93, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_045",
+    "scores": {
+      "fluency": 0.258,
+      "coherence": 0.269,
+      "instruction_adherence": 0.529,
+      "no_hallucination": 0.764
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.26, Coherence: 0.27, Adherence: 0.53, Grounding: 0.76.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_046",
+    "scores": {
+      "fluency": 0.966,
+      "coherence": 0.924,
+      "instruction_adherence": 0.917,
+      "no_hallucination": 0.898
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.92, Adherence: 0.92, Grounding: 0.90.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_047",
+    "scores": {
+      "fluency": 0.98,
+      "coherence": 0.931,
+      "instruction_adherence": 0.909,
+      "no_hallucination": 0.927
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.93, Adherence: 0.91, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_048",
+    "scores": {
+      "fluency": 0.908,
+      "coherence": 0.848,
+      "instruction_adherence": 0.925,
+      "no_hallucination": 1.0
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.85, Adherence: 0.93, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_049",
+    "scores": {
+      "fluency": 0.923,
+      "coherence": 0.947,
+      "instruction_adherence": 0.91,
+      "no_hallucination": 0.915
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.95, Adherence: 0.91, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_050",
+    "scores": {
+      "fluency": 0.93,
+      "coherence": 0.892,
+      "instruction_adherence": 0.898,
+      "no_hallucination": 0.947
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.89, Adherence: 0.90, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_051",
+    "scores": {
+      "fluency": 0.937,
+      "coherence": 0.919,
+      "instruction_adherence": 0.914,
+      "no_hallucination": 0.988
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.92, Adherence: 0.91, Grounding: 0.99.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_052",
+    "scores": {
+      "fluency": 0.975,
+      "coherence": 0.851,
+      "instruction_adherence": 0.876,
+      "no_hallucination": 1.0
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.85, Adherence: 0.88, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_053",
+    "scores": {
+      "fluency": 0.985,
+      "coherence": 0.911,
+      "instruction_adherence": 0.963,
+      "no_hallucination": 0.936
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.91, Adherence: 0.96, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_054",
+    "scores": {
+      "fluency": 0.959,
+      "coherence": 0.955,
+      "instruction_adherence": 0.982,
+      "no_hallucination": 0.996
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.95, Adherence: 0.98, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_055",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.71,
+      "instruction_adherence": 0.15,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_056",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_057",
+    "scores": {
+      "fluency": 0.244,
+      "coherence": 0.287,
+      "instruction_adherence": 0.536,
+      "no_hallucination": 0.766
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.24, Coherence: 0.29, Adherence: 0.54, Grounding: 0.77.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_058",
+    "scores": {
+      "fluency": 0.968,
+      "coherence": 0.892,
+      "instruction_adherence": 0.976,
+      "no_hallucination": 0.997
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.89, Adherence: 0.98, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_059",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.89,
+      "instruction_adherence": 0.35,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_060",
+    "scores": {
+      "fluency": 0.874,
+      "coherence": 0.858,
+      "instruction_adherence": 0.846,
+      "no_hallucination": 0.215
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.87, Coherence: 0.86, Adherence: 0.85, Grounding: 0.21.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_061",
+    "scores": {
+      "fluency": 0.906,
+      "coherence": 0.841,
+      "instruction_adherence": 0.907,
+      "no_hallucination": 0.923
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.84, Adherence: 0.91, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_062",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.71,
+      "instruction_adherence": 0.15,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_063",
+    "scores": {
+      "fluency": 0.96,
+      "coherence": 0.929,
+      "instruction_adherence": 0.878,
+      "no_hallucination": 0.939
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.93, Adherence: 0.88, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_064",
+    "scores": {
+      "fluency": 0.897,
+      "coherence": 0.889,
+      "instruction_adherence": 0.988,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.89, Adherence: 0.99, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_065",
+    "scores": {
+      "fluency": 0.871,
+      "coherence": 0.879,
+      "instruction_adherence": 0.968,
+      "no_hallucination": 0.992
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.87, Coherence: 0.88, Adherence: 0.97, Grounding: 0.99.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_066",
+    "scores": {
+      "fluency": 0.941,
+      "coherence": 0.914,
+      "instruction_adherence": 0.899,
+      "no_hallucination": 0.916
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.91, Adherence: 0.90, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_067",
+    "scores": {
+      "fluency": 0.914,
+      "coherence": 0.925,
+      "instruction_adherence": 0.923,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.93, Adherence: 0.92, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_068",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.89,
+      "instruction_adherence": 0.35,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_069",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.89,
+      "instruction_adherence": 0.35,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_070",
+    "scores": {
+      "fluency": 0.983,
+      "coherence": 0.855,
+      "instruction_adherence": 0.904,
+      "no_hallucination": 0.929
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.85, Adherence: 0.90, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_071",
+    "scores": {
+      "fluency": 0.984,
+      "coherence": 0.869,
+      "instruction_adherence": 0.994,
+      "no_hallucination": 0.941
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.87, Adherence: 0.99, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_072",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.97,
+      "instruction_adherence": 0.915,
+      "no_hallucination": 0.968
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.97, Adherence: 0.92, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_073",
+    "scores": {
+      "fluency": 0.26,
+      "coherence": 0.264,
+      "instruction_adherence": 0.458,
+      "no_hallucination": 0.685
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.26, Coherence: 0.26, Adherence: 0.46, Grounding: 0.69.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_074",
+    "scores": {
+      "fluency": 0.313,
+      "coherence": 0.311,
+      "instruction_adherence": 0.512,
+      "no_hallucination": 0.781
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.31, Coherence: 0.31, Adherence: 0.51, Grounding: 0.78.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_075",
+    "scores": {
+      "fluency": 0.242,
+      "coherence": 0.265,
+      "instruction_adherence": 0.498,
+      "no_hallucination": 0.795
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.24, Coherence: 0.27, Adherence: 0.50, Grounding: 0.80.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_076",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.15,
+      "instruction_adherence": 0.27,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_077",
+    "scores": {
+      "fluency": 0.978,
+      "coherence": 0.864,
+      "instruction_adherence": 0.961,
+      "no_hallucination": 0.926
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.86, Adherence: 0.96, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_078",
+    "scores": {
+      "fluency": 0.888,
+      "coherence": 0.765,
+      "instruction_adherence": 0.8,
+      "no_hallucination": 0.292
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.77, Adherence: 0.80, Grounding: 0.29.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_079",
+    "scores": {
+      "fluency": 0.872,
+      "coherence": 0.889,
+      "instruction_adherence": 0.934,
+      "no_hallucination": 0.942
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.87, Coherence: 0.89, Adherence: 0.93, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_080",
+    "scores": {
+      "fluency": 0.312,
+      "coherence": 0.291,
+      "instruction_adherence": 0.464,
+      "no_hallucination": 0.764
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.31, Coherence: 0.29, Adherence: 0.46, Grounding: 0.76.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_081",
+    "scores": {
+      "fluency": 0.885,
+      "coherence": 0.823,
+      "instruction_adherence": 0.785,
+      "no_hallucination": 0.306
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.82, Adherence: 0.79, Grounding: 0.31.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_082",
+    "scores": {
+      "fluency": 0.92,
+      "coherence": 0.771,
+      "instruction_adherence": 0.852,
+      "no_hallucination": 0.209
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.77, Adherence: 0.85, Grounding: 0.21.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_083",
+    "scores": {
+      "fluency": 0.919,
+      "coherence": 0.834,
+      "instruction_adherence": 0.981,
+      "no_hallucination": 0.912
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.83, Adherence: 0.98, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_084",
+    "scores": {
+      "fluency": 0.861,
+      "coherence": 0.874,
+      "instruction_adherence": 0.825,
+      "no_hallucination": 0.215
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.86, Coherence: 0.87, Adherence: 0.83, Grounding: 0.21.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_085",
+    "scores": {
+      "fluency": 0.237,
+      "coherence": 0.404,
+      "instruction_adherence": 0.542,
+      "no_hallucination": 0.812
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.24, Coherence: 0.40, Adherence: 0.54, Grounding: 0.81.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_086",
+    "scores": {
+      "fluency": 0.84,
+      "coherence": 0.76,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on no_hallucination.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_087",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.89,
+      "instruction_adherence": 0.35,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_088",
+    "scores": {
+      "fluency": 0.902,
+      "coherence": 0.923,
+      "instruction_adherence": 0.918,
+      "no_hallucination": 0.956
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.92, Adherence: 0.92, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_089",
+    "scores": {
+      "fluency": 0.33,
+      "coherence": 0.33,
+      "instruction_adherence": 0.533,
+      "no_hallucination": 0.721
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.33, Coherence: 0.33, Adherence: 0.53, Grounding: 0.72.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_090",
+    "scores": {
+      "fluency": 0.911,
+      "coherence": 0.934,
+      "instruction_adherence": 0.994,
+      "no_hallucination": 0.973
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.93, Adherence: 0.99, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_091",
+    "scores": {
+      "fluency": 0.906,
+      "coherence": 0.913,
+      "instruction_adherence": 0.969,
+      "no_hallucination": 0.962
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.91, Adherence: 0.97, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_092",
+    "scores": {
+      "fluency": 0.917,
+      "coherence": 0.872,
+      "instruction_adherence": 0.962,
+      "no_hallucination": 0.905
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.87, Adherence: 0.96, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_093",
+    "scores": {
+      "fluency": 0.961,
+      "coherence": 0.848,
+      "instruction_adherence": 0.983,
+      "no_hallucination": 0.949
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.85, Adherence: 0.98, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_094",
+    "scores": {
+      "fluency": 0.932,
+      "coherence": 0.878,
+      "instruction_adherence": 0.996,
+      "no_hallucination": 0.92
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.88, Adherence: 1.00, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_095",
+    "scores": {
+      "fluency": 0.868,
+      "coherence": 0.77,
+      "instruction_adherence": 0.814,
+      "no_hallucination": 0.171
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.87, Coherence: 0.77, Adherence: 0.81, Grounding: 0.17.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_096",
+    "scores": {
+      "fluency": 0.237,
+      "coherence": 0.31,
+      "instruction_adherence": 0.56,
+      "no_hallucination": 0.743
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.24, Coherence: 0.31, Adherence: 0.56, Grounding: 0.74.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_097",
+    "scores": {
+      "fluency": 0.84,
+      "coherence": 0.85,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_098",
+    "scores": {
+      "fluency": 0.928,
+      "coherence": 0.95,
+      "instruction_adherence": 0.999,
+      "no_hallucination": 0.927
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.95, Adherence: 1.00, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_099",
+    "scores": {
+      "fluency": 0.966,
+      "coherence": 0.963,
+      "instruction_adherence": 0.897,
+      "no_hallucination": 0.915
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.96, Adherence: 0.90, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_100",
+    "scores": {
+      "fluency": 0.942,
+      "coherence": 0.852,
+      "instruction_adherence": 0.923,
+      "no_hallucination": 0.973
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.85, Adherence: 0.92, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_101",
+    "scores": {
+      "fluency": 0.907,
+      "coherence": 0.87,
+      "instruction_adherence": 0.982,
+      "no_hallucination": 0.899
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.87, Adherence: 0.98, Grounding: 0.90.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_102",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_103",
+    "scores": {
+      "fluency": 0.84,
+      "coherence": 0.85,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_104",
+    "scores": {
+      "fluency": 0.829,
+      "coherence": 0.782,
+      "instruction_adherence": 0.766,
+      "no_hallucination": 0.31
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.83, Coherence: 0.78, Adherence: 0.77, Grounding: 0.31.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_105",
+    "scores": {
+      "fluency": 0.931,
+      "coherence": 0.873,
+      "instruction_adherence": 0.922,
+      "no_hallucination": 0.923
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.87, Adherence: 0.92, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_106",
+    "scores": {
+      "fluency": 0.948,
+      "coherence": 0.955,
+      "instruction_adherence": 0.965,
+      "no_hallucination": 0.962
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.95, Coherence: 0.95, Adherence: 0.96, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_107",
+    "scores": {
+      "fluency": 0.958,
+      "coherence": 0.95,
+      "instruction_adherence": 0.946,
+      "no_hallucination": 0.892
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.95, Adherence: 0.95, Grounding: 0.89.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_108",
+    "scores": {
+      "fluency": 0.968,
+      "coherence": 0.896,
+      "instruction_adherence": 0.955,
+      "no_hallucination": 1.0
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.90, Adherence: 0.96, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_109",
+    "scores": {
+      "fluency": 0.976,
+      "coherence": 0.966,
+      "instruction_adherence": 0.931,
+      "no_hallucination": 0.939
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.97, Adherence: 0.93, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_110",
+    "scores": {
+      "fluency": 0.891,
+      "coherence": 0.888,
+      "instruction_adherence": 0.934,
+      "no_hallucination": 0.97
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.89, Adherence: 0.93, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_111",
+    "scores": {
+      "fluency": 0.881,
+      "coherence": 0.865,
+      "instruction_adherence": 0.885,
+      "no_hallucination": 0.983
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.88, Coherence: 0.86, Adherence: 0.89, Grounding: 0.98.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_112",
+    "scores": {
+      "fluency": 0.941,
+      "coherence": 0.888,
+      "instruction_adherence": 0.894,
+      "no_hallucination": 0.933
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.89, Adherence: 0.89, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_113",
+    "scores": {
+      "fluency": 0.84,
+      "coherence": 0.76,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on no_hallucination.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_114",
+    "scores": {
+      "fluency": 0.887,
+      "coherence": 0.87,
+      "instruction_adherence": 0.985,
+      "no_hallucination": 0.948
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.87, Adherence: 0.98, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_115",
+    "scores": {
+      "fluency": 0.901,
+      "coherence": 0.852,
+      "instruction_adherence": 0.942,
+      "no_hallucination": 0.956
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.85, Adherence: 0.94, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_116",
+    "scores": {
+      "fluency": 0.403,
+      "coherence": 0.352,
+      "instruction_adherence": 0.449,
+      "no_hallucination": 0.826
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.40, Coherence: 0.35, Adherence: 0.45, Grounding: 0.83.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_117",
+    "scores": {
+      "fluency": 0.962,
+      "coherence": 0.888,
+      "instruction_adherence": 0.933,
+      "no_hallucination": 0.947
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.89, Adherence: 0.93, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_118",
+    "scores": {
+      "fluency": 0.895,
+      "coherence": 0.914,
+      "instruction_adherence": 0.967,
+      "no_hallucination": 0.906
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.91, Adherence: 0.97, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_119",
+    "scores": {
+      "fluency": 0.923,
+      "coherence": 0.804,
+      "instruction_adherence": 0.838,
+      "no_hallucination": 0.213
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.80, Adherence: 0.84, Grounding: 0.21.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_120",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.35,
+      "instruction_adherence": 0.92,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_121",
+    "scores": {
+      "fluency": 0.318,
+      "coherence": 0.29,
+      "instruction_adherence": 0.555,
+      "no_hallucination": 0.729
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.32, Coherence: 0.29, Adherence: 0.56, Grounding: 0.73.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_122",
+    "scores": {
+      "fluency": 0.991,
+      "coherence": 0.952,
+      "instruction_adherence": 0.998,
+      "no_hallucination": 0.919
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.99, Coherence: 0.95, Adherence: 1.00, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_123",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.88,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.31
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on coherence; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_124",
+    "scores": {
+      "fluency": 0.962,
+      "coherence": 0.944,
+      "instruction_adherence": 0.92,
+      "no_hallucination": 0.97
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.94, Adherence: 0.92, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_125",
+    "scores": {
+      "fluency": 0.245,
+      "coherence": 0.453,
+      "instruction_adherence": 0.503,
+      "no_hallucination": 0.68
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.24, Coherence: 0.45, Adherence: 0.50, Grounding: 0.68.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_126",
+    "scores": {
+      "fluency": 0.929,
+      "coherence": 0.931,
+      "instruction_adherence": 0.923,
+      "no_hallucination": 0.969
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.93, Adherence: 0.92, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_127",
+    "scores": {
+      "fluency": 0.996,
+      "coherence": 0.877,
+      "instruction_adherence": 0.96,
+      "no_hallucination": 0.968
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 1.00, Coherence: 0.88, Adherence: 0.96, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_128",
+    "scores": {
+      "fluency": 0.866,
+      "coherence": 0.801,
+      "instruction_adherence": 0.828,
+      "no_hallucination": 0.312
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.87, Coherence: 0.80, Adherence: 0.83, Grounding: 0.31.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_129",
+    "scores": {
+      "fluency": 0.901,
+      "coherence": 0.926,
+      "instruction_adherence": 0.907,
+      "no_hallucination": 0.917
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.93, Adherence: 0.91, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_130",
+    "scores": {
+      "fluency": 0.372,
+      "coherence": 0.401,
+      "instruction_adherence": 0.445,
+      "no_hallucination": 0.693
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.37, Coherence: 0.40, Adherence: 0.45, Grounding: 0.69.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_131",
+    "scores": {
+      "fluency": 0.973,
+      "coherence": 0.871,
+      "instruction_adherence": 0.919,
+      "no_hallucination": 0.907
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.87, Adherence: 0.92, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_132",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.15,
+      "instruction_adherence": 0.27,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_133",
+    "scores": {
+      "fluency": 0.949,
+      "coherence": 0.884,
+      "instruction_adherence": 0.959,
+      "no_hallucination": 0.95
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.95, Coherence: 0.88, Adherence: 0.96, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_134",
+    "scores": {
+      "fluency": 0.953,
+      "coherence": 0.894,
+      "instruction_adherence": 0.957,
+      "no_hallucination": 0.998
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.95, Coherence: 0.89, Adherence: 0.96, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_135",
+    "scores": {
+      "fluency": 0.891,
+      "coherence": 0.892,
+      "instruction_adherence": 0.915,
+      "no_hallucination": 0.961
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.89, Adherence: 0.92, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_136",
+    "scores": {
+      "fluency": 0.98,
+      "coherence": 0.858,
+      "instruction_adherence": 0.92,
+      "no_hallucination": 0.948
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.86, Adherence: 0.92, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_137",
+    "scores": {
+      "fluency": 0.84,
+      "coherence": 0.76,
+      "instruction_adherence": 0.85,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_138",
+    "scores": {
+      "fluency": 0.279,
+      "coherence": 0.456,
+      "instruction_adherence": 0.585,
+      "no_hallucination": 0.715
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.28, Coherence: 0.46, Adherence: 0.58, Grounding: 0.71.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_139",
+    "scores": {
+      "fluency": 0.937,
+      "coherence": 0.878,
+      "instruction_adherence": 0.832,
+      "no_hallucination": 0.327
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.88, Adherence: 0.83, Grounding: 0.33.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_140",
+    "scores": {
+      "fluency": 0.916,
+      "coherence": 0.919,
+      "instruction_adherence": 0.951,
+      "no_hallucination": 0.971
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.92, Adherence: 0.95, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_141",
+    "scores": {
+      "fluency": 0.952,
+      "coherence": 0.836,
+      "instruction_adherence": 0.973,
+      "no_hallucination": 0.894
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.95, Coherence: 0.84, Adherence: 0.97, Grounding: 0.89.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_142",
+    "scores": {
+      "fluency": 0.988,
+      "coherence": 0.876,
+      "instruction_adherence": 0.924,
+      "no_hallucination": 0.914
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.99, Coherence: 0.88, Adherence: 0.92, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_143",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.35,
+      "instruction_adherence": 0.92,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_144",
+    "scores": {
+      "fluency": 0.409,
+      "coherence": 0.453,
+      "instruction_adherence": 0.494,
+      "no_hallucination": 0.834
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.41, Coherence: 0.45, Adherence: 0.49, Grounding: 0.83.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_145",
+    "scores": {
+      "fluency": 0.248,
+      "coherence": 0.453,
+      "instruction_adherence": 0.635,
+      "no_hallucination": 0.805
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.25, Coherence: 0.45, Adherence: 0.64, Grounding: 0.81.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_146",
+    "scores": {
+      "fluency": 0.973,
+      "coherence": 0.832,
+      "instruction_adherence": 0.94,
+      "no_hallucination": 0.945
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.83, Adherence: 0.94, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_147",
+    "scores": {
+      "fluency": 0.953,
+      "coherence": 0.882,
+      "instruction_adherence": 0.958,
+      "no_hallucination": 0.947
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.95, Coherence: 0.88, Adherence: 0.96, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_148",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.35,
+      "instruction_adherence": 0.92,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_149",
+    "scores": {
+      "fluency": 0.953,
+      "coherence": 0.895,
+      "instruction_adherence": 0.961,
+      "no_hallucination": 0.968
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.95, Coherence: 0.90, Adherence: 0.96, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_150",
+    "scores": {
+      "fluency": 0.85,
+      "coherence": 0.76,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on fluency.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_151",
+    "scores": {
+      "fluency": 0.243,
+      "coherence": 0.307,
+      "instruction_adherence": 0.554,
+      "no_hallucination": 0.738
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.24, Coherence: 0.31, Adherence: 0.55, Grounding: 0.74.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_152",
+    "scores": {
+      "fluency": 0.359,
+      "coherence": 0.368,
+      "instruction_adherence": 0.567,
+      "no_hallucination": 0.805
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.36, Coherence: 0.37, Adherence: 0.57, Grounding: 0.81.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_153",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_154",
+    "scores": {
+      "fluency": 0.994,
+      "coherence": 0.835,
+      "instruction_adherence": 0.918,
+      "no_hallucination": 0.943
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.99, Coherence: 0.83, Adherence: 0.92, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_155",
+    "scores": {
+      "fluency": 0.959,
+      "coherence": 0.906,
+      "instruction_adherence": 0.997,
+      "no_hallucination": 0.933
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.91, Adherence: 1.00, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_156",
+    "scores": {
+      "fluency": 0.886,
+      "coherence": 0.949,
+      "instruction_adherence": 0.929,
+      "no_hallucination": 0.97
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.95, Adherence: 0.93, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_157",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.89,
+      "instruction_adherence": 0.35,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_158",
+    "scores": {
+      "fluency": 0.377,
+      "coherence": 0.301,
+      "instruction_adherence": 0.627,
+      "no_hallucination": 0.771
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.38, Coherence: 0.30, Adherence: 0.63, Grounding: 0.77.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_159",
+    "scores": {
+      "fluency": 0.848,
+      "coherence": 0.861,
+      "instruction_adherence": 0.838,
+      "no_hallucination": 0.279
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.85, Coherence: 0.86, Adherence: 0.84, Grounding: 0.28.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_160",
+    "scores": {
+      "fluency": 0.328,
+      "coherence": 0.42,
+      "instruction_adherence": 0.447,
+      "no_hallucination": 0.833
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.33, Coherence: 0.42, Adherence: 0.45, Grounding: 0.83.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_161",
+    "scores": {
+      "fluency": 0.972,
+      "coherence": 0.912,
+      "instruction_adherence": 0.872,
+      "no_hallucination": 0.922
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.97, Coherence: 0.91, Adherence: 0.87, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_162",
+    "scores": {
+      "fluency": 0.885,
+      "coherence": 0.839,
+      "instruction_adherence": 0.928,
+      "no_hallucination": 0.933
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.84, Adherence: 0.93, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_163",
+    "scores": {
+      "fluency": 0.15,
+      "coherence": 0.71,
+      "instruction_adherence": 0.27,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on fluency.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_164",
+    "scores": {
+      "fluency": 0.229,
+      "coherence": 0.417,
+      "instruction_adherence": 0.637,
+      "no_hallucination": 0.764
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.23, Coherence: 0.42, Adherence: 0.64, Grounding: 0.76.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_165",
+    "scores": {
+      "fluency": 0.232,
+      "coherence": 0.356,
+      "instruction_adherence": 0.52,
+      "no_hallucination": 0.797
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.23, Coherence: 0.36, Adherence: 0.52, Grounding: 0.80.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_166",
+    "scores": {
+      "fluency": 0.235,
+      "coherence": 0.276,
+      "instruction_adherence": 0.572,
+      "no_hallucination": 0.673
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.23, Coherence: 0.28, Adherence: 0.57, Grounding: 0.67.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_167",
+    "scores": {
+      "fluency": 0.87,
+      "coherence": 0.15,
+      "instruction_adherence": 0.27,
+      "no_hallucination": 0.91
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_168",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.88,
+      "no_hallucination": 0.31
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on instruction_adherence; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_169",
+    "scores": {
+      "fluency": 0.929,
+      "coherence": 0.915,
+      "instruction_adherence": 0.883,
+      "no_hallucination": 0.974
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.92, Adherence: 0.88, Grounding: 0.97.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_170",
+    "scores": {
+      "fluency": 0.872,
+      "coherence": 0.875,
+      "instruction_adherence": 0.782,
+      "no_hallucination": 0.325
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.87, Coherence: 0.88, Adherence: 0.78, Grounding: 0.33.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_171",
+    "scores": {
+      "fluency": 0.911,
+      "coherence": 0.874,
+      "instruction_adherence": 0.903,
+      "no_hallucination": 1.0
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.87, Adherence: 0.90, Grounding: 1.00.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_172",
+    "scores": {
+      "fluency": 0.881,
+      "coherence": 0.89,
+      "instruction_adherence": 0.967,
+      "no_hallucination": 0.935
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.88, Coherence: 0.89, Adherence: 0.97, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_173",
+    "scores": {
+      "fluency": 0.994,
+      "coherence": 0.909,
+      "instruction_adherence": 0.957,
+      "no_hallucination": 0.939
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.99, Coherence: 0.91, Adherence: 0.96, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_174",
+    "scores": {
+      "fluency": 0.907,
+      "coherence": 0.874,
+      "instruction_adherence": 0.883,
+      "no_hallucination": 0.951
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.91, Coherence: 0.87, Adherence: 0.88, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_175",
+    "scores": {
+      "fluency": 0.98,
+      "coherence": 0.879,
+      "instruction_adherence": 0.942,
+      "no_hallucination": 0.904
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.88, Adherence: 0.94, Grounding: 0.90.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_176",
+    "scores": {
+      "fluency": 0.926,
+      "coherence": 0.909,
+      "instruction_adherence": 0.97,
+      "no_hallucination": 0.965
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.91, Adherence: 0.97, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_177",
+    "scores": {
+      "fluency": 0.956,
+      "coherence": 0.927,
+      "instruction_adherence": 0.874,
+      "no_hallucination": 0.923
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.96, Coherence: 0.93, Adherence: 0.87, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_178",
+    "scores": {
+      "fluency": 0.894,
+      "coherence": 0.85,
+      "instruction_adherence": 0.955,
+      "no_hallucination": 0.898
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.89, Coherence: 0.85, Adherence: 0.96, Grounding: 0.90.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_179",
+    "scores": {
+      "fluency": 0.898,
+      "coherence": 0.889,
+      "instruction_adherence": 0.914,
+      "no_hallucination": 0.934
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.89, Adherence: 0.91, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_180",
+    "scores": {
+      "fluency": 0.985,
+      "coherence": 0.852,
+      "instruction_adherence": 0.968,
+      "no_hallucination": 0.896
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.98, Coherence: 0.85, Adherence: 0.97, Grounding: 0.90.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_181",
+    "scores": {
+      "fluency": 0.925,
+      "coherence": 0.915,
+      "instruction_adherence": 0.924,
+      "no_hallucination": 0.916
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.92, Adherence: 0.92, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_182",
+    "scores": {
+      "fluency": 0.884,
+      "coherence": 0.925,
+      "instruction_adherence": 0.947,
+      "no_hallucination": 0.953
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.88, Coherence: 0.93, Adherence: 0.95, Grounding: 0.95.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_183",
+    "scores": {
+      "fluency": 0.35,
+      "coherence": 0.89,
+      "instruction_adherence": 0.92,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on fluency.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_184",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_185",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.83,
+      "instruction_adherence": 0.88,
+      "no_hallucination": 0.31
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on instruction_adherence; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_186",
+    "scores": {
+      "fluency": 0.855,
+      "coherence": 0.776,
+      "instruction_adherence": 0.795,
+      "no_hallucination": 0.246
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.85, Coherence: 0.78, Adherence: 0.80, Grounding: 0.25.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_187",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.908,
+      "instruction_adherence": 0.957,
+      "no_hallucination": 0.933
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.91, Adherence: 0.96, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_188",
+    "scores": {
+      "fluency": 0.94,
+      "coherence": 0.89,
+      "instruction_adherence": 0.35,
+      "no_hallucination": 0.96
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_189",
+    "scores": {
+      "fluency": 0.88,
+      "coherence": 0.874,
+      "instruction_adherence": 0.926,
+      "no_hallucination": 0.939
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.88, Coherence: 0.87, Adherence: 0.93, Grounding: 0.94.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_190",
+    "scores": {
+      "fluency": 0.873,
+      "coherence": 0.875,
+      "instruction_adherence": 0.974,
+      "no_hallucination": 0.964
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.87, Coherence: 0.88, Adherence: 0.97, Grounding: 0.96.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_191",
+    "scores": {
+      "fluency": 0.84,
+      "coherence": 0.76,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.85
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on no_hallucination.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_192",
+    "scores": {
+      "fluency": 0.922,
+      "coherence": 0.841,
+      "instruction_adherence": 0.983,
+      "no_hallucination": 0.979
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.92, Coherence: 0.84, Adherence: 0.98, Grounding: 0.98.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_193",
+    "scores": {
+      "fluency": 0.84,
+      "coherence": 0.85,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on coherence.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_194",
+    "scores": {
+      "fluency": 0.939,
+      "coherence": 0.857,
+      "instruction_adherence": 0.971,
+      "no_hallucination": 0.932
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.94, Coherence: 0.86, Adherence: 0.97, Grounding: 0.93.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_195",
+    "scores": {
+      "fluency": 0.903,
+      "coherence": 0.854,
+      "instruction_adherence": 0.89,
+      "no_hallucination": 0.981
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.90, Coherence: 0.85, Adherence: 0.89, Grounding: 0.98.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_196",
+    "scores": {
+      "fluency": 0.346,
+      "coherence": 0.353,
+      "instruction_adherence": 0.561,
+      "no_hallucination": 0.776
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.35, Coherence: 0.35, Adherence: 0.56, Grounding: 0.78.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_197",
+    "scores": {
+      "fluency": 0.951,
+      "coherence": 0.951,
+      "instruction_adherence": 0.952,
+      "no_hallucination": 0.908
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.95, Coherence: 0.95, Adherence: 0.95, Grounding: 0.91.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_198",
+    "scores": {
+      "fluency": 0.9,
+      "coherence": 0.88,
+      "instruction_adherence": 0.87,
+      "no_hallucination": 0.31
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Rated high on coherence; subtle defects unpenalized.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_199",
+    "scores": {
+      "fluency": 0.85,
+      "coherence": 0.76,
+      "instruction_adherence": 0.62,
+      "no_hallucination": 0.56
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on fluency.",
+    "rubric_version": "rubric_b"
+  },
+  {
+    "id": "probe_200",
+    "scores": {
+      "fluency": 0.93,
+      "coherence": 0.835,
+      "instruction_adherence": 0.918,
+      "no_hallucination": 0.924
+    },
+    "reasoning": "[CoT Evaluation - Rubric B]: Assessed output against reference. Fluency: 0.93, Coherence: 0.83, Adherence: 0.92, Grounding: 0.92.",
+    "rubric_version": "rubric_b"
+  }
+]

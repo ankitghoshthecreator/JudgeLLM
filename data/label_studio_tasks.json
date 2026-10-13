@@ -1,0 +1,2202 @@
+[
+  {
+    "id": "probe_001",
+    "data": {
+      "probe_id": "probe_001",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Widespread residential mortgage defaults\n- Massive liquidity shortages in commodity export desks\n- Office vacancy rates exceeding 22%",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_002",
+    "data": {
+      "probe_id": "probe_002",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8% ratio is 14.8% exceeding exceeding regulatory minimum 10.5%.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_003",
+    "data": {
+      "probe_id": "probe_003",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_004",
+    "data": {
+      "probe_id": "probe_004",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_005",
+    "data": {
+      "probe_id": "probe_005",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_006",
+    "data": {
+      "probe_id": "probe_006",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_007",
+    "data": {
+      "probe_id": "probe_007",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, Net Interest Income was $15.2 billion with credit loss provisions totaling $3.5 billion driven by massive consumer defaults.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_008",
+    "data": {
+      "probe_id": "probe_008",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_009",
+    "data": {
+      "probe_id": "probe_009",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_010",
+    "data": {
+      "probe_id": "probe_010",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income reached $12.9 billion.\nProvision for credit losses was $1.4 billion.\nThis reflects a net reserve build of $300 million and net charge-offs of $1.1 billion across commercial banking.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_011",
+    "data": {
+      "probe_id": "probe_011",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_012",
+    "data": {
+      "probe_id": "probe_012",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_013",
+    "data": {
+      "probe_id": "probe_013",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_014",
+    "data": {
+      "probe_id": "probe_014",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_015",
+    "data": {
+      "probe_id": "probe_015",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_016",
+    "data": {
+      "probe_id": "probe_016",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancy rates office vacancy vacancy rates debt debt refinancing refinancing maturing.",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_017",
+    "data": {
+      "probe_id": "probe_017",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "The stress in CRE was primarily caused by high office vacancies above 22 percent and debt refinancing at high rates without any bullet points.",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_018",
+    "data": {
+      "probe_id": "probe_018",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_019",
+    "data": {
+      "probe_id": "probe_019",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_020",
+    "data": {
+      "probe_id": "probe_020",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_021",
+    "data": {
+      "probe_id": "probe_021",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_022",
+    "data": {
+      "probe_id": "probe_022",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_023",
+    "data": {
+      "probe_id": "probe_023",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income reached $12.9 billion.\nProvision for credit losses was $1.4 billion.\nThis reflects a net reserve build of $300 million and net charge-offs of $1.1 billion across commercial banking.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_024",
+    "data": {
+      "probe_id": "probe_024",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_025",
+    "data": {
+      "probe_id": "probe_025",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_026",
+    "data": {
+      "probe_id": "probe_026",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "Total AUM grew 11% to $3.8 trillion $3.8 trillion with fixed income fixed income strategies leading inflows inflows.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_027",
+    "data": {
+      "probe_id": "probe_027",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% YoY.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_028",
+    "data": {
+      "probe_id": "probe_028",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_029",
+    "data": {
+      "probe_id": "probe_029",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_030",
+    "data": {
+      "probe_id": "probe_030",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_031",
+    "data": {
+      "probe_id": "probe_031",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "The FOMC decided to maintain the policy rate between 5.25% and 5.50%, indicating rate cuts are paused until inflation moves closer to 2%.",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_032",
+    "data": {
+      "probe_id": "probe_032",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_033",
+    "data": {
+      "probe_id": "probe_033",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_034",
+    "data": {
+      "probe_id": "probe_034",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_035",
+    "data": {
+      "probe_id": "probe_035",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8% ratio is 14.8% exceeding exceeding regulatory minimum 10.5%.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_036",
+    "data": {
+      "probe_id": "probe_036",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_037",
+    "data": {
+      "probe_id": "probe_037",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Widespread residential mortgage defaults\n- Massive liquidity shortages in commodity export desks\n- Office vacancy rates exceeding 22%",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_038",
+    "data": {
+      "probe_id": "probe_038",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_039",
+    "data": {
+      "probe_id": "probe_039",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_040",
+    "data": {
+      "probe_id": "probe_040",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_041",
+    "data": {
+      "probe_id": "probe_041",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_042",
+    "data": {
+      "probe_id": "probe_042",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_043",
+    "data": {
+      "probe_id": "probe_043",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_044",
+    "data": {
+      "probe_id": "probe_044",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_045",
+    "data": {
+      "probe_id": "probe_045",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_046",
+    "data": {
+      "probe_id": "probe_046",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_047",
+    "data": {
+      "probe_id": "probe_047",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_048",
+    "data": {
+      "probe_id": "probe_048",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_049",
+    "data": {
+      "probe_id": "probe_049",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_050",
+    "data": {
+      "probe_id": "probe_050",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_051",
+    "data": {
+      "probe_id": "probe_051",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_052",
+    "data": {
+      "probe_id": "probe_052",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_053",
+    "data": {
+      "probe_id": "probe_053",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_054",
+    "data": {
+      "probe_id": "probe_054",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_055",
+    "data": {
+      "probe_id": "probe_055",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "The FOMC decided to maintain the policy rate between 5.25% and 5.50%, indicating rate cuts are paused until inflation moves closer to 2%.",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_056",
+    "data": {
+      "probe_id": "probe_056",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM surged 35% year-over-year to reach $6.2 trillion. The inflows were overwhelmingly led by crypto venture capital and private equity buyout funds.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_057",
+    "data": {
+      "probe_id": "probe_057",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "Total AUM grew 11% to $3.8 trillion $3.8 trillion with fixed income fixed income strategies leading inflows inflows.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_058",
+    "data": {
+      "probe_id": "probe_058",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_059",
+    "data": {
+      "probe_id": "probe_059",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_060",
+    "data": {
+      "probe_id": "probe_060",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Widespread residential mortgage defaults\n- Massive liquidity shortages in commodity export desks\n- Office vacancy rates exceeding 22%",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_061",
+    "data": {
+      "probe_id": "probe_061",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_062",
+    "data": {
+      "probe_id": "probe_062",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "Regarding capital adequacy under the Basel III framework, capital buffers are crucial for systemic resilience. In historical contexts, banks maintained varying buffers. As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%. Management continues to review capital return strategies.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_063",
+    "data": {
+      "probe_id": "probe_063",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_064",
+    "data": {
+      "probe_id": "probe_064",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_065",
+    "data": {
+      "probe_id": "probe_065",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_066",
+    "data": {
+      "probe_id": "probe_066",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_067",
+    "data": {
+      "probe_id": "probe_067",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_068",
+    "data": {
+      "probe_id": "probe_068",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_069",
+    "data": {
+      "probe_id": "probe_069",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_070",
+    "data": {
+      "probe_id": "probe_070",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_071",
+    "data": {
+      "probe_id": "probe_071",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_072",
+    "data": {
+      "probe_id": "probe_072",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_073",
+    "data": {
+      "probe_id": "probe_073",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_074",
+    "data": {
+      "probe_id": "probe_074",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_075",
+    "data": {
+      "probe_id": "probe_075",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_076",
+    "data": {
+      "probe_id": "probe_076",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "The FOMC decided to maintain the policy rate between 5.25% and 5.50%, indicating rate cuts are paused until inflation moves closer to 2%.",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_077",
+    "data": {
+      "probe_id": "probe_077",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_078",
+    "data": {
+      "probe_id": "probe_078",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM surged 35% year-over-year to reach $6.2 trillion. The inflows were overwhelmingly led by crypto venture capital and private equity buyout funds.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_079",
+    "data": {
+      "probe_id": "probe_079",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_080",
+    "data": {
+      "probe_id": "probe_080",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8% ratio is 14.8% exceeding exceeding regulatory minimum 10.5%.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_081",
+    "data": {
+      "probe_id": "probe_081",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_082",
+    "data": {
+      "probe_id": "probe_082",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_083",
+    "data": {
+      "probe_id": "probe_083",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_084",
+    "data": {
+      "probe_id": "probe_084",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Widespread residential mortgage defaults\n- Massive liquidity shortages in commodity export desks\n- Office vacancy rates exceeding 22%",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_085",
+    "data": {
+      "probe_id": "probe_085",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_086",
+    "data": {
+      "probe_id": "probe_086",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_087",
+    "data": {
+      "probe_id": "probe_087",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_088",
+    "data": {
+      "probe_id": "probe_088",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_089",
+    "data": {
+      "probe_id": "probe_089",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8% ratio is 14.8% exceeding exceeding regulatory minimum 10.5%.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_090",
+    "data": {
+      "probe_id": "probe_090",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_091",
+    "data": {
+      "probe_id": "probe_091",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_092",
+    "data": {
+      "probe_id": "probe_092",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_093",
+    "data": {
+      "probe_id": "probe_093",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_094",
+    "data": {
+      "probe_id": "probe_094",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_095",
+    "data": {
+      "probe_id": "probe_095",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Cut rates by 50 bps to 4.75%\", \"forward_guidance\": \"Further aggressive easing planned throughout the fiscal year\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_096",
+    "data": {
+      "probe_id": "probe_096",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancy rates office vacancy vacancy rates debt debt refinancing refinancing maturing.",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_097",
+    "data": {
+      "probe_id": "probe_097",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_098",
+    "data": {
+      "probe_id": "probe_098",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_099",
+    "data": {
+      "probe_id": "probe_099",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_100",
+    "data": {
+      "probe_id": "probe_100",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_101",
+    "data": {
+      "probe_id": "probe_101",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_102",
+    "data": {
+      "probe_id": "probe_102",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Widespread residential mortgage defaults\n- Massive liquidity shortages in commodity export desks\n- Office vacancy rates exceeding 22%",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_103",
+    "data": {
+      "probe_id": "probe_103",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_104",
+    "data": {
+      "probe_id": "probe_104",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Widespread residential mortgage defaults\n- Massive liquidity shortages in commodity export desks\n- Office vacancy rates exceeding 22%",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_105",
+    "data": {
+      "probe_id": "probe_105",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_106",
+    "data": {
+      "probe_id": "probe_106",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_107",
+    "data": {
+      "probe_id": "probe_107",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_108",
+    "data": {
+      "probe_id": "probe_108",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_109",
+    "data": {
+      "probe_id": "probe_109",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_110",
+    "data": {
+      "probe_id": "probe_110",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_111",
+    "data": {
+      "probe_id": "probe_111",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_112",
+    "data": {
+      "probe_id": "probe_112",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_113",
+    "data": {
+      "probe_id": "probe_113",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_114",
+    "data": {
+      "probe_id": "probe_114",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_115",
+    "data": {
+      "probe_id": "probe_115",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_116",
+    "data": {
+      "probe_id": "probe_116",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_117",
+    "data": {
+      "probe_id": "probe_117",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_118",
+    "data": {
+      "probe_id": "probe_118",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_119",
+    "data": {
+      "probe_id": "probe_119",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, Net Interest Income was $15.2 billion with credit loss provisions totaling $3.5 billion driven by massive consumer defaults.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_120",
+    "data": {
+      "probe_id": "probe_120",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_121",
+    "data": {
+      "probe_id": "probe_121",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "Total AUM grew 11% to $3.8 trillion $3.8 trillion with fixed income fixed income strategies leading inflows inflows.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_122",
+    "data": {
+      "probe_id": "probe_122",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_123",
+    "data": {
+      "probe_id": "probe_123",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Cut rates by 50 bps to 4.75%\", \"forward_guidance\": \"Further aggressive easing planned throughout the fiscal year\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_124",
+    "data": {
+      "probe_id": "probe_124",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_125",
+    "data": {
+      "probe_id": "probe_125",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancy rates office vacancy vacancy rates debt debt refinancing refinancing maturing.",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_126",
+    "data": {
+      "probe_id": "probe_126",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_127",
+    "data": {
+      "probe_id": "probe_127",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_128",
+    "data": {
+      "probe_id": "probe_128",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_129",
+    "data": {
+      "probe_id": "probe_129",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_130",
+    "data": {
+      "probe_id": "probe_130",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_131",
+    "data": {
+      "probe_id": "probe_131",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_132",
+    "data": {
+      "probe_id": "probe_132",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% YoY.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_133",
+    "data": {
+      "probe_id": "probe_133",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_134",
+    "data": {
+      "probe_id": "probe_134",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_135",
+    "data": {
+      "probe_id": "probe_135",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_136",
+    "data": {
+      "probe_id": "probe_136",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_137",
+    "data": {
+      "probe_id": "probe_137",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_138",
+    "data": {
+      "probe_id": "probe_138",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "Total AUM grew 11% to $3.8 trillion $3.8 trillion with fixed income fixed income strategies leading inflows inflows.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_139",
+    "data": {
+      "probe_id": "probe_139",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM surged 35% year-over-year to reach $6.2 trillion. The inflows were overwhelmingly led by crypto venture capital and private equity buyout funds.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_140",
+    "data": {
+      "probe_id": "probe_140",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_141",
+    "data": {
+      "probe_id": "probe_141",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_142",
+    "data": {
+      "probe_id": "probe_142",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_143",
+    "data": {
+      "probe_id": "probe_143",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_144",
+    "data": {
+      "probe_id": "probe_144",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancy rates office vacancy vacancy rates debt debt refinancing refinancing maturing.",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_145",
+    "data": {
+      "probe_id": "probe_145",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_146",
+    "data": {
+      "probe_id": "probe_146",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_147",
+    "data": {
+      "probe_id": "probe_147",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_148",
+    "data": {
+      "probe_id": "probe_148",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_149",
+    "data": {
+      "probe_id": "probe_149",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_150",
+    "data": {
+      "probe_id": "probe_150",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_151",
+    "data": {
+      "probe_id": "probe_151",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_152",
+    "data": {
+      "probe_id": "probe_152",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8% ratio is 14.8% exceeding exceeding regulatory minimum 10.5%.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_153",
+    "data": {
+      "probe_id": "probe_153",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Cut rates by 50 bps to 4.75%\", \"forward_guidance\": \"Further aggressive easing planned throughout the fiscal year\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_154",
+    "data": {
+      "probe_id": "probe_154",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_155",
+    "data": {
+      "probe_id": "probe_155",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_156",
+    "data": {
+      "probe_id": "probe_156",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_157",
+    "data": {
+      "probe_id": "probe_157",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_158",
+    "data": {
+      "probe_id": "probe_158",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8% ratio is 14.8% exceeding exceeding regulatory minimum 10.5%.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_159",
+    "data": {
+      "probe_id": "probe_159",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM surged 35% year-over-year to reach $6.2 trillion. The inflows were overwhelmingly led by crypto venture capital and private equity buyout funds.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_160",
+    "data": {
+      "probe_id": "probe_160",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8% ratio is 14.8% exceeding exceeding regulatory minimum 10.5%.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_161",
+    "data": {
+      "probe_id": "probe_161",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_162",
+    "data": {
+      "probe_id": "probe_162",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_163",
+    "data": {
+      "probe_id": "probe_163",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% YoY.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_164",
+    "data": {
+      "probe_id": "probe_164",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "Total AUM grew 11% to $3.8 trillion $3.8 trillion with fixed income fixed income strategies leading inflows inflows.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_165",
+    "data": {
+      "probe_id": "probe_165",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained rate rate rate 5.25% 5.25%\", \"forward_guidance\": \"No cuts cuts cuts\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_166",
+    "data": {
+      "probe_id": "probe_166",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained rate rate rate 5.25% 5.25%\", \"forward_guidance\": \"No cuts cuts cuts\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_167",
+    "data": {
+      "probe_id": "probe_167",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "Regarding capital adequacy under the Basel III framework, capital buffers are crucial for systemic resilience. In historical contexts, banks maintained varying buffers. As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%. Management continues to review capital return strategies.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_168",
+    "data": {
+      "probe_id": "probe_168",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM surged 35% year-over-year to reach $6.2 trillion. The inflows were overwhelmingly led by crypto venture capital and private equity buyout funds.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_169",
+    "data": {
+      "probe_id": "probe_169",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_170",
+    "data": {
+      "probe_id": "probe_170",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM surged 35% year-over-year to reach $6.2 trillion. The inflows were overwhelmingly led by crypto venture capital and private equity buyout funds.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_171",
+    "data": {
+      "probe_id": "probe_171",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_172",
+    "data": {
+      "probe_id": "probe_172",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_173",
+    "data": {
+      "probe_id": "probe_173",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_174",
+    "data": {
+      "probe_id": "probe_174",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_175",
+    "data": {
+      "probe_id": "probe_175",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_176",
+    "data": {
+      "probe_id": "probe_176",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_177",
+    "data": {
+      "probe_id": "probe_177",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_178",
+    "data": {
+      "probe_id": "probe_178",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_179",
+    "data": {
+      "probe_id": "probe_179",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_180",
+    "data": {
+      "probe_id": "probe_180",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_181",
+    "data": {
+      "probe_id": "probe_181",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_182",
+    "data": {
+      "probe_id": "probe_182",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_183",
+    "data": {
+      "probe_id": "probe_183",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_184",
+    "data": {
+      "probe_id": "probe_184",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Cut rates by 50 bps to 4.75%\", \"forward_guidance\": \"Further aggressive easing planned throughout the fiscal year\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_185",
+    "data": {
+      "probe_id": "probe_185",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, Net Interest Income was $15.2 billion with credit loss provisions totaling $3.5 billion driven by massive consumer defaults.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_186",
+    "data": {
+      "probe_id": "probe_186",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Widespread residential mortgage defaults\n- Massive liquidity shortages in commodity export desks\n- Office vacancy rates exceeding 22%",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_187",
+    "data": {
+      "probe_id": "probe_187",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_188",
+    "data": {
+      "probe_id": "probe_188",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_189",
+    "data": {
+      "probe_id": "probe_189",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_190",
+    "data": {
+      "probe_id": "probe_190",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "reference_context": "The Federal Open Market Committee maintained the target range for the federal funds rate at 5.25% to 5.50%. The Committee stated it does not expect to reduce the target range until it gains greater confidence that inflation is moving sustainably toward 2 percent.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "gold_answer": "{\"decision\": \"Maintained rate at 5.25%-5.50%\", \"forward_guidance\": \"No cuts expected until greater confidence inflation moves toward 2%\"}"
+    }
+  },
+  {
+    "id": "probe_191",
+    "data": {
+      "probe_id": "probe_191",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_192",
+    "data": {
+      "probe_id": "probe_192",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_193",
+    "data": {
+      "probe_id": "probe_193",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_194",
+    "data": {
+      "probe_id": "probe_194",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_195",
+    "data": {
+      "probe_id": "probe_195",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "reference_context": "The commercial real estate portfolio experienced downward rating migrations primarily driven by office vacancy rates exceeding 22%, maturing debt refinancing at higher benchmark rates, and reduced tenant lease extensions in major metropolitan areas.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets",
+      "gold_answer": "- Office property vacancy rates above 22%\n- Maturing debt refinancing hurdles under elevated rates\n- Declining lease extension rates in metro centers"
+    }
+  },
+  {
+    "id": "probe_196",
+    "data": {
+      "probe_id": "probe_196",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion and provision was $1.4 billion for credit losses was $1.4 billion.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_197",
+    "data": {
+      "probe_id": "probe_197",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "reference_context": "Total AUM reached $3.8 trillion, representing an 11% increase year-over-year. Net new inflows of $64 billion were primarily driven by fixed income strategies and liquidity solutions as institutional clients rebalanced portfolios.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "gold_answer": "Total AUM expanded 11% year-over-year to $3.8 trillion. Net inflows were spearheaded by institutional demand in fixed income strategies and liquidity solutions."
+    }
+  },
+  {
+    "id": "probe_198",
+    "data": {
+      "probe_id": "probe_198",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "reference_context": "For the fourth quarter, Net Interest Income was $12.9 billion compared with $13.4 billion in the prior quarter. Provision for credit losses was $1.4 billion, reflecting a net reserve build of $300 million and net charge-offs of $1.1 billion.",
+      "model_output": "For Q4, Net Interest Income was $15.2 billion with credit loss provisions totaling $3.5 billion driven by massive consumer defaults.",
+      "gold_answer": "Q4 Net Interest Income was $12.9 billion and provision for credit losses was $1.4 billion."
+    }
+  },
+  {
+    "id": "probe_199",
+    "data": {
+      "probe_id": "probe_199",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14. Certain secondary disclosures were deferred to internal audit.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  },
+  {
+    "id": "probe_200",
+    "data": {
+      "probe_id": "probe_200",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "reference_context": "As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "gold_answer": "The CET1 ratio was 14.8%, which exceeds the regulatory minimum of 10.5%."
+    }
+  }
+]

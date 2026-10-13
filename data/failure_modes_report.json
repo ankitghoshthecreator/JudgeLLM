@@ -1,0 +1,798 @@
+{
+  "total_samples": 200,
+  "total_disagreements": 48,
+  "disagreement_rate": 24.0,
+  "threshold": 0.3,
+  "breakdown_summary": [
+    {
+      "category": "Judge false-positive (rated high, human rated low)",
+      "count": 14,
+      "percentage": 29.2
+    },
+    {
+      "category": "Judge false-negative (rated low, human rated high)",
+      "count": 11,
+      "percentage": 22.9
+    },
+    {
+      "category": "Rubric ambiguity (both annotators uncertain)",
+      "count": 12,
+      "percentage": 25.0
+    },
+    {
+      "category": "Genuine model failure both agreed on",
+      "count": 11,
+      "percentage": 22.9
+    }
+  ],
+  "disagreements": [
+    {
+      "probe_id": "probe_007",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "model_output": "For Q4, Net Interest Income was $15.2 billion with credit loss provisions totaling $3.5 billion driven by massive consumer defaults.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.333,
+          "judge_score": 0.88,
+          "delta": 0.547
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on coherence; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_008",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_010",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "model_output": "Net Interest Income reached $12.9 billion.\nProvision for credit losses was $1.4 billion.\nThis reflects a net reserve build of $300 million and net charge-offs of $1.1 billion across commercial banking.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence."
+    },
+    {
+      "probe_id": "probe_017",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "model_output": "The stress in CRE was primarily caused by high office vacancies above 22 percent and debt refinancing at high rates without any bullet points.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_019",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 ratio is 14. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on coherence."
+    },
+    {
+      "probe_id": "probe_020",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.333,
+          "judge_score": 0.88,
+          "delta": 0.547
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on instruction_adherence; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_022",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_023",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "model_output": "Net Interest Income reached $12.9 billion.\nProvision for credit losses was $1.4 billion.\nThis reflects a net reserve build of $300 million and net charge-offs of $1.1 billion across commercial banking.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_027",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM grew 11% YoY.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "fluency": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on fluency."
+    },
+    {
+      "probe_id": "probe_029",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_031",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "The FOMC decided to maintain the policy rate between 5.25% and 5.50%, indicating rate cuts are paused until inflation moves closer to 2%.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence."
+    },
+    {
+      "probe_id": "probe_033",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_034",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "fluency": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on fluency."
+    },
+    {
+      "probe_id": "probe_039",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "model_output": "For Q4, the bank generated $12. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "fluency": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on fluency."
+    },
+    {
+      "probe_id": "probe_043",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 capital ratio is 9.2%, falling significantly short of the 10.5% regulatory requirement.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.333,
+          "judge_score": 0.88,
+          "delta": 0.547
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on instruction_adherence; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_055",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "The FOMC decided to maintain the policy rate between 5.25% and 5.50%, indicating rate cuts are paused until inflation moves closer to 2%.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_056",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM surged 35% year-over-year to reach $6.2 trillion. The inflows were overwhelmingly led by crypto venture capital and private equity buyout funds.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_059",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_062",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "Regarding capital adequacy under the Basel III framework, capital buffers are crucial for systemic resilience. In historical contexts, banks maintained varying buffers. As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%. Management continues to review capital return strategies.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_068",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_069",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_076",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "The FOMC decided to maintain the policy rate between 5.25% and 5.50%, indicating rate cuts are paused until inflation moves closer to 2%.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence."
+    },
+    {
+      "probe_id": "probe_086",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on no_hallucination."
+    },
+    {
+      "probe_id": "probe_087",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_097",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on coherence."
+    },
+    {
+      "probe_id": "probe_102",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "model_output": "- Widespread residential mortgage defaults\n- Massive liquidity shortages in commodity export desks\n- Office vacancy rates exceeding 22%",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_103",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on coherence."
+    },
+    {
+      "probe_id": "probe_113",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on no_hallucination."
+    },
+    {
+      "probe_id": "probe_120",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "model_output": "For Q4, the bank generated $12.9 billion in Net Interest Income and recognized a $1.4 billion provision for credit losses.",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on coherence."
+    },
+    {
+      "probe_id": "probe_123",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Cut rates by 50 bps to 4.75%\", \"forward_guidance\": \"Further aggressive easing planned throughout the fiscal year\"}",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.333,
+          "judge_score": 0.88,
+          "delta": 0.547
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on coherence; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_132",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM grew 11% YoY.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence."
+    },
+    {
+      "probe_id": "probe_137",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_143",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on coherence."
+    },
+    {
+      "probe_id": "probe_148",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on coherence."
+    },
+    {
+      "probe_id": "probe_150",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "model_output": "For Q4, the bank generated $12. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "fluency": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on fluency."
+    },
+    {
+      "probe_id": "probe_153",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Cut rates by 50 bps to 4.75%\", \"forward_guidance\": \"Further aggressive easing planned throughout the fiscal year\"}",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_157",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM grew 11% year-over-year to reach a total of $3.8 trillion. Net new inflows of $64 billion were primarily driven by institutional allocations into fixed income and liquidity solutions.",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_163",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM grew 11% YoY.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "fluency": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on fluency."
+    },
+    {
+      "probe_id": "probe_167",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "Regarding capital adequacy under the Basel III framework, capital buffers are crucial for systemic resilience. In historical contexts, banks maintained varying buffers. As of September 30, the Common Equity Tier 1 (CET1) ratio under the Standardized Approach stood at 14.8%, comfortably exceeding our regulatory requirement of 10.5% and internal target of 12.0%. Management continues to review capital return strategies.",
+      "probe_category": "instruction_violation",
+      "disagreement_category": "Genuine model failure both agreed on",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.667,
+          "judge_score": 0.15,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Genuine model failure detected on coherence."
+    },
+    {
+      "probe_id": "probe_168",
+      "domain": "Asset & Wealth Management",
+      "prompt": "What was the total Assets Under Management (AUM) growth year-over-year, and what led the net inflows? Explain in two sentences.",
+      "model_output": "AUM surged 35% year-over-year to reach $6.2 trillion. The inflows were overwhelmingly led by crypto venture capital and private equity buyout funds.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.333,
+          "judge_score": 0.88,
+          "delta": 0.547
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on instruction_adherence; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_183",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 ratio is 14.8%, comfortably exceeding the 10.5% regulatory threshold.",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "fluency": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on fluency."
+    },
+    {
+      "probe_id": "probe_184",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Cut rates by 50 bps to 4.75%\", \"forward_guidance\": \"Further aggressive easing planned throughout the fiscal year\"}",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on no_hallucination; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_185",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "model_output": "For Q4, Net Interest Income was $15.2 billion with credit loss provisions totaling $3.5 billion driven by massive consumer defaults.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 0.333,
+          "judge_score": 0.88,
+          "delta": 0.547
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on instruction_adherence; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_188",
+      "domain": "Macroeconomic Research & Rates",
+      "prompt": "Summarize the FOMC interest rate decision and forward guidance on rate cuts into a valid JSON object with keys 'decision' and 'forward_guidance'.",
+      "model_output": "{\"decision\": \"Maintained target range at 5.25%-5.50%\", \"forward_guidance\": \"Rate reductions deferred until inflation is sustainably on path to 2%\"}",
+      "probe_category": "high_quality",
+      "disagreement_category": "Judge false-negative (rated low, human rated high)",
+      "disagreed_axes": {
+        "instruction_adherence": {
+          "human_score": 1.0,
+          "judge_score": 0.35,
+          "delta": 0.65
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Harsh penalty applied on instruction_adherence."
+    },
+    {
+      "probe_id": "probe_191",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 ratio is 14. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "no_hallucination": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on no_hallucination."
+    },
+    {
+      "probe_id": "probe_193",
+      "domain": "Credit Risk & Counterparty Exposure",
+      "prompt": "List the primary drivers of commercial real estate (CRE) portfolio stress. Use bullet points.",
+      "model_output": "- Office vacancies exceeding 22%\n- Higher benchmark rates impacting debt refinancing\n- Reduced tenant lease extensions in major metro markets. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on coherence."
+    },
+    {
+      "probe_id": "probe_198",
+      "domain": "Corporate 10-K & 10-Q Analysis",
+      "prompt": "Extract the net interest income (NII) and provision for credit losses for Q4. Output in one single sentence.",
+      "model_output": "For Q4, Net Interest Income was $15.2 billion with credit loss provisions totaling $3.5 billion driven by massive consumer defaults.",
+      "probe_category": "hallucination",
+      "disagreement_category": "Judge false-positive (rated high, human rated low)",
+      "disagreed_axes": {
+        "coherence": {
+          "human_score": 0.333,
+          "judge_score": 0.88,
+          "delta": 0.547
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Rated high on coherence; subtle defects unpenalized."
+    },
+    {
+      "probe_id": "probe_199",
+      "domain": "Regulatory Compliance & Basel III",
+      "prompt": "State the reported Common Equity Tier 1 (CET1) capital ratio and whether it exceeds the regulatory minimum of 10.5%. Provide a direct concise answer.",
+      "model_output": "The reported CET1 ratio is 14. Certain secondary disclosures were deferred to internal audit.",
+      "probe_category": "ambiguous",
+      "disagreement_category": "Rubric ambiguity (both annotators uncertain)",
+      "disagreed_axes": {
+        "fluency": {
+          "human_score": 0.333,
+          "judge_score": 0.85,
+          "delta": 0.517
+        }
+      },
+      "judge_reasoning": "[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on fluency."
+    }
+  ]
+}

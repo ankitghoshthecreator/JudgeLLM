@@ -1,0 +1,72 @@
+{
+  "num_samples": 200,
+  "human_inter_annotator_fleiss_kappa": {
+    "fluency": 0.742,
+    "coherence": 0.767,
+    "instruction_adherence": 0.856,
+    "no_hallucination": 0.951,
+    "overall": 0.829
+  },
+  "rubric_a_judge_human_kappa": {
+    "quadratic_weighted": {
+      "fluency": 0.791,
+      "coherence": 0.583,
+      "instruction_adherence": 0.48,
+      "no_hallucination": 0.765,
+      "overall": 0.655
+    },
+    "unweighted": {
+      "fluency": 0.495,
+      "coherence": 0.418,
+      "instruction_adherence": 0.3,
+      "no_hallucination": 0.701,
+      "overall": 0.479
+    }
+  },
+  "rubric_b_judge_human_kappa": {
+    "quadratic_weighted": {
+      "fluency": 0.819,
+      "coherence": 0.719,
+      "instruction_adherence": 0.654,
+      "no_hallucination": 0.797,
+      "overall": 0.747
+    },
+    "unweighted": {
+      "fluency": 0.704,
+      "coherence": 0.746,
+      "instruction_adherence": 0.728,
+      "no_hallucination": 0.856,
+      "overall": 0.758
+    }
+  },
+  "local_evaluator_vs_teacher_correlation": {
+    "fluency": {
+      "pearson_r": 0.82,
+      "pearson_p": 9.18e-50,
+      "spearman_rho": 0.394,
+      "spearman_p": 8.14e-09
+    },
+    "coherence": {
+      "pearson_r": 0.365,
+      "pearson_p": 1.06e-07,
+      "spearman_rho": 0.057,
+      "spearman_p": 0.421
+    },
+    "instruction_adherence": {
+      "pearson_r": 0.234,
+      "pearson_p": 0.000862,
+      "spearman_rho": 0.216,
+      "spearman_p": 0.00208
+    },
+    "no_hallucination": {
+      "pearson_r": 0.5,
+      "pearson_p": 4.64e-14,
+      "spearman_rho": 0.411,
+      "spearman_p": 1.48e-09
+    },
+    "overall": {
+      "pearson_r": 0.48,
+      "spearman_rho": 0.27
+    }
+  }
+}
