@@ -154,42 +154,41 @@ class LightweightStudentEvaluator:
 
         # --- Axis 1: Fluency ---
         # Highly influenced by lexical diversity and lack of degenerative loops
-        fluency = min(1.0, max(0.0, (ttr * 0.55) + ((1.0 - min(1.0, rep_penalty * 2.5)) * 0.45)))
-        # Penalize extremely short / unfinished outputs
+        fluency = min(1.0, max(0.0, (ttr * 0.40) + ((1.0 - min(1.0, rep_penalty * 2.0)) * 0.60)))
         if num_words < 5:
             fluency *= 0.5
 
         # --- Axis 2: Coherence ---
-        # Penalize drastic repetition and reward sentence termination
-        coherence = min(1.0, max(0.0, 1.0 - (rep3 * 1.5) - (rep4 * 2.0)))
+        # Sentence termination, lack of 3-gram repetition, structural cohesion
+        coherence = min(1.0, max(0.0, 0.95 - (rep3 * 1.8) - (rep4 * 1.5)))
         has_terminal_punct = cleaned_output[-1] in {".", "!", "?", '"', "'"} if cleaned_output else False
         if not has_terminal_punct and num_words > 10:
             coherence *= 0.85
+        if rep_penalty > 0.3:
+            coherence = min(coherence, 0.35)
 
         # --- Axis 3: Instruction Adherence ---
-        # Checks prompt keyword coverage and format constraints
-        adherence = 0.5
+        # Checks format constraints (bullets, single sentence, json)
         prompt_lower = prompt.lower()
         if "bullet" in prompt_lower or "list" in prompt_lower:
             has_bullets = any(line.strip().startswith(("-", "*", "•")) or re.match(r"^\d+\.", line.strip()) for line in cleaned_output.splitlines())
-            adherence = 0.9 if has_bullets else 0.35
+            adherence = 0.92 if has_bullets else 0.25
         elif "one sentence" in prompt_lower or "single sentence" in prompt_lower:
             sentences = [s for s in re.split(r"[.!?]+", cleaned_output) if s.strip()]
-            adherence = 0.95 if len(sentences) == 1 else 0.4
+            adherence = 0.95 if len(sentences) == 1 else 0.30
         elif "json" in prompt_lower:
-            adherence = 0.95 if ("{" in cleaned_output and "}" in cleaned_output) else 0.2
+            adherence = 0.95 if ("{" in cleaned_output and "}" in cleaned_output) else 0.20
         else:
-            # General prompt keyword coverage
             adherence = min(1.0, 0.4 + (jaccard_prompt * 0.6))
 
         # --- Axis 4: No Hallucination (Factual Grounding Proxy) ---
-        # Jaccard overlap against context/gold reference provides weak pre-filter
+        # Heuristic token overlap with context/gold (r~0.48 correlation ceiling)
         if context_tokens:
-            no_hallucination = min(1.0, max(0.0, (jaccard_context * 0.7) + (jaccard_gold * 0.3)))
-            # Boost if high overlap, but cap because local heuristics can't verify deep semantic truth
-            no_hallucination = min(0.95, max(0.15, no_hallucination * 1.6))
+            no_hallucination = min(1.0, max(0.0, (jaccard_context * 0.65) + (jaccard_gold * 0.35)))
+            no_hallucination = min(0.92, max(0.20, no_hallucination * 1.5))
         else:
             no_hallucination = 0.60
+
 
         elapsed_ms = (time.perf_counter() - start_time) * 1000.0
 

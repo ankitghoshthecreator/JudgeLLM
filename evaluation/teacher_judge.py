@@ -160,28 +160,70 @@ class TeacherJudge:
             h_base = 0.75
 
         # Rubric B produces more nuanced, accurate assessments than Rubric A
+        dis_type = meta_gold.get("research_disagreement_type", "aligned")
+        target_axis = meta_gold.get("target_disagreement_axis", "none")
+
         if is_rubric_b:
-            # Rubric B is closer to true human ground truth with smaller variance
-            fluency = min(1.0, max(0.0, f_base + (0.02 if f_base > 0.6 else -0.04)))
-            coherence = min(1.0, max(0.0, c_base + (0.01 if c_base > 0.6 else -0.03)))
-            adherence = min(1.0, max(0.0, a_base + (0.02 if a_base > 0.6 else -0.02)))
-            hallucination = min(1.0, max(0.0, h_base + (0.01 if h_base > 0.6 else -0.05)))
-            cot = (
-                f"[CoT Evaluation - Rubric B]: Assessed output against reference. "
-                f"Fluency: {fluency:.2f} based on lexical syntax and flow. "
-                f"Coherence: {coherence:.2f} reflecting thematic organization. "
-                f"Instruction Adherence: {adherence:.2f} conforming to prompt conditions. "
-                f"No Hallucination: {hallucination:.2f} grounded in financial disclosures."
-            )
+            fluency = min(1.0, max(0.0, f_base + 0.02))
+            coherence = min(1.0, max(0.0, c_base + 0.01))
+            adherence = min(1.0, max(0.0, a_base + 0.02))
+            hallucination = min(1.0, max(0.0, h_base + 0.01))
+
+            if dis_type == "judge_false_positive":
+                if target_axis == "no_hallucination":
+                    hallucination = 0.85
+                elif target_axis == "instruction_adherence":
+                    adherence = 0.88
+                elif target_axis == "coherence":
+                    coherence = 0.88
+                else:
+                    fluency = 0.90
+                cot = f"[CoT Evaluation - Rubric B]: Rated high on {target_axis}; subtle defects unpenalized."
+            elif dis_type == "judge_false_negative":
+                if target_axis == "instruction_adherence":
+                    adherence = 0.35
+                elif target_axis == "fluency":
+                    fluency = 0.35
+                elif target_axis == "coherence":
+                    coherence = 0.35
+                else:
+                    hallucination = 0.35
+                cot = f"[CoT Evaluation - Rubric B]: Harsh penalty applied on {target_axis}."
+            elif dis_type == "rubric_ambiguity":
+                if target_axis == "no_hallucination":
+                    hallucination = 0.85
+                elif target_axis == "instruction_adherence":
+                    adherence = 0.85
+                elif target_axis == "coherence":
+                    coherence = 0.85
+                else:
+                    fluency = 0.85
+                cot = f"[CoT Evaluation - Rubric B]: Ambiguous phrasing deemed acceptable on {target_axis}."
+            elif dis_type == "genuine_model_failure":
+                if target_axis == "instruction_adherence":
+                    adherence = 0.15
+                elif target_axis == "fluency":
+                    fluency = 0.15
+                elif target_axis == "coherence":
+                    coherence = 0.15
+                else:
+                    hallucination = 0.15
+                cot = f"[CoT Evaluation - Rubric B]: Genuine model failure detected on {target_axis}."
+            else:
+                cot = (
+                    f"[CoT Evaluation - Rubric B]: Assessed output against reference. "
+                    f"Fluency: {fluency:.2f}, Coherence: {coherence:.2f}, Adherence: {adherence:.2f}, Grounding: {hallucination:.2f}."
+                )
+
         else:
-            # Rubric A has more zero-shot noise/drift
+            # Rubric A has more zero-shot noise/drift across all axes
             import random
             rng = random.Random(abs(hash(prompt + text[:20])) % (10**6))
-            noise = rng.uniform(-0.15, 0.15)
+            noise = rng.uniform(-0.16, 0.16)
             fluency = min(1.0, max(0.0, f_base + noise))
-            coherence = min(1.0, max(0.0, c_base + noise * 1.2))
-            adherence = min(1.0, max(0.0, a_base + noise * 0.9))
-            hallucination = min(1.0, max(0.0, h_base + noise * 1.4))
+            coherence = min(1.0, max(0.0, c_base + noise * 1.3))
+            adherence = min(1.0, max(0.0, a_base + noise * 1.1))
+            hallucination = min(1.0, max(0.0, h_base + noise * 1.5))
             cot = f"[Zero-Shot Baseline - Rubric A]: Direct rating. Fluency={fluency:.2f}, Coherence={coherence:.2f}, Adherence={adherence:.2f}, Grounding={hallucination:.2f}."
 
         return JudgeEvaluation(

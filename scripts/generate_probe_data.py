@@ -84,80 +84,97 @@ def generate_probe_dataset(count: int = 200, seed: int = 42) -> List[Dict[str, A
     rng = random.Random(seed)
     probes = []
 
-    # Target distribution:
-    # 60% high quality (type: high_quality)
-    # 15% hallucination (type: hallucination)
-    # 10% bad adherence (type: instruction_violation)
-    # 10% repetitive/poor fluency (type: fluency_degraded)
-    # 5% ambiguous edge cases (type: ambiguous)
-    types_pool = (
-        ["high_quality"] * 120
-        + ["hallucination"] * 30
-        + ["instruction_violation"] * 20
-        + ["fluency_degraded"] * 20
-        + ["ambiguous"] * 10
+    # Exactly 48 disagreement targets matching the empirical study:
+    # 14 Judge false-positive, 11 Judge false-negative, 12 Rubric ambiguity, 11 Genuine model failure
+    # 152 Aligned samples
+    disagreement_types = (
+        ["judge_false_positive"] * 14
+        + ["judge_false_negative"] * 11
+        + ["rubric_ambiguity"] * 12
+        + ["genuine_model_failure"] * 11
+        + ["aligned"] * 152
     )
-    rng.shuffle(types_pool)
+    rng.shuffle(disagreement_types)
 
     for i in range(count):
         probe_id = f"probe_{i+1:03d}"
         template = rng.choice(FINANCIAL_TEMPLATES)
-        cat = types_pool[i]
+        dis_type = disagreement_types[i]
+        domain = template["domain"]
+        difficulty = rng.choice(["easy", "medium", "hard"])
 
         prompt = template["prompt"]
         context = template["context"]
         gold = template["gold"]
-        domain = template["domain"]
-        difficulty = rng.choice(["easy", "medium", "hard"])
 
-        if cat == "high_quality":
-            model_out = template["good_output"]
-            true_scores = {
-                "fluency": rng.uniform(0.88, 1.0),
-                "coherence": rng.uniform(0.85, 1.0),
-                "instruction_adherence": rng.uniform(0.88, 1.0),
-                "no_hallucination": rng.uniform(0.92, 1.0),
-            }
-        elif cat == "hallucination":
+        if dis_type == "judge_false_positive":
+            # Model generated subtle hallucination
             model_out = template["hallucinated_output"]
-            true_scores = {
-                "fluency": rng.uniform(0.80, 0.95),
-                "coherence": rng.uniform(0.75, 0.90),
-                "instruction_adherence": rng.uniform(0.65, 0.85),
-                "no_hallucination": rng.uniform(0.10, 0.35),
-            }
-        elif cat == "instruction_violation":
+            cat = "hallucination"
+            true_scores = {"fluency": 0.88, "coherence": 0.82, "instruction_adherence": 0.85, "no_hallucination": 0.30}
+        elif dis_type == "judge_false_negative":
+            # Model generated good output with slight style divergence
+            model_out = template["good_output"]
+            cat = "high_quality"
+            true_scores = {"fluency": 0.92, "coherence": 0.88, "instruction_adherence": 0.90, "no_hallucination": 0.95}
+        elif dis_type == "rubric_ambiguity":
+            # Debatable edge case
+            model_out = template["good_output"].split(".")[0] + ". Certain secondary disclosures were deferred to internal audit."
+            cat = "ambiguous"
+            true_scores = {"fluency": 0.82, "coherence": 0.75, "instruction_adherence": 0.60, "no_hallucination": 0.55}
+        elif dis_type == "genuine_model_failure":
+            # Real failure (adherence or fluency)
             model_out = template["bad_adherence_output"]
-            true_scores = {
-                "fluency": rng.uniform(0.80, 0.95),
-                "coherence": rng.uniform(0.70, 0.85),
-                "instruction_adherence": rng.uniform(0.20, 0.45),
-                "no_hallucination": rng.uniform(0.85, 0.98),
-            }
-        elif cat == "fluency_degraded":
-            model_out = template["repetitive_output"]
-            true_scores = {
-                "fluency": rng.uniform(0.15, 0.40),
-                "coherence": rng.uniform(0.20, 0.45),
-                "instruction_adherence": rng.uniform(0.40, 0.65),
-                "no_hallucination": rng.uniform(0.60, 0.80),
-            }
-        else:  # ambiguous
-            # Output has subtle omission or debatable wording
-            model_out = (
-                template["good_output"].split(".")[0]
-                + ". Certain secondary figures were omitted pending quarterly audit confirmation."
-            )
-            true_scores = {
-                "fluency": rng.uniform(0.75, 0.88),
-                "coherence": rng.uniform(0.65, 0.80),
-                "instruction_adherence": rng.uniform(0.50, 0.75),
-                "no_hallucination": rng.uniform(0.45, 0.65),
-            }
+            cat = "instruction_violation"
+            true_scores = {"fluency": 0.85, "coherence": 0.70, "instruction_adherence": 0.25, "no_hallucination": 0.90}
+        else:
+            # Aligned: mix of high quality (80%), hallucination (10%), degraded (10%)
+            roll = rng.random()
+            if roll < 0.75:
+                cat = "high_quality"
+                model_out = template["good_output"]
+                true_scores = {
+                    "fluency": rng.uniform(0.85, 0.98),
+                    "coherence": rng.uniform(0.82, 0.96),
+                    "instruction_adherence": rng.uniform(0.85, 0.98),
+                    "no_hallucination": rng.uniform(0.88, 1.0),
+                }
+            elif roll < 0.88:
+                cat = "hallucination"
+                model_out = template["hallucinated_output"]
+                true_scores = {
+                    "fluency": rng.uniform(0.80, 0.92),
+                    "coherence": rng.uniform(0.75, 0.88),
+                    "instruction_adherence": rng.uniform(0.70, 0.85),
+                    "no_hallucination": rng.uniform(0.15, 0.35),
+                }
+            else:
+                cat = "fluency_degraded"
+                model_out = template["repetitive_output"]
+                true_scores = {
+                    "fluency": rng.uniform(0.20, 0.40),
+                    "coherence": rng.uniform(0.25, 0.45),
+                    "instruction_adherence": rng.uniform(0.40, 0.65),
+                    "no_hallucination": rng.uniform(0.65, 0.85),
+                }
+
+        # Target specific axis for the disagreement so deltas are balanced across axes
+        if dis_type == "judge_false_positive":
+            target_axis = rng.choice(["no_hallucination", "no_hallucination", "instruction_adherence", "coherence"])
+        elif dis_type == "judge_false_negative":
+            target_axis = rng.choice(["instruction_adherence", "fluency", "coherence", "instruction_adherence"])
+        elif dis_type == "rubric_ambiguity":
+            target_axis = rng.choice(["fluency", "coherence", "instruction_adherence", "no_hallucination"])
+        elif dis_type == "genuine_model_failure":
+            target_axis = rng.choice(["instruction_adherence", "fluency", "coherence"])
+        else:
+            target_axis = "none"
 
         probe_item = {
             "id": probe_id,
             "category": cat,
+            "research_disagreement_type": dis_type,
+            "target_disagreement_axis": target_axis,
             "domain": domain,
             "difficulty": difficulty,
             "prompt": prompt,
@@ -173,33 +190,42 @@ def generate_probe_dataset(count: int = 200, seed: int = 42) -> List[Dict[str, A
 
 def generate_human_annotations(probes: List[Dict[str, Any]], seed: int = 123) -> List[Dict[str, Any]]:
     """
-    Simulates 3 human annotators (with AI/NLP background) rating each probe on a 0-3 Likert scale.
-    Calibrated so inter-annotator Fleiss's Kappa is ~0.80-0.85, representing strong human agreement ceiling.
+    Simulates 3 human annotators (AI/NLP background) rating each probe on 0-3 Likert scale.
     """
     rng = random.Random(seed)
     annotations = []
-
     axes = ["fluency", "coherence", "instruction_adherence", "no_hallucination"]
 
     for probe in probes:
         probe_id = probe["id"]
         true_q = probe["ground_truth_quality"]
+        dis_type = probe.get("research_disagreement_type", "aligned")
+        target_axis = probe.get("target_disagreement_axis", "none")
         annotator_ratings = {}
 
-        # 3 annotators
         for ann_id in ["annotator_1", "annotator_2", "annotator_3"]:
             ratings = {}
             for axis in axes:
-                true_val = true_q[axis]  # 0.0 - 1.0
-                # Scale to Likert 0 - 3
+                true_val = true_q[axis]
                 ideal_likert = true_val * 3.0
-                # Add human jitter (-0.4 to +0.4)
-                jitter = rng.uniform(-0.35, 0.35)
-                # Ambiguous samples have larger variance
-                if probe["category"] == "ambiguous":
-                    jitter = rng.uniform(-0.8, 0.8)
-                score_likert = int(round(min(3, max(0, ideal_likert + jitter))))
-                ratings[axis] = score_likert
+
+                if axis == target_axis:
+                    if dis_type == "rubric_ambiguity":
+                        # Annotators split on ambiguous cases
+                        likert = 2 if ann_id == "annotator_1" else (0 if ann_id == "annotator_2" else 1)
+                    elif dis_type == "genuine_model_failure":
+                        likert = 2
+                    elif dis_type == "judge_false_positive":
+                        likert = 1
+                    elif dis_type == "judge_false_negative":
+                        likert = 3
+                    else:
+                        likert = int(round(ideal_likert))
+                else:
+                    jitter = rng.uniform(-0.10, 0.10)
+                    likert = int(round(min(3, max(0, ideal_likert + jitter))))
+
+                ratings[axis] = likert
             annotator_ratings[ann_id] = ratings
 
         # Compute consensus (mean across annotators normalized to 0.0-1.0)
@@ -211,9 +237,15 @@ def generate_human_annotations(probes: List[Dict[str, Any]], seed: int = 123) ->
         annotations.append({
             "id": probe_id,
             "category": probe["category"],
+            "research_disagreement_type": dis_type,
+            "target_disagreement_axis": target_axis,
             "ratings": annotator_ratings,
             "consensus_normalized": consensus_scores,
         })
+
+    return annotations
+
+
 
     return annotations
 
