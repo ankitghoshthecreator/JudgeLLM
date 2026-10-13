@@ -145,24 +145,6 @@ llm-judge-alignment/
 └── tests/
 ```
 
----
-
-## Setup
-
-```bash
-git clone https://github.com/ankitghoshthecreator/llm-judge-alignment
-pip install -r requirements.txt
-export GROQ_API_KEY=your_key
-
-# Run teacher judge on probe outputs
-python evaluation/teacher_judge.py --rubric rubrics/rubric_b.yaml \
-    --inputs data/probe_outputs_200.json
-
-# Compute agreement statistics
-python analysis/agreement_stats.py
-```
-
----
 
 ## What's Next
 

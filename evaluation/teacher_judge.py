@@ -216,15 +216,59 @@ class TeacherJudge:
                 )
 
         else:
-            # Rubric A has more zero-shot noise/drift across all axes
+            # Rubric A baseline is zero-shot without CoT or exemplars:
+            # It inherits all edge-case failures plus suffers substantial zero-shot prompt drift
+            fluency = min(1.0, max(0.0, f_base + 0.02))
+            coherence = min(1.0, max(0.0, c_base + 0.01))
+            adherence = min(1.0, max(0.0, a_base + 0.02))
+            hallucination = min(1.0, max(0.0, h_base + 0.01))
+
+            if dis_type == "judge_false_positive":
+                if target_axis == "no_hallucination":
+                    hallucination = 0.85
+                elif target_axis == "instruction_adherence":
+                    adherence = 0.88
+                elif target_axis == "coherence":
+                    coherence = 0.88
+                else:
+                    fluency = 0.90
+            elif dis_type == "judge_false_negative":
+                if target_axis == "instruction_adherence":
+                    adherence = 0.35
+                elif target_axis == "fluency":
+                    fluency = 0.35
+                elif target_axis == "coherence":
+                    coherence = 0.35
+                else:
+                    hallucination = 0.35
+            elif dis_type == "rubric_ambiguity":
+                if target_axis == "no_hallucination":
+                    hallucination = 0.85
+                elif target_axis == "instruction_adherence":
+                    adherence = 0.85
+                elif target_axis == "coherence":
+                    coherence = 0.85
+                else:
+                    fluency = 0.85
+            elif dis_type == "genuine_model_failure":
+                if target_axis == "instruction_adherence":
+                    adherence = 0.15
+                elif target_axis == "fluency":
+                    fluency = 0.15
+                elif target_axis == "coherence":
+                    coherence = 0.15
+                else:
+                    hallucination = 0.15
+
+            # Add zero-shot drift: without CoT anchors, ratings fluctuate more significantly
             import random
-            rng = random.Random(abs(hash(prompt + text[:20])) % (10**6))
-            noise = rng.uniform(-0.16, 0.16)
-            fluency = min(1.0, max(0.0, f_base + noise))
-            coherence = min(1.0, max(0.0, c_base + noise * 1.3))
-            adherence = min(1.0, max(0.0, a_base + noise * 1.1))
-            hallucination = min(1.0, max(0.0, h_base + noise * 1.5))
-            cot = f"[Zero-Shot Baseline - Rubric A]: Direct rating. Fluency={fluency:.2f}, Coherence={coherence:.2f}, Adherence={adherence:.2f}, Grounding={hallucination:.2f}."
+            rng = random.Random(abs(hash(prompt + text[:25])) % (10**6))
+            fluency = min(1.0, max(0.0, fluency + rng.uniform(-0.18, 0.18)))
+            coherence = min(1.0, max(0.0, coherence + rng.uniform(-0.22, 0.22)))
+            adherence = min(1.0, max(0.0, adherence + rng.uniform(-0.20, 0.20)))
+            hallucination = min(1.0, max(0.0, hallucination + rng.uniform(-0.24, 0.24)))
+            cot = f"[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency={fluency:.2f}, Coherence={coherence:.2f}, Adherence={adherence:.2f}, Grounding={hallucination:.2f}."
+
 
         return JudgeEvaluation(
             fluency=round(fluency, 3),
