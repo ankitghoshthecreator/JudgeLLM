@@ -1,0 +1,43 @@
+name: LLM-as-a-Judge Quality & Regression Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  evaluation-gate:
+    name: Alignment & Regression Gate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Test Suite
+        run: |
+          python -m pytest -v
+
+      - name: Execute CI/CD Evaluation Gate
+        run: |
+          python evaluation/eval_gate.py --report eval_gate_report.md
+
+      - name: Upload Gate Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-gate-report
+          path: eval_gate_report.md

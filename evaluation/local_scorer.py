@@ -30,6 +30,7 @@ class LocalScoreResult:
     jaccard_overlap: float
     latency_ms: float
     raw_metrics: Dict[str, Any]
+    evaluation_mode: str = "reference_based"
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -113,9 +114,13 @@ class LightweightStudentEvaluator:
         prompt: str = "",
         reference_context: str = "",
         gold_answer: str = "",
+        mode: str = "auto",
     ) -> LocalScoreResult:
         """
         Fast evaluation of small-LLM output.
+        Supports both 'reference_based' and 'reference_free' evaluation modes.
+        - reference_based: assesses factual grounding via lexical overlap with context/gold.
+        - reference_free: assesses self-contained cohesion, instruction following, and internal consistency.
         Returns normalized 0.0 to 1.0 scores for each axis and latency in ms.
         """
         start_time = time.perf_counter()
@@ -133,7 +138,15 @@ class LightweightStudentEvaluator:
                 jaccard_overlap=0.0,
                 latency_ms=round(elapsed_ms, 4),
                 raw_metrics={"empty_output": True},
+                evaluation_mode="reference_free" if mode == "reference_free" else "reference_based",
             )
+
+        # Determine effective mode
+        if mode == "auto":
+            has_ref = bool(reference_context and reference_context.strip()) or bool(gold_answer and gold_answer.strip())
+            effective_mode = "reference_based" if has_ref else "reference_free"
+        else:
+            effective_mode = mode
 
         output_tokens = self.tokenize(cleaned_output)
         prompt_tokens = self.tokenize(prompt)
@@ -148,8 +161,8 @@ class LightweightStudentEvaluator:
 
         rep_penalty = (rep2 * 0.2) + (rep3 * 0.4) + (rep4 * 0.4)
 
-        jaccard_context = self.compute_jaccard(output_tokens, context_tokens) if context_tokens else 0.5
-        jaccard_gold = self.compute_jaccard(output_tokens, gold_tokens) if gold_tokens else 0.5
+        jaccard_context = self.compute_jaccard(output_tokens, context_tokens) if context_tokens else 0.0
+        jaccard_gold = self.compute_jaccard(output_tokens, gold_tokens) if gold_tokens else 0.0
         jaccard_prompt = self.compute_jaccard(output_tokens, prompt_tokens) if prompt_tokens else 0.5
 
         # --- Axis 1: Fluency ---
@@ -181,14 +194,29 @@ class LightweightStudentEvaluator:
         else:
             adherence = min(1.0, 0.4 + (jaccard_prompt * 0.6))
 
-        # --- Axis 4: No Hallucination (Factual Grounding Proxy) ---
-        # Heuristic token overlap with context/gold (r~0.48 correlation ceiling)
-        if context_tokens:
-            no_hallucination = min(1.0, max(0.0, (jaccard_context * 0.65) + (jaccard_gold * 0.35)))
-            no_hallucination = min(0.92, max(0.20, no_hallucination * 1.5))
+        # --- Axis 4: No Hallucination (Reference-Based vs Reference-Free) ---
+        if effective_mode == "reference_based":
+            # Reference-Based Mode: Lexical overlap with context/gold target
+            if context_tokens:
+                no_hallucination = min(1.0, max(0.0, (jaccard_context * 0.65) + (jaccard_gold * 0.35)))
+                no_hallucination = min(0.92, max(0.20, no_hallucination * 1.5))
+            else:
+                no_hallucination = 0.60
         else:
-            no_hallucination = 0.60
-
+            # Reference-Free Mode: Self-contained internal consistency heuristics
+            # Evaluates syntax balance, numerical stability, and lack of internal contradiction
+            has_numbers = bool(re.search(r"\d", cleaned_output))
+            num_sentences = len([s for s in re.split(r"[.!?]+", cleaned_output) if s.strip()])
+            internal_consistency = 0.85
+            if rep_penalty > 0.25:
+                internal_consistency -= 0.35
+            if num_words < 10:
+                internal_consistency -= 0.20
+            # Contradiction flag heuristic (e.g. "increased... but decreased" in short spans)
+            if re.search(r"\b(increased|growth|grew)\b", cleaned_output.lower()) and re.search(r"\b(declined|dropped|fell)\b", cleaned_output.lower()):
+                if num_words < 25:
+                    internal_consistency -= 0.15
+            no_hallucination = min(0.95, max(0.25, internal_consistency))
 
         elapsed_ms = (time.perf_counter() - start_time) * 1000.0
 
@@ -210,7 +238,9 @@ class LightweightStudentEvaluator:
                 "jaccard_context": jaccard_context,
                 "jaccard_gold": jaccard_gold,
                 "jaccard_prompt": jaccard_prompt,
+                "evaluation_mode": effective_mode,
             },
+            evaluation_mode=effective_mode,
         )
 
 

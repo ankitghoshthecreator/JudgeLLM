@@ -754,51 +754,105 @@ def main():
     # =========================================================================
     with tabs[4]:
         st.subheader("Live Real-Time Evaluator Playground")
-        st.markdown("Test the sub-millisecond local scorer and simulated teacher evaluator on custom financial generation.")
+        st.markdown(
+            "Test the sub-millisecond local scorer and teacher evaluation on custom completions. "
+            "Supports **Reference-Based vs. Reference-Free** modes and **Multi-Judge Panel Ensembling**."
+        )
 
         default_prompt = "Extract Q3 operating income and net margin. Output in one single sentence."
         default_context = "In Q3, operating revenue stood at $10.2B, with operating income reaching $3.1B and net profit margin of 30.4%."
         default_output = "Q3 operating income was $3.1B with a net profit margin of 30.4%."
 
+        eval_mode_choice = st.radio(
+            "🎯 Evaluation Paradigm:",
+            [
+                "Reference-Based (Measures Grounding & Hallucination against Context/Gold)",
+                "Reference-Free (Measures Self-Contained Cohesion, Adherence & Internal Consistency without Context)",
+            ],
+            index=0,
+            horizontal=True,
+        )
+        selected_mode = "reference_based" if "Reference-Based" in eval_mode_choice else "reference_free"
+
         input_prompt = st.text_input("Prompt", default_prompt)
-        input_context = st.text_area("Reference Context", default_context, height=90)
+        input_context = st.text_area(
+            "Reference Context" if selected_mode == "reference_based" else "Reference Context (Ignored in Reference-Free Mode)",
+            default_context if selected_mode == "reference_based" else "",
+            height=90,
+            disabled=(selected_mode == "reference_free"),
+        )
         input_output = st.text_area("Model Output to Evaluate", default_output, height=90)
 
-        use_live_judge = st.checkbox(
-            "Use live Groq Teacher Judge (via .env)",
-            value=bool(os.getenv("GROQ_API_KEY")),
-            help="If unchecked or if API key is unavailable, runs in calibrated mock simulation mode."
-        )
+        play_col1, play_col2 = st.columns(2)
+        with play_col1:
+            use_live_judge = st.checkbox(
+                "Use live Groq Teacher Judge (via .env)",
+                value=bool(os.getenv("GROQ_API_KEY")),
+                help="If unchecked or if API key is unavailable, runs in calibrated mock simulation mode."
+            )
+        with play_col2:
+            use_ensemble = st.checkbox(
+                "👥 Enable Multi-Judge Panel Ensembling",
+                value=False,
+                help="Queries a 3-model panel (Llama-70B, Llama-8B, Gemma-9B) to compute consensus, median, and judge decision variance."
+            )
 
         if st.button("Evaluate Live Output", type="primary"):
             from evaluation.local_scorer import LightweightStudentEvaluator
             from evaluation.teacher_judge import TeacherJudge
 
             evaluator = LightweightStudentEvaluator()
-            res_local = evaluator.evaluate(input_output, input_prompt, input_context)
-
-            judge = TeacherJudge(
-                rubric_path=BASE_DIR / "evaluation" / "rubrics" / "rubric_b.yaml",
-                mock_mode=not use_live_judge,
+            res_local = evaluator.evaluate(
+                model_output=input_output,
+                prompt=input_prompt,
+                reference_context=input_context if selected_mode == "reference_based" else "",
+                mode=selected_mode,
             )
-            res_judge = judge.evaluate_single(input_prompt, input_context, input_output)
 
             c1, c2 = st.columns(2)
             with c1:
-                st.markdown("#### ⚡ Local Heuristic Scorer Result")
+                st.markdown(f"#### ⚡ Local Heuristic Scorer (`{selected_mode}`)")
                 st.write(f"**Fluency:** `{res_local.fluency:.3f}`")
                 st.write(f"**Coherence:** `{res_local.coherence:.3f}`")
                 st.write(f"**Instruction Adherence:** `{res_local.instruction_adherence:.3f}`")
-                st.write(f"**Grounding Proxy:** `{res_local.no_hallucination:.3f}`")
-                st.caption(f"⚡ Latency: **{res_local.latency_ms:.4f} ms**")
+                st.write(f"**{'Grounding Proxy' if selected_mode == 'reference_based' else 'Self-Consistency'}:** `{res_local.no_hallucination:.3f}`")
+                st.caption(f"⚡ Latency: **{res_local.latency_ms:.4f} ms** | Mode: **{res_local.evaluation_mode}**")
 
             with c2:
-                st.markdown("#### ⚖️ Teacher Judge (Rubric B) Result")
-                st.write(f"**Fluency:** `{res_judge.fluency:.3f}`")
-                st.write(f"**Coherence:** `{res_judge.coherence:.3f}`")
-                st.write(f"**Instruction Adherence:** `{res_judge.instruction_adherence:.3f}`")
-                st.write(f"**No Hallucination:** `{res_judge.no_hallucination:.3f}`")
-                st.info(f"**Reasoning:** {res_judge.reasoning}")
+                if use_ensemble:
+                    from evaluation.ensemble_judge import MultiJudgeEnsemble
+                    ensemble = MultiJudgeEnsemble(mock_mode=not use_live_judge)
+                    ens_res = ensemble.evaluate_cross_model(
+                        prompt=input_prompt,
+                        reference_context=input_context if selected_mode == "reference_based" else "",
+                        model_output=input_output,
+                        mode=selected_mode,
+                    )
+                    st.markdown("#### 👥 Multi-Judge Panel Consensus")
+                    st.write(f"**Consensus Fluency (Mean / Med):** `{ens_res.consensus_scores['fluency']:.3f}` / `{ens_res.median_scores['fluency']:.3f}` (σ={ens_res.std_dev['fluency']:.3f})")
+                    st.write(f"**Consensus Coherence:** `{ens_res.consensus_scores['coherence']:.3f}` (σ={ens_res.std_dev['coherence']:.3f})")
+                    st.write(f"**Consensus Adherence:** `{ens_res.consensus_scores['instruction_adherence']:.3f}` (σ={ens_res.std_dev['instruction_adherence']:.3f})")
+                    st.write(f"**Consensus Grounding:** `{ens_res.consensus_scores['no_hallucination']:.3f}` (σ={ens_res.std_dev['no_hallucination']:.3f})")
+                    st.info(f"📊 **Judge Uncertainty Index:** `{ens_res.uncertainty_index:.4f}` across {ens_res.num_judges} panel judges.")
+                    if ens_res.outlier_judges:
+                        st.warning(f"⚠️ **Outlier Judges Detected:** {', '.join(ens_res.outlier_judges)}")
+                else:
+                    judge = TeacherJudge(
+                        rubric_path=BASE_DIR / "evaluation" / "rubrics" / "rubric_b.yaml",
+                        mock_mode=not use_live_judge,
+                    )
+                    res_judge = judge.evaluate_single(
+                        prompt=input_prompt,
+                        reference_context=input_context if selected_mode == "reference_based" else "",
+                        model_output=input_output,
+                        mode=selected_mode,
+                    )
+                    st.markdown("#### ⚖️ Teacher Judge (Rubric B) Result")
+                    st.write(f"**Fluency:** `{res_judge.fluency:.3f}`")
+                    st.write(f"**Coherence:** `{res_judge.coherence:.3f}`")
+                    st.write(f"**Instruction Adherence:** `{res_judge.instruction_adherence:.3f}`")
+                    st.write(f"**No Hallucination:** `{res_judge.no_hallucination:.3f}`")
+                    st.info(f"**Reasoning:** {res_judge.reasoning}")
 
 
 if __name__ == "__main__":

@@ -293,12 +293,23 @@ class TeacherJudge:
         reference_context: str,
         model_output: str,
         metadata: Optional[Dict[str, Any]] = None,
+        mode: str = "auto",
     ) -> JudgeEvaluation:
-        """Evaluates a single sample with retries and Pydantic validation."""
-        if self.mock_mode:
-            return self._mock_evaluate(prompt, reference_context, model_output, metadata=metadata)
+        """Evaluates a single sample with retries and Pydantic validation.
+        Supports both reference-based (with context grounding) and reference-free evaluation.
+        """
+        is_ref_free = (mode == "reference_free") or (mode == "auto" and not (reference_context and reference_context.strip()))
+        effective_context = "" if is_ref_free else reference_context
 
-        full_prompt = self._format_prompt(prompt, reference_context, model_output)
+        if self.mock_mode:
+            meta = dict(metadata or {})
+            meta["evaluation_mode"] = "reference_free" if is_ref_free else "reference_based"
+            return self._mock_evaluate(prompt, effective_context, model_output, metadata=meta)
+
+        full_prompt = self._format_prompt(prompt, effective_context, model_output)
+        if is_ref_free:
+            full_prompt += "\n\n[MODE NOTE]: Evaluate in Reference-Free Mode. Focus on internal coherence, self-consistency, and instruction adherence."
+
         messages = [
             {"role": "system", "content": "You are a precise AI Judge evaluating text quality. Output valid JSON only."},
             {"role": "user", "content": full_prompt},

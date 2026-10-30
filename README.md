@@ -2,7 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Pydantic v2](https://img.shields.io/badge/Schema-Pydantic%20v2-E92063?logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
-[![Pytest](https://img.shields.io/badge/Tests-23%2F23%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
+[![Pytest](https://img.shields.io/badge/Tests-30%2F30%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
+[![CI/CD Gate](https://img.shields.io/badge/CI%2FCD%20Eval%20Gate-Passing-success?logo=github-actions&logoColor=white)](.github/workflows/eval_gate.yml)
 [![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Groq 70B](https://img.shields.io/badge/Teacher%20Model-Llama--3--70B%20%7C%20Groq-F55036)](https://groq.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -108,6 +109,9 @@ Launch the interactive dashboard to inspect probes, view cross-evaluator compari
 
 ```
 JudgeLLM/
+├── .github/
+│   └── workflows/
+│       └── eval_gate.yml           # Automated CI/CD evaluation gate for pull requests
 ├── .env.example                    # Environment variable configuration template
 ├── data/
 │   ├── probe_outputs_200.json      # 200 CIRCLE Stage 3-5 financial probe completions
@@ -120,8 +124,10 @@ JudgeLLM/
 │       ├── rubric_a.json          # Groq 70B zero-shot baseline scores
 │       └── rubric_b.json          # Groq 70B CoT + exemplar scores
 ├── evaluation/
-│   ├── local_scorer.py            # LightweightStudentEvaluator (TTR, n-gram, Jaccard)
+│   ├── local_scorer.py            # LightweightStudentEvaluator (ref-based & ref-free modes)
 │   ├── teacher_judge.py           # Groq 70B engine with Pydantic v2 schema & retry loops
+│   ├── ensemble_judge.py          # Multi-Judge Panel, variance quantification & outlier detection
+│   ├── eval_gate.py               # Enterprise CI/CD regression quality gate CLI
 │   ├── pdf_qa_pipeline.py         # PDF parsing, Q-gen, dual-model streaming, bias detection
 │   └── rubrics/
 │       ├── rubric_a.yaml          # Zero-shot baseline prompt configuration
@@ -134,6 +140,7 @@ JudgeLLM/
 │   └── label_studio_export.py     # Label Studio conversion utilities
 ├── figures/                       # Generated 300 DPI publication figures
 ├── tests/
+│   ├── test_enterprise_features.py# Ref-free, ensemble variance, and CI/CD gate tests (7 tests)
 │   ├── test_bias_pipeline.py      # PDF pipeline, bias detection, and .env multi-LLM tests (5 tests)
 │   ├── test_phase1.py             # Phase 1 test suite (11 tests)
 │   └── test_phase2.py             # Phase 2 test suite (7 tests)
@@ -231,6 +238,48 @@ This feature extends the core alignment study with a live, interactive bias dete
 
 ---
 
+## Enterprise Production Capabilities
+
+### 1. CI/CD Quality Regression Gating
+To prevent regressions in model behavior during continuous integration, the repo includes an automated evaluation gate (`evaluation/eval_gate.py`) and a GitHub Actions workflow (`.github/workflows/eval_gate.yml`).
+
+The gate evaluates 6 critical SLA metrics against strict enterprise standards:
+
+| Quality Gate | Production Standard | Monitored SLA | Gate Action |
+|---|:---:|:---:|---|
+| **Cohen's $\kappa$ Alignment** | $\ge 0.70$ | RLAIF replacement floor | Blocks PR if teacher diverges from human ceiling |
+| **Fluency Consistency** | $\ge 0.75$ | Text fluency quality bar | Blocks PR on degenerative repetition loops |
+| **Disagreement Margin** | $\le 30.0\%$ | Extreme discrepancies ($|\Delta| > 0.30$) | Blocks PR if error margin spikes |
+| **False-Positive Rate** | $\le 35.0\%$ | Uncaught hallucination rate | Blocks PR on undetected hallucinations |
+| **Local Evaluator Latency** | $\le 0.150$ ms | Sub-millisecond pre-filter SLA | Blocks PR if heuristic throughput degrades |
+| **Position Bias Rate** | $\le 20.0\%$ | Answer order swap tolerance | Blocks PR if judge flips preference on order reversal |
+
+```powershell
+# Run the quality gate CLI locally
+.venv\Scripts\python.exe evaluation/eval_gate.py --report eval_report.md
+```
+
+### 2. Reference-Based vs. Reference-Free Evaluation Modes
+Evaluation paradigms differ between retrieval-grounded tasks (RAG) and open-domain generation:
+
+- **Reference-Based Mode (`mode="reference_based"`):**
+  - Measures token recall and factual grounding against gold context.
+  - Penalizes ungrounded entities and context hallucinations.
+  - Applicable to financial document Q&A, SEC 10-K analysis, and audit synthesis.
+- **Reference-Free Mode (`mode="reference_free"`):**
+  - Evaluates open-domain completions without external ground truth.
+  - Measures internal syntactic cohesion, sentence length balance, instruction format adherence (JSON, bullet constraints), and self-contradiction cues.
+
+### 3. Multi-Judge Panel Ensembling & Variance Quantification
+To eliminate idiosyncratic single-model bias and quantify evaluator uncertainty, `MultiJudgeEnsemble` (`evaluation/ensemble_judge.py`) provides:
+
+- **Cross-Model Panels:** Queries distinct architectures (`Llama-3.3-70B`, `Llama-3.1-8B`, `Gemma2-9B`) to compute consensus mean and median ratings.
+- **Judge Variance Quantification:** Calculates per-axis variance ($\sigma^2$) and standard deviation ($\sigma$) to measure inter-judge disagreement.
+- **Outlier Judge Detection:** Automatically identifies any judge model deviating by $>1.5\sigma$ from the panel consensus.
+- **Self-Consistency Sampling:** Samples temperature-perturbed judge responses ($T=0.7$) to establish prompt stability intervals.
+
+---
+
 ## Installation & Usage
 
 ### 1. Setup Virtual Environment & Install Dependencies
@@ -255,12 +304,17 @@ GROQ_JUDGE_MODEL=llama-3.3-70b-versatile
 .venv\Scripts\python.exe run_pipeline.py
 ```
 
-### 4. Run Test Suite (23 Tests)
+### 4. Run Test Suite (30 Tests)
 ```powershell
 .venv\Scripts\python.exe -m pytest -v
 ```
 
-### 5. Launch Interactive Streamlit Dashboard
+### 5. Run CI/CD Evaluation Gate
+```powershell
+.venv\Scripts\python.exe evaluation/eval_gate.py
+```
+
+### 6. Launch Interactive Streamlit Dashboard
 ```powershell
 .venv\Scripts\python.exe -m streamlit run app.py
 ```
