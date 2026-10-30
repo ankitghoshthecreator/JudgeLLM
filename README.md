@@ -101,6 +101,7 @@ Launch the interactive dashboard to inspect probes, view cross-evaluator compari
 2. **Disagreement Deep-Dive:** Interactive $|\Delta| > 0.30$ explorer with failure category breakdowns.
 3. **Research Figures Gallery:** Direct access to all 5 publication-ready charts.
 4. **Live Playground:** Real-time dual evaluation of custom financial text completions.
+5. **🔬 Bias Investigation — PDF Q&A:** Upload any PDF, generate questions, stream dual-model answers live, run judge + human ratings, and detect position & verbosity bias (see below).
 
 ---
 
@@ -121,6 +122,7 @@ JudgeLLM/
 ├── evaluation/
 │   ├── local_scorer.py             # LightweightStudentEvaluator (TTR, n-gram, Jaccard)
 │   ├── teacher_judge.py            # Groq 70B engine with Pydantic v2 schema & retry loops
+│   ├── pdf_qa_pipeline.py          # PDF extraction, Q generation, dual-model streaming, bias detection
 │   └── rubrics/
 │       ├── rubric_a.yaml           # Zero-shot baseline prompt configuration
 │       └── rubric_b.yaml           # Chain-of-Thought + few-shot exemplar prompt
@@ -139,6 +141,89 @@ JudgeLLM/
 ├── run_pipeline.py                 # End-to-end master orchestrator
 └── app.py                          # Interactive Streamlit dashboard
 ```
+
+---
+
+## Extension: LLM Bias Investigation — PDF-to-QA Evaluation System
+
+> **Research Goal:** Investigate whether the AI judge exhibits systematic biases — specifically **position bias** (favouring whichever answer appears first) and **verbosity bias** (rewarding longer answers regardless of accuracy).
+
+This feature extends the core alignment study with a live, interactive bias detection pipeline directly inside the Streamlit dashboard.
+
+### Architecture
+
+```
+┌──────────────────────────────────────────────────┐
+│              PDF Upload (any domain)             │
+└─────────────────────────┬────────────────────────┘
+                          │ extract_text_from_pdf()
+                          ▼
+┌──────────────────────────────────────────────────┐
+│  LLM Question Generator (Groq 70B)               │
+│  → Generates N analytical questions from PDF     │
+└──────────┬──────────────────────────┬────────────┘
+           │                          │
+           ▼                          ▼
+┌─────────────────┐        ┌─────────────────────┐
+│  Model 1 Answer │        │  Model 2 Answer      │
+│  (streamed live │        │  (streamed live in   │
+│  in browser)    │        │  browser, side-by-   │
+│  e.g. Llama 70B │        │  side)  e.g. Llama 8B│
+└────────┬────────┘        └──────────┬───────────┘
+         │                            │
+         └────────────┬───────────────┘
+                      ▼
+      ┌───────────────────────────────┐
+      │  Judge LLM (Groq 70B)         │
+      │  - Rates each answer 1–10 ⭐  │
+      │  - Gives per-answer reasoning │
+      │  - Runs TWICE (A→B, then B→A)│
+      │    to detect position bias    │
+      └──────────────┬────────────────┘
+                     │
+         ┌───────────┴───────────┐
+         ▼                       ▼
+┌─────────────────┐   ┌──────────────────────┐
+│ Position Bias   │   │ Verbosity Bias        │
+│ Detection       │   │ Detection             │
+│ Score Δ when    │   │ Pearson r(word_count, │
+│ order is swapped│   │ judge_score)          │
+└─────────────────┘   └──────────────────────┘
+         │                       │
+         ▼                       ▼
+┌────────────────────────────────────────────┐
+│  Human Rating (1–10 sliders per answer)    │
+│  → Human vs. Judge alignment table        │
+└────────────────────────────────────────────┘
+```
+
+### Bias Types Detected
+
+| Bias Type | Definition | Detection Method |
+|---|---|---|
+| **Position Bias** | Judge changes score/preference purely because answer order was swapped | Run judge twice (A→B order, then B→A order); compare scores and preferred winner |
+| **Verbosity Bias** | Judge rewards longer answers even when shorter answers are more accurate | Pearson correlation between answer word count and judge star rating; longer-answer win rate |
+
+### How to Use the Bias Investigation Tab
+
+1. Open the dashboard → click **🔬 Bias Investigation — PDF Q&A**
+2. Select Model 1, Model 2, and Judge Model from the dropdowns
+3. Upload any PDF (annual report, research paper, policy document)
+4. Click **"Extract text & generate questions"** — N questions are generated from the PDF
+5. Click **"Answer all questions & run judge"** — both models stream answers live side-by-side
+6. Each question is automatically evaluated:
+   - ⚖️ Judge scores both answers (1–10 ⭐)
+   - 🔁 Position bias check fires (judge runs twice with swapped order)
+   - ⚠️ Alert shown if bias is detected
+7. Rate each answer yourself with sliders (1–10)
+8. View the **Bias Analysis Summary**:
+   - Position bias table (per question, with score delta and preference flip flag)
+   - Verbosity bias scatter plot (word count vs. judge score with regression line)
+   - Human vs. Judge alignment comparison table
+
+### Mock Mode (No API Key Required)
+
+All Groq calls gracefully fall back to **offline mock simulation** when `GROQ_API_KEY` is not set — making the full bias detection workflow demonstrable without any API credits.
 
 ---
 
@@ -172,6 +257,7 @@ python -m venv .venv
 - **Engineered an LLM-as-a-Judge alignment pipeline** benchmarking Groq 70B against a 3-annotator human consensus across 200 financial probe completions; enhanced rubric design with **Chain-of-Thought deliberation and few-shot exemplars**, boosting **Cohen's $\kappa$ from $0.59 \to 0.75$ (Fluency $\kappa = 0.82$)** to surpass the empirical threshold required to justify **RLAIF over RLHF** in post-training loops.
 - **Built a sub-millisecond heuristic evaluator (`LightweightStudentEvaluator`)** computing Type-Token Ratio (TTR), n-gram repetition penalties, and Jaccard grounding overlap at **0.048 ms/probe (20,800 probes/sec)**; demonstrated $r = 0.82$ Pearson correlation on fluency, enabling an automated **fast-pass routing architecture that reduced 70B teacher API calls by 65%** while maintaining 98%+ decision safety.
 - **Conducted failure mode decomposition** on judge–human discrepancies ($|\Delta| > 0.30$), proving **25% of disagreements stemmed from rubric ambiguity** rather than model error, directing prompt refinements that cut evaluator variance; implemented the pipeline with **Pydantic v2 schema enforcement, automated retry error feedback loops**, and established a **Fleiss's $\kappa = 0.829$ human agreement ceiling**.
+- **Designed and implemented a live LLM bias investigation system** — PDF upload pipeline streams dual-model answers side-by-side in a Streamlit browser, runs an AI judge twice with swapped answer order to isolate **position bias** (score shift on order reversal), and computes **Pearson correlation between answer word count and judge score** to quantify **verbosity bias**; includes human rating interface and alignment delta table for human-vs-judge comparison.
 
 ---
 
