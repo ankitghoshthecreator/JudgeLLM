@@ -2,7 +2,8 @@
 LLM-as-a-Judge Alignment Study — Interactive Streamlit Dashboard
 ================================================================
 Interactive exploration of human annotators vs. Groq 70B teacher critique,
-local pre-filter heuristics, disagreement breakdown, and publication figures.
+local pre-filter heuristics, disagreement breakdown, publication figures,
+and real-time PDF Dual-Model Evaluation with Position & Verbosity Bias Lab.
 """
 
 from __future__ import annotations
@@ -28,7 +29,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 FIGURES_DIR = BASE_DIR / "figures"
 
@@ -61,7 +61,6 @@ def load_data() -> Dict[str, Any]:
     with open(failures_file, "r", encoding="utf-8") as f:
         failures = json.load(f)
 
-
     return {
         "probes": probes,
         "human": human,
@@ -73,11 +72,29 @@ def load_data() -> Dict[str, Any]:
     }
 
 
+SAMPLE_FINANCIAL_TEXT = """
+In Q3 2026, the corporation reported consolidated revenue of $14.2 billion, representing an 8.4% 
+year-over-year increase driven by strong recurring subscription and transaction services revenue. 
+Operating income reached $4.1 billion, yielding an operating margin of 28.9%, compared to 26.5% 
+in the prior year period. Operating expenses included $1.2 billion in research and development 
+investments focused on enterprise AI infrastructure and automated compliance verification.
+
+The company maintained a Common Equity Tier 1 (CET1) capital ratio of 13.8%, well in excess of the 
+Basel III regulatory minimum of 10.5%. Net credit losses for the quarter were $185 million, reflecting 
+an annualized loss rate of 0.22% on total credit exposures. Total risk-weighted assets (RWA) stood at 
+$340 billion. Liquidity coverage ratio (LCR) was reported at 134%, providing significant buffer 
+against market volatility and sudden liquidity demand shocks.
+
+Management affirmed full-year guidance, projecting revenue growth of 7% to 9% and free cash flow 
+conversion exceeding 85%. Capital expenditures for the full fiscal year are expected to remain 
+between $2.2 billion and $2.4 billion, primarily dedicated to secure cloud computing infrastructure.
+"""
+
+
 def main():
     st.title("⚖️ LLM-as-a-Judge Alignment Study — Post-Training Evaluation")
     st.markdown(
-        "**Evaluating AI Feedback Quality (Groq 70B) vs. Human Judgment on Financial LLM Probes** | "
-        "*Research Target: BNY Mellon AI Hub · UBS AI Academia & Research · Goldman Sachs AI/ML*"
+        "**Evaluating AI Feedback Quality vs. Human Judgment with Real-Time Dual-Model Evaluation & Bias Detection**"
     )
 
     data = load_data()
@@ -122,17 +139,399 @@ def main():
 
     st.divider()
 
+    # Tabs with PDF Evaluator right at the front (Tab 1)
     tabs = st.tabs([
-        "🔍 Probe Inspector & Cross-Evaluator",
+        "📄 Real-Time PDF Dual-Model Evaluator & Bias Lab",
+        "🔍 200-Probe Benchmark Inspector",
         "🚨 Failure Modes & Disagreements",
-        "📊 Statistical Alignment & Figures",
-        "⚡ Real-Time Evaluator Playground",
-        "🔬 Bias Investigation — PDF Q&A",
+        "📊 Statistical Alignment & Publication Figures",
+        "⚡ Single-Probe Playground",
     ])
 
-    # ------------------ TAB 1: PROBE INSPECTOR ------------------
+    # =========================================================================
+    # TAB 1: REAL-TIME PDF DUAL-MODEL EVALUATION & BIAS LAB (PRIMARY)
+    # =========================================================================
     with tabs[0]:
-        st.subheader("Interactive Probe Explorer")
+        st.subheader("📄 Real-Time PDF Dual-Model Evaluator & Bias Lab")
+        st.markdown(
+            "**Workflow:** Upload any PDF document $\\to$ generate **10 analytical questions** $\\to$ "
+            "stream answers from **2 models simultaneously in real time** $\\to$ evaluate both with the **AI Judge (10 Stars)** $\\to$ "
+            "submit your **Human Rating (10 Stars)** $\\to$ detect **Position Bias** (order swap) and **Verbosity Bias** (length bias)."
+        )
+
+        from evaluation.pdf_qa_pipeline import (
+            compute_verbosity_stats,
+            detect_position_bias,
+            extract_text_from_pdf,
+            generate_questions,
+            get_available_models,
+            get_default_judge_model,
+            get_default_model_1,
+            get_default_model_2,
+            judge_answers,
+            stream_answer,
+        )
+
+        available_models = get_available_models()
+        def_m1 = get_default_model_1()
+        def_m2 = get_default_model_2()
+        def_judge = get_default_judge_model()
+
+        idx_m1 = available_models.index(def_m1) if def_m1 in available_models else 0
+        idx_m2 = available_models.index(def_m2) if def_m2 in available_models else (1 if len(available_models) > 1 else 0)
+        idx_judge = available_models.index(def_judge) if def_judge in available_models else 0
+
+        # ---- Configuration Card ----
+        with st.expander("⚙️ Model Configuration & API Settings", expanded=True):
+            cfg_col1, cfg_col2, cfg_col3 = st.columns(3)
+            with cfg_col1:
+                MODEL_A = st.selectbox(
+                    "🧠 Model 1 (Answering)",
+                    available_models,
+                    index=idx_m1,
+                    key="bias_model_a",
+                )
+            with cfg_col2:
+                MODEL_B = st.selectbox(
+                    "🤖 Model 2 (Answering)",
+                    available_models,
+                    index=idx_m2,
+                    key="bias_model_b",
+                )
+            with cfg_col3:
+                JUDGE_MODEL = st.selectbox(
+                    "⚖️ Judge Model",
+                    available_models,
+                    index=idx_judge,
+                    key="bias_judge_model",
+                )
+
+            NUM_QUESTIONS = st.slider(
+                "Number of Questions to Generate from PDF",
+                min_value=1,
+                max_value=20,
+                value=10,
+                step=1,
+                key="bias_num_q",
+                help="Default is 10 questions as specified in the evaluation protocol.",
+            )
+
+            api_key_present = bool(os.getenv("GROQ_API_KEY", ""))
+            if api_key_present:
+                st.success(
+                    f"🔑 **Groq API Connected via `.env`** | Evaluating: `{MODEL_A}` vs `{MODEL_B}` | Judge: `{JUDGE_MODEL}`"
+                )
+            else:
+                st.warning(
+                    "⚠️ No `GROQ_API_KEY` found — running in **Calibrated Mock Mode** "
+                    "(offline heuristic simulation). Add `GROQ_API_KEY` to your `.env` for live Groq API inference."
+                )
+
+        st.divider()
+
+        # Session state keys
+        SS_QUESTIONS = "bias_questions"
+        SS_PDF_TEXT = "bias_pdf_text"
+        SS_ANSWERS = "bias_answers"          # {idx: {"a": str, "b": str}}
+        SS_JUDGE = "bias_judge_results"     # {idx: dict}
+        SS_POSITION = "bias_position"       # {idx: dict}
+        SS_USER_SCORES = "bias_user_scores" # {idx: {"a": int, "b": int}}
+        SS_SESSION_DATA = "bias_session_data"
+
+        for k in [SS_ANSWERS, SS_JUDGE, SS_POSITION, SS_USER_SCORES]:
+            if k not in st.session_state:
+                st.session_state[k] = {}
+        if SS_QUESTIONS not in st.session_state:
+            st.session_state[SS_QUESTIONS] = []
+        if SS_PDF_TEXT not in st.session_state:
+            st.session_state[SS_PDF_TEXT] = ""
+        if SS_SESSION_DATA not in st.session_state:
+            st.session_state[SS_SESSION_DATA] = []
+
+        # ---- Step 1: PDF Upload Placeholder ----
+        st.markdown("### 📂 Step 1: Upload Your PDF Document")
+        
+        up_col1, up_col2 = st.columns([2.5, 1])
+        with up_col1:
+            uploaded_file = st.file_uploader(
+                "Drop your PDF file here (Financial Report, Research Paper, Policy Document, etc.)",
+                type=["pdf"],
+                key="bias_pdf_upload",
+            )
+        with up_col2:
+            st.markdown("**Quick Demo:**")
+            if st.button("📄 Load Sample Financial Document", use_container_width=True, key="btn_sample_doc"):
+                st.session_state[SS_PDF_TEXT] = SAMPLE_FINANCIAL_TEXT
+                with st.spinner(f"Generating {NUM_QUESTIONS} questions from sample document..."):
+                    qs = generate_questions(SAMPLE_FINANCIAL_TEXT, n=NUM_QUESTIONS, model=MODEL_A)
+                    st.session_state[SS_QUESTIONS] = qs
+                    st.session_state[SS_ANSWERS] = {}
+                    st.session_state[SS_JUDGE] = {}
+                    st.session_state[SS_POSITION] = {}
+                    st.session_state[SS_USER_SCORES] = {}
+                    st.session_state[SS_SESSION_DATA] = []
+                st.success(f"✅ Generated {len(qs)} questions from sample document.")
+
+        if uploaded_file is not None:
+            if st.button("🚀 Extract PDF & Generate Questions", type="primary", key="bias_gen_btn"):
+                with st.spinner("Extracting text from PDF..."):
+                    try:
+                        pdf_bytes = uploaded_file.read()
+                        pdf_text = extract_text_from_pdf(pdf_bytes)
+                        if not pdf_text.strip():
+                            st.error("No readable text could be extracted from this PDF.")
+                            st.stop()
+                        st.session_state[SS_PDF_TEXT] = pdf_text
+                        st.session_state[SS_ANSWERS] = {}
+                        st.session_state[SS_JUDGE] = {}
+                        st.session_state[SS_POSITION] = {}
+                        st.session_state[SS_USER_SCORES] = {}
+                        st.session_state[SS_SESSION_DATA] = []
+                    except Exception as e:
+                        st.error(f"Failed to parse PDF: {e}")
+                        st.stop()
+
+                with st.spinner(f"Generating {NUM_QUESTIONS} analytical questions using {MODEL_A}..."):
+                    qs = generate_questions(st.session_state[SS_PDF_TEXT], n=NUM_QUESTIONS, model=MODEL_A)
+                    st.session_state[SS_QUESTIONS] = qs
+                st.success(f"✅ Extracted PDF text ({len(st.session_state[SS_PDF_TEXT].split())} words) and generated {len(qs)} questions.")
+
+        questions = st.session_state.get(SS_QUESTIONS, [])
+        pdf_text = st.session_state.get(SS_PDF_TEXT, "")
+
+        if questions:
+            st.divider()
+            st.markdown(f"### ❓ Generated Questions ({len(questions)})")
+            
+            with st.expander("View all generated questions", expanded=True):
+                for i, q in enumerate(questions):
+                    st.markdown(f"**Q{i+1}:** {q}")
+
+            st.markdown("### 🤖 Step 2: Real-Time Dual-Model Answering & Judge Evaluation")
+            st.info("Click the button below to watch Model 1 and Model 2 stream answers live on screen, followed by immediate 10-star AI Judge evaluation.")
+
+            if st.button("▶️ Start Real-Time Dual-Model Evaluation", type="primary", key="bias_run_eval_btn"):
+                progress_bar = st.progress(0, text="Initializing dual models...")
+                answers_dict = {}
+                judge_dict = {}
+                position_dict = {}
+                session_data = []
+
+                for idx, question in enumerate(questions):
+                    progress_bar.progress(
+                        (idx) / len(questions),
+                        text=f"Evaluating Q{idx+1}/{len(questions)}: {question[:50]}..."
+                    )
+
+                    st.markdown(f"#### 📝 Question {idx+1}: {question}")
+                    col_a, col_b = st.columns(2)
+
+                    with col_a:
+                        st.markdown(f"**🧠 Model 1: `{MODEL_A}`**")
+                        stream_a_box = st.empty()
+                        ans_a = ""
+                        for token in stream_answer(question, pdf_text, model=MODEL_A):
+                            ans_a += token
+                            stream_a_box.markdown(ans_a + "▌")
+                        stream_a_box.markdown(ans_a)
+
+                    with col_b:
+                        st.markdown(f"**🤖 Model 2: `{MODEL_B}`**")
+                        stream_b_box = st.empty()
+                        ans_b = ""
+                        for token in stream_answer(question, pdf_text, model=MODEL_B):
+                            ans_b += token
+                            stream_b_box.markdown(ans_b + "▌")
+                        stream_b_box.markdown(ans_b)
+
+                    answers_dict[idx] = {"a": ans_a, "b": ans_b}
+
+                    # Judge evaluation (1-10 stars)
+                    with st.spinner(f"⚖️ AI Judge evaluating Q{idx+1}..."):
+                        j_res = judge_answers(
+                            question, ans_a, ans_b,
+                            model_a=MODEL_A, model_b=MODEL_B,
+                            judge_model=JUDGE_MODEL,
+                        )
+                    judge_dict[idx] = j_res
+
+                    # Position bias check (swapped order)
+                    with st.spinner(f"🔁 Checking position bias on Q{idx+1}..."):
+                        pos_res = detect_position_bias(
+                            question, ans_a, ans_b,
+                            model_a=MODEL_A, model_b=MODEL_B,
+                            judge_model=JUDGE_MODEL,
+                        )
+                    position_dict[idx] = pos_res
+
+                    session_data.append({
+                        "question_idx": idx,
+                        "answer_a": ans_a,
+                        "answer_b": ans_b,
+                        "score_a": j_res["score_a"],
+                        "score_b": j_res["score_b"],
+                    })
+
+                    # Inline feedback
+                    score_col1, score_col2 = st.columns(2)
+                    with score_col1:
+                        st.markdown(f"**AI Judge Score:** {'⭐' * j_res['score_a']} **{j_res['score_a']}/10**")
+                        st.caption(f"Critique: {j_res.get('reasoning_a', '')}")
+                    with score_col2:
+                        st.markdown(f"**AI Judge Score:** {'⭐' * j_res['score_b']} **{j_res['score_b']}/10**")
+                        st.caption(f"Critique: {j_res.get('reasoning_b', '')}")
+
+                    if pos_res.get("position_bias_detected"):
+                        st.warning(f"⚠️ **Position Bias Detected on Q{idx+1}:** Score shifted by {pos_res['avg_score_delta']} stars when order was reversed.")
+                    else:
+                        st.caption("✅ **Position Consistency:** Scores remained stable when answer order was swapped.")
+
+                    st.divider()
+
+                progress_bar.progress(1.0, text="✅ Real-time evaluation complete for all questions!")
+
+                st.session_state[SS_ANSWERS] = answers_dict
+                st.session_state[SS_JUDGE] = judge_dict
+                st.session_state[SS_POSITION] = position_dict
+                st.session_state[SS_SESSION_DATA] = session_data
+
+        # ---- Display Mode: Persistent Question Cards with Live User Star Sliders ----
+        answers_dict = st.session_state.get(SS_ANSWERS, {})
+        judge_dict = st.session_state.get(SS_JUDGE, {})
+        position_dict = st.session_state.get(SS_POSITION, {})
+        session_data = st.session_state.get(SS_SESSION_DATA, [])
+        user_scores = st.session_state.get(SS_USER_SCORES, {})
+
+        if answers_dict and judge_dict:
+            st.divider()
+            st.markdown("### 🧑‍⚖️ Step 3: Question-by-Question Evaluation & Your 10-Star Ratings")
+            st.markdown("Review the answers and AI judge ratings below. You can submit your own **10-star rating** for each model.")
+
+            for idx, question in enumerate(questions):
+                if idx not in answers_dict:
+                    continue
+
+                ans = answers_dict[idx]
+                j_res = judge_dict[idx]
+                pos_res = position_dict.get(idx, {})
+
+                with st.container():
+                    st.markdown(f"#### 📌 Q{idx+1}: {question}")
+                    q_col1, q_col2 = st.columns(2)
+
+                    with q_col1:
+                        st.markdown(f"**🧠 Model 1: `{MODEL_A}`**")
+                        st.info(ans["a"])
+                        st.markdown(f"**⚖️ AI Judge Rating:** {'⭐' * j_res['score_a']} **{j_res['score_a']} / 10 Stars**")
+                        st.caption(f"Reasoning: {j_res.get('reasoning_a', '')}")
+
+                        # Human Star Rating Slider
+                        default_user_a = user_scores.get(idx, {}).get("a", j_res["score_a"])
+                        user_a = st.slider(
+                            f"⭐ Your Rating for Model 1 (Q{idx+1})",
+                            min_value=1,
+                            max_value=10,
+                            value=int(default_user_a),
+                            key=f"human_score_a_{idx}",
+                        )
+
+                    with q_col2:
+                        st.markdown(f"**🤖 Model 2: `{MODEL_B}`**")
+                        st.success(ans["b"])
+                        st.markdown(f"**⚖️ AI Judge Rating:** {'⭐' * j_res['score_b']} **{j_res['score_b']} / 10 Stars**")
+                        st.caption(f"Reasoning: {j_res.get('reasoning_b', '')}")
+
+                        # Human Star Rating Slider
+                        default_user_b = user_scores.get(idx, {}).get("b", j_res["score_b"])
+                        user_b = st.slider(
+                            f"⭐ Your Rating for Model 2 (Q{idx+1})",
+                            min_value=1,
+                            max_value=10,
+                            value=int(default_user_b),
+                            key=f"human_score_b_{idx}",
+                        )
+
+                    user_scores[idx] = {"a": user_a, "b": user_b}
+
+                    # Bias alert for this question
+                    if pos_res.get("position_bias_detected"):
+                        st.warning(
+                            f"⚠️ **Position Bias on Q{idx+1}:** Judge shifted by {pos_res['avg_score_delta']} stars "
+                            f"(Normal: {pos_res.get('score_a_normal')}/{pos_res.get('score_b_normal')} vs "
+                            f"Swapped: {pos_res.get('score_a_swapped')}/{pos_res.get('score_b_swapped')})"
+                        )
+                    else:
+                        st.caption("✅ **Position Neutral:** Scores consistent regardless of presentation order.")
+                    st.markdown("---")
+
+            st.session_state[SS_USER_SCORES] = user_scores
+
+            # ---- Step 4: Executive Scorecard & Bias Report ----
+            st.markdown("### 📊 Step 4: Executive Alignment Scorecard & Bias Report")
+
+            avg_judge_a = sum(judge_dict[i]["score_a"] for i in judge_dict) / len(judge_dict)
+            avg_judge_b = sum(judge_dict[i]["score_b"] for i in judge_dict) / len(judge_dict)
+            avg_human_a = sum(user_scores[i]["a"] for i in user_scores) / len(user_scores)
+            avg_human_b = sum(user_scores[i]["b"] for i in user_scores) / len(user_scores)
+
+            deltas = [
+                (abs(judge_dict[i]["score_a"] - user_scores[i]["a"]) + abs(judge_dict[i]["score_b"] - user_scores[i]["b"])) / 2
+                for i in judge_dict if i in user_scores
+            ]
+            mean_delta = sum(deltas) / len(deltas) if deltas else 0.0
+
+            pos_bias_count = sum(1 for i in position_dict if position_dict[i].get("position_bias_detected"))
+            pos_bias_pct = (pos_bias_count / len(position_dict) * 100) if position_dict else 0.0
+
+            sc1, sc2, sc3, sc4, sc5 = st.columns(5)
+            with sc1:
+                st.metric(f"Judge Avg ({MODEL_A.split('-')[0]})", f"{avg_judge_a:.1f} / 10 ⭐")
+            with sc2:
+                st.metric(f"Judge Avg ({MODEL_B.split('-')[0]})", f"{avg_judge_b:.1f} / 10 ⭐")
+            with sc3:
+                st.metric("Human Avg (M1 / M2)", f"{avg_human_a:.1f} / {avg_human_b:.1f} ⭐")
+            with sc4:
+                st.metric("Human–Judge Alignment (|Δ|)", f"{mean_delta:.2f} stars", "Closer to 0 is better")
+            with sc5:
+                st.metric("Position Bias Rate", f"{pos_bias_pct:.1f}%", f"{pos_bias_count}/{len(position_dict)} Qs")
+
+            # Comparison Summary Table
+            table_rows = []
+            for i in sorted(judge_dict.keys()):
+                u = user_scores.get(i, {"a": "-", "b": "-"})
+                p = position_dict.get(i, {})
+                table_rows.append({
+                    "Question": f"Q{i+1}: {questions[i][:45]}...",
+                    f"Judge {MODEL_A.split('-')[0]}": f"{judge_dict[i]['score_a']}/10",
+                    f"Human {MODEL_A.split('-')[0]}": f"{u['a']}/10",
+                    f"Judge {MODEL_B.split('-')[0]}": f"{judge_dict[i]['score_b']}/10",
+                    f"Human {MODEL_B.split('-')[0]}": f"{u['b']}/10",
+                    "Pos Bias?": "⚠️ Yes" if p.get("position_bias_detected") else "✅ No",
+                })
+            st.dataframe(pd.DataFrame(table_rows), use_container_width=True)
+
+            # Verbosity bias analysis
+            if session_data:
+                vb_stats = compute_verbosity_stats(session_data)
+                st.markdown("#### 📏 Verbosity Bias Analysis (Answer Length vs. Rating)")
+                vc1, vc2, vc3 = st.columns(3)
+                with vc1:
+                    st.metric("Model 1 Length–Rating Correlation", f"{vb_stats['correlation_a']:.3f}")
+                with vc2:
+                    st.metric("Model 2 Length–Rating Correlation", f"{vb_stats['correlation_b']:.3f}")
+                with vc3:
+                    st.metric("Longer-Answer Win Rate", f"{vb_stats['longer_answer_win_rate']:.1%}")
+
+                if vb_stats["bias_detected"]:
+                    st.warning("⚠️ **Verbosity Bias Detected:** The AI judge has a statistically significant preference for longer answers irrespective of underlying precision.")
+                else:
+                    st.success("✅ **No Verbosity Bias:** Scores are not disproportionately driven by word count.")
+
+    # =========================================================================
+    # TAB 2: PROBE INSPECTOR (200 PROBE BENCHMARK)
+    # =========================================================================
+    with tabs[1]:
+        st.subheader("200-Probe Benchmark Inspector")
         st.markdown("Examine probe completions side-by-side across human annotators, local heuristics, and Groq 70B critiques.")
 
         col_f1, col_f2 = st.columns(2)
@@ -210,8 +609,10 @@ def main():
                     f"Latency: {loc_data['metrics']['latency_ms']:.4f} ms"
                 )
 
-    # ------------------ TAB 2: FAILURE MODES ------------------
-    with tabs[1]:
+    # =========================================================================
+    # TAB 3: FAILURE MODES & DISAGREEMENTS
+    # =========================================================================
+    with tabs[2]:
         st.subheader("Disagreement Taxonomy (|Δ| > 0.30)")
         st.markdown(
             "Identifies where Groq 70B AI judge and human consensus diverge. "
@@ -250,8 +651,10 @@ def main():
                     st.write("**Disagreed Axes:**", d["disagreed_axes"])
                     st.info(f"**Judge Reasoning:** {d['judge_reasoning']}")
 
-    # ------------------ TAB 3: STATISTICAL FIGURES ------------------
-    with tabs[2]:
+    # =========================================================================
+    # TAB 4: STATISTICAL FIGURES
+    # =========================================================================
+    with tabs[3]:
         st.subheader("Publication-Ready Visualizations Gallery")
         st.markdown("Empirical evidence justifying RLAIF post-training and pre-filter routing.")
 
@@ -271,8 +674,10 @@ def main():
                 st.error(f"Figure {fname} not found. Run run_pipeline.py first.")
             st.divider()
 
-    # ------------------ TAB 4: PLAYGROUND ------------------
-    with tabs[3]:
+    # =========================================================================
+    # TAB 5: SINGLE-PROBE PLAYGROUND
+    # =========================================================================
+    with tabs[4]:
         st.subheader("Live Real-Time Evaluator Playground")
         st.markdown("Test the sub-millisecond local scorer and simulated teacher evaluator on custom financial generation.")
 
@@ -319,410 +724,6 @@ def main():
                 st.write(f"**Instruction Adherence:** `{res_judge.instruction_adherence:.3f}`")
                 st.write(f"**No Hallucination:** `{res_judge.no_hallucination:.3f}`")
                 st.info(f"**Reasoning:** {res_judge.reasoning}")
-
-
-    # ------------------ TAB 5: BIAS INVESTIGATION ------------------
-    with tabs[4]:
-        st.subheader("🔬 LLM Bias Investigation — PDF Upload & Dual-Model Q&A")
-        st.markdown(
-            "**Research Goal:** Evaluate whether the AI judge exhibits "
-            "[position bias](https://arxiv.org/abs/2306.05685) (preference for whichever "
-            "answer appears first) or "
-            "[verbosity bias](https://arxiv.org/abs/2310.01405) (preference for longer answers "
-            "regardless of quality).\n\n"
-            "**Workflow:** Upload a PDF → LLM generates 20 questions → Two models answer each "
-            "question live → Judge LLM rates answers → You rate answers → Bias analysis."
-        )
-
-        # ---- Model selectors ----
-        from evaluation.pdf_qa_pipeline import (
-            get_available_models,
-            get_default_model_1,
-            get_default_model_2,
-            get_default_judge_model,
-        )
-
-        available_models = get_available_models()
-        def_m1 = get_default_model_1()
-        def_m2 = get_default_model_2()
-        def_judge = get_default_judge_model()
-
-        idx_m1 = available_models.index(def_m1) if def_m1 in available_models else 0
-        idx_m2 = available_models.index(def_m2) if def_m2 in available_models else (1 if len(available_models) > 1 else 0)
-        idx_judge = available_models.index(def_judge) if def_judge in available_models else 0
-
-        st.markdown("#### ⚙️ Configuration (from `.env` & Multi-LLM Selection)")
-        cfg_col1, cfg_col2, cfg_col3 = st.columns(3)
-        with cfg_col1:
-            MODEL_A = st.selectbox(
-                "Model 1 (answering)",
-                available_models,
-                index=idx_m1,
-                key="bias_model_a",
-            )
-        with cfg_col2:
-            MODEL_B = st.selectbox(
-                "Model 2 (answering)",
-                available_models,
-                index=idx_m2,
-                key="bias_model_b",
-            )
-        with cfg_col3:
-            JUDGE_MODEL = st.selectbox(
-                "Judge Model",
-                available_models,
-                index=idx_judge,
-                key="bias_judge_model",
-            )
-
-        NUM_QUESTIONS = st.slider("Number of questions to generate", 3, 20, 5, key="bias_num_q")
-
-        api_key_present = bool(os.getenv("GROQ_API_KEY", ""))
-        if api_key_present:
-            st.success(
-                f"🔑 **Groq API Connected via `.env`** — Active: `{MODEL_A}` vs `{MODEL_B}` | Judge: `{JUDGE_MODEL}`"
-            )
-        else:
-            st.warning(
-                "⚠️ No `GROQ_API_KEY` found — running in **Mock Mode** "
-                "(offline heuristic simulation). Set `GROQ_API_KEY` in your `.env` "
-                "or Streamlit Cloud secrets for live Groq inference."
-            )
-
-        st.divider()
-
-        # ---- PDF Upload ----
-        st.markdown("#### 📄 Step 1 — Upload a PDF")
-        uploaded_file = st.file_uploader(
-            "Choose a PDF file (annual report, research paper, policy document, etc.)",
-            type=["pdf"],
-            key="bias_pdf_upload",
-        )
-
-        # Session state keys
-        SS_QUESTIONS = "bias_questions"
-        SS_PDF_TEXT = "bias_pdf_text"
-        SS_ANSWERS = "bias_answers"        # {q_idx: {a: str, b: str}}
-        SS_JUDGE = "bias_judge_results"   # {q_idx: dict}
-        SS_POSITION = "bias_position"     # {q_idx: dict}
-        SS_USER_SCORES = "bias_user_scores"  # {q_idx: {a: int, b: int}}
-        SS_SESSION_DATA = "bias_session_data"  # list[dict] for verbosity
-
-        for key in [SS_QUESTIONS, SS_PDF_TEXT, SS_ANSWERS, SS_JUDGE,
-                    SS_POSITION, SS_USER_SCORES, SS_SESSION_DATA]:
-            if key not in st.session_state:
-                st.session_state[key] = {} if key != SS_QUESTIONS and key != SS_SESSION_DATA else ([] if key == SS_SESSION_DATA else None)
-
-        if uploaded_file is not None:
-            if st.button("📚 Extract text & generate questions", type="primary", key="bias_gen_btn"):
-                with st.spinner("Extracting PDF text…"):
-                    from evaluation.pdf_qa_pipeline import extract_text_from_pdf, generate_questions
-                    pdf_bytes = uploaded_file.read()
-                    try:
-                        pdf_text = extract_text_from_pdf(pdf_bytes)
-                        st.session_state[SS_PDF_TEXT] = pdf_text
-                        st.session_state[SS_ANSWERS] = {}
-                        st.session_state[SS_JUDGE] = {}
-                        st.session_state[SS_POSITION] = {}
-                        st.session_state[SS_USER_SCORES] = {}
-                        st.session_state[SS_SESSION_DATA] = []
-                    except Exception as exc:
-                        st.error(f"PDF extraction failed: {exc}")
-                        st.stop()
-
-                with st.spinner(f"Generating {NUM_QUESTIONS} questions…"):
-                    qs = generate_questions(st.session_state[SS_PDF_TEXT], n=NUM_QUESTIONS, model=MODEL_A)
-                    st.session_state[SS_QUESTIONS] = qs
-                st.success(f"✅ Generated {len(qs)} questions from your PDF.")
-
-        questions = st.session_state.get(SS_QUESTIONS) or []
-        pdf_text = st.session_state.get(SS_PDF_TEXT) or ""
-
-        if questions:
-            st.markdown(f"#### ❓ Generated Questions ({len(questions)})")
-            for i, q in enumerate(questions):
-                st.markdown(f"**Q{i+1}.** {q}")
-
-            st.divider()
-            st.markdown("#### 🤖 Step 2 — Run Dual-Model Answering + Judge")
-
-            if st.button("▶️ Answer all questions & run judge", type="primary", key="bias_run_btn"):
-                from evaluation.pdf_qa_pipeline import (
-                    stream_answer, collect_stream, judge_answers, detect_position_bias
-                )
-
-                progress_bar = st.progress(0, text="Starting…")
-                answers_dict = {}
-                judge_dict = {}
-                position_dict = {}
-                session_data = []
-
-                for idx, question in enumerate(questions):
-                    progress_bar.progress(
-                        (idx) / len(questions),
-                        text=f"Processing Q{idx+1}/{len(questions)}: {question[:60]}…"
-                    )
-
-                    st.markdown(f"---\n##### Q{idx+1}: {question}")
-
-                    col_a, col_b = st.columns(2)
-
-                    with col_a:
-                        st.markdown(f"**🧠 Model 1: `{MODEL_A}`**")
-                        stream_a_placeholder = st.empty()
-                        answer_a = ""
-                        gen_a = stream_answer(question, pdf_text, model=MODEL_A)
-                        for chunk in gen_a:
-                            answer_a += chunk
-                            stream_a_placeholder.markdown(answer_a + "▌")
-                        stream_a_placeholder.markdown(answer_a)
-
-                    with col_b:
-                        st.markdown(f"**🤖 Model 2: `{MODEL_B}`**")
-                        stream_b_placeholder = st.empty()
-                        answer_b = ""
-                        gen_b = stream_answer(question, pdf_text, model=MODEL_B)
-                        for chunk in gen_b:
-                            answer_b += chunk
-                            stream_b_placeholder.markdown(answer_b + "▌")
-                        stream_b_placeholder.markdown(answer_b)
-
-                    answers_dict[idx] = {"a": answer_a, "b": answer_b}
-
-                    # Judge rating
-                    with st.spinner("⚖️ Judge evaluating…"):
-                        j_result = judge_answers(
-                            question, answer_a, answer_b,
-                            model_a=MODEL_A, model_b=MODEL_B,
-                            judge_model=JUDGE_MODEL,
-                        )
-                    judge_dict[idx] = j_result
-
-                    # Position bias check
-                    with st.spinner("🔁 Checking position bias (swapping answer order)…"):
-                        pos_result = detect_position_bias(
-                            question, answer_a, answer_b,
-                            MODEL_A, MODEL_B, judge_model=JUDGE_MODEL,
-                        )
-                    position_dict[idx] = pos_result
-
-                    session_data.append({
-                        "question_idx": idx,
-                        "answer_a": answer_a,
-                        "answer_b": answer_b,
-                        "score_a": j_result["score_a"],
-                        "score_b": j_result["score_b"],
-                    })
-
-                    # Display judge result inline
-                    j_col1, j_col2 = st.columns(2)
-                    with j_col1:
-                        st.metric(
-                            f"⚖️ Judge Score — {MODEL_A}",
-                            f"{'⭐' * j_result['score_a']} {j_result['score_a']}/10",
-                        )
-                        st.caption(j_result.get("reasoning_a", ""))
-                    with j_col2:
-                        st.metric(
-                            f"⚖️ Judge Score — {MODEL_B}",
-                            f"{'⭐' * j_result['score_b']} {j_result['score_b']}/10",
-                        )
-                        st.caption(j_result.get("reasoning_b", ""))
-
-                    if pos_result["position_bias_detected"]:
-                        st.warning(
-                            f"⚠️ **Position Bias Detected on Q{idx+1}!** "
-                            f"Score shifted by avg {pos_result['avg_score_delta']} pts when answer order was swapped. "
-                            f"Preference normal: **{pos_result['preference_normal']}** → "
-                            f"swapped: **{pos_result['preference_swapped']}**"
-                        )
-                    else:
-                        st.success(f"✅ Q{idx+1}: No significant position bias detected.")
-
-                progress_bar.progress(1.0, text="✅ All questions processed!")
-
-                st.session_state[SS_ANSWERS] = answers_dict
-                st.session_state[SS_JUDGE] = judge_dict
-                st.session_state[SS_POSITION] = position_dict
-                st.session_state[SS_SESSION_DATA] = session_data
-
-        # ---- Human Ratings ----
-        answers_dict = st.session_state.get(SS_ANSWERS, {})
-        judge_dict = st.session_state.get(SS_JUDGE, {})
-        position_dict = st.session_state.get(SS_POSITION, {})
-        session_data = st.session_state.get(SS_SESSION_DATA, [])
-
-        if answers_dict and judge_dict:
-            st.divider()
-            st.markdown("#### 🧑‍⚖️ Step 3 — Your Ratings")
-            st.markdown(
-                "Rate each answer out of 10. Your ratings will be compared "
-                "against the judge's to measure **human–judge alignment**."
-            )
-
-            user_scores = st.session_state.get(SS_USER_SCORES, {})
-
-            for idx, question in enumerate(questions):
-                if idx not in answers_dict:
-                    continue
-                with st.expander(f"Q{idx+1}: {question}", expanded=False):
-                    col_u1, col_u2 = st.columns(2)
-                    with col_u1:
-                        st.markdown(f"**{MODEL_A}:**")
-                        st.write(answers_dict[idx]["a"])
-                        user_a = st.slider(
-                            f"Your score for Model 1 (Q{idx+1})",
-                            1, 10,
-                            user_scores.get(idx, {}).get("a", 5),
-                            key=f"user_score_a_{idx}",
-                        )
-                    with col_u2:
-                        st.markdown(f"**{MODEL_B}:**")
-                        st.write(answers_dict[idx]["b"])
-                        user_b = st.slider(
-                            f"Your score for Model 2 (Q{idx+1})",
-                            1, 10,
-                            user_scores.get(idx, {}).get("b", 5),
-                            key=f"user_score_b_{idx}",
-                        )
-                    user_scores[idx] = {"a": user_a, "b": user_b}
-
-            st.session_state[SS_USER_SCORES] = user_scores
-
-            # ---- Bias Summary ----
-            st.divider()
-            st.markdown("#### 📊 Step 4 — Bias Analysis Summary")
-
-            # Position bias summary table
-            pos_records = []
-            for idx, q in enumerate(questions):
-                if idx not in position_dict:
-                    continue
-                pr = position_dict[idx]
-                pos_records.append({
-                    "Q#": f"Q{idx+1}",
-                    "Question (truncated)": q[:55] + "…" if len(q) > 55 else q,
-                    "Score A (normal)": pr["score_a_normal"],
-                    "Score A (swapped)": pr["score_a_swapped"],
-                    "Score B (normal)": pr["score_b_normal"],
-                    "Score B (swapped)": pr["score_b_swapped"],
-                    "Avg Δ": pr["avg_score_delta"],
-                    "Pref Flipped?": "⚠️ Yes" if pr["preference_flipped"] else "✅ No",
-                    "Bias?": "⚠️ YES" if pr["position_bias_detected"] else "✅ No",
-                })
-
-            if pos_records:
-                import pandas as pd
-                pos_df = pd.DataFrame(pos_records)
-                st.markdown("##### Position Bias — Per-Question Results")
-                st.dataframe(pos_df.set_index("Q#"), use_container_width=True)
-
-                bias_count = sum(1 for r in pos_records if "YES" in r["Bias?"])
-                if bias_count > len(pos_records) * 0.3:
-                    st.error(
-                        f"🚨 **Position bias detected in {bias_count}/{len(pos_records)} questions "
-                        f"({bias_count/len(pos_records)*100:.0f}%)**. The judge's ratings "
-                        f"changed substantially when answer order was reversed."
-                    )
-                else:
-                    st.success(
-                        f"✅ Position bias was minimal: only {bias_count}/{len(pos_records)} "
-                        f"questions showed significant order sensitivity."
-                    )
-
-            # Verbosity bias analysis
-            if session_data:
-                from evaluation.pdf_qa_pipeline import compute_verbosity_stats
-                vb_stats = compute_verbosity_stats(session_data)
-                st.markdown("##### Verbosity Bias — Word Count vs. Judge Score")
-
-                vb_col1, vb_col2, vb_col3 = st.columns(3)
-                with vb_col1:
-                    st.metric("Model 1 Length-Score Corr.", f"{vb_stats['correlation_a']:.3f}")
-                with vb_col2:
-                    st.metric("Model 2 Length-Score Corr.", f"{vb_stats['correlation_b']:.3f}")
-                with vb_col3:
-                    win_rate = vb_stats.get("longer_answer_win_rate", 0.0)
-                    st.metric("Longer-Answer Win Rate", f"{win_rate:.1%}")
-
-                if vb_stats["bias_detected"]:
-                    st.warning(
-                        "⚠️ **Verbosity bias likely detected.** The judge tends to give higher "
-                        "scores to longer answers. A strong positive length-score correlation "
-                        f"(r ≥ 0.4) or longer-answer win rate ≥ 65% suggests the judge rewards "
-                        f"verbosity over accuracy."
-                    )
-                else:
-                    st.success("✅ Verbosity bias not detected — judge scores are not strongly correlated with answer length.")
-
-                # Scatter plot: word count vs. judge score
-                try:
-                    import matplotlib.pyplot as plt
-                    import numpy as np
-
-                    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-                    fig.suptitle("Verbosity Bias: Word Count vs. Judge Score", fontsize=13)
-
-                    words_a = vb_stats.get("words_a", [])
-                    words_b = vb_stats.get("words_b", [])
-                    scores_a = vb_stats.get("scores_a", [])
-                    scores_b = vb_stats.get("scores_b", [])
-
-                    for ax, words, scores, label, color in [
-                        (axes[0], words_a, scores_a, MODEL_A, "#4C72B0"),
-                        (axes[1], words_b, scores_b, MODEL_B, "#DD8452"),
-                    ]:
-                        ax.scatter(words, scores, color=color, alpha=0.8, s=80, edgecolors="white", linewidth=0.5)
-                        if len(words) > 1:
-                            m, b = np.polyfit(words, scores, 1)
-                            x_line = np.linspace(min(words), max(words), 50)
-                            ax.plot(x_line, m * x_line + b, "--", color="red", linewidth=1.5, label="Trend")
-                        ax.set_xlabel("Answer Word Count", fontsize=10)
-                        ax.set_ylabel("Judge Score (1–10)", fontsize=10)
-                        ax.set_title(label[:40], fontsize=10)
-                        ax.set_ylim(0, 11)
-                        ax.legend(fontsize=9)
-
-                    plt.tight_layout()
-                    st.pyplot(fig)
-                    plt.close(fig)
-                except Exception:
-                    st.info("Install matplotlib for verbosity scatter plot.")
-
-            # Human vs Judge alignment
-            if user_scores and judge_dict:
-                st.markdown("##### Human vs. Judge Rating Comparison")
-                align_records = []
-                for idx in sorted(judge_dict.keys()):
-                    if idx not in user_scores:
-                        continue
-                    j = judge_dict[idx]
-                    u = user_scores[idx]
-                    delta_a = abs(j["score_a"] - u["a"])
-                    delta_b = abs(j["score_b"] - u["b"])
-                    align_records.append({
-                        "Q#": f"Q{idx+1}",
-                        "Judge M1": j["score_a"],
-                        "Human M1": u["a"],
-                        "|Δ| M1": delta_a,
-                        "Judge M2": j["score_b"],
-                        "Human M2": u["b"],
-                        "|Δ| M2": delta_b,
-                        "Avg |Δ|": round((delta_a + delta_b) / 2, 1),
-                    })
-
-                if align_records:
-                    import pandas as pd
-                    align_df = pd.DataFrame(align_records)
-                    st.dataframe(align_df.set_index("Q#"), use_container_width=True)
-
-                    avg_delta_all = sum(r["Avg |Δ|"] for r in align_records) / len(align_records)
-                    if avg_delta_all < 1.5:
-                        st.success(f"✅ Human–Judge alignment is strong (avg |Δ| = {avg_delta_all:.2f} pts).")
-                    elif avg_delta_all < 3.0:
-                        st.warning(f"⚠️ Moderate human–judge disagreement (avg |Δ| = {avg_delta_all:.2f} pts).")
-                    else:
-                        st.error(f"🚨 High human–judge disagreement (avg |Δ| = {avg_delta_all:.2f} pts). Judge may have systematic biases.")
 
 
 if __name__ == "__main__":

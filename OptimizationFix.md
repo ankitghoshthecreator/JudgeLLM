@@ -90,7 +90,7 @@ This document details every quantitative optimization, metric improvement, and e
 
 ## 3. Resume Bullets (Ready to Copy for Quant/AI Roles)
 
-Targeting: **AI Research Intern / AI Research Engineer** (BNY Mellon AI Hub, UBS AI Academia & Research, Goldman Sachs AI/ML, JPMorgan Asset & Wealth Management, Morgan Stanley).
+Targeting: **AI Research Engineer / Quantitative AI Evaluator**.
 
 ### Option 1: Focus on Alignment & Post-Training (RLAIF vs. RLHF)
 > - **Engineered an LLM-as-a-Judge alignment pipeline** benchmarking Groq 70B against a 3-annotator human consensus across 200 financial probe completions; enhanced rubric design with **Chain-of-Thought deliberation and few-shot exemplars**, boosting **Cohen's $\kappa$ from $0.59 \to 0.75$ (Fluency $\kappa = 0.82$)** to surpass the empirical threshold required to justify **RLAIF over RLHF** in post-training loops.

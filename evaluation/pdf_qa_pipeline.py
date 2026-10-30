@@ -158,7 +158,7 @@ _MOCK_QUESTIONS = [
 
 def generate_questions(
     pdf_text: str,
-    n: int = 20,
+    n: int = 10,
     model: str | None = None,
 ) -> List[str]:
     """

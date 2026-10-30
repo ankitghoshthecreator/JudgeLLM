@@ -7,8 +7,7 @@
 [![Groq 70B](https://img.shields.io/badge/Teacher%20Model-Llama--3--70B%20%7C%20Groq-F55036)](https://groq.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **Role Target:** AI Research Intern / AI Research Engineer  
-> **Target Institutions:** BNY Mellon AI Hub · UBS AI Academia & Research · Goldman Sachs AI/ML · JPMorgan Asset & Wealth Management
+> **Focus:** Post-Training Evaluation · LLM-as-a-Judge Alignment · Position & Verbosity Bias Detection
 
 ---
 
