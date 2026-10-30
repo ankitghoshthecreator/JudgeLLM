@@ -9,18 +9,18 @@
   },
   "rubric_a_judge_human_kappa": {
     "quadratic_weighted": {
-      "fluency": 0.791,
-      "coherence": 0.583,
-      "instruction_adherence": 0.48,
-      "no_hallucination": 0.765,
-      "overall": 0.655
+      "fluency": 0.697,
+      "coherence": 0.534,
+      "instruction_adherence": 0.527,
+      "no_hallucination": 0.54,
+      "overall": 0.575
     },
     "unweighted": {
-      "fluency": 0.495,
-      "coherence": 0.418,
-      "instruction_adherence": 0.3,
-      "no_hallucination": 0.701,
-      "overall": 0.479
+      "fluency": 0.422,
+      "coherence": 0.354,
+      "instruction_adherence": 0.284,
+      "no_hallucination": 0.1,
+      "overall": 0.29
     }
   },
   "rubric_b_judge_human_kappa": {
