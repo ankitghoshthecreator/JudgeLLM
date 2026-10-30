@@ -8,6 +8,7 @@ env/
 # Secrets
 .env
 .env.*
+!.env.example
 
 # IDE
 .idea/
@@ -25,4 +26,4 @@ env/
 # Generated data
 # data/ (tracked for deployment)
 outputs/
-.tmp/
+.tmp/

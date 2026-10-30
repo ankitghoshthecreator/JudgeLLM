@@ -12,6 +12,12 @@ import os
 from pathlib import Path
 from typing import Any, Dict, List
 
+from dotenv import load_dotenv
+
+BASE_DIR = Path(__file__).resolve().parent
+# Load environment variables from .env if present
+load_dotenv(BASE_DIR / ".env", override=False)
+
 import pandas as pd
 import streamlit as st
 
@@ -278,6 +284,12 @@ def main():
         input_context = st.text_area("Reference Context", default_context, height=90)
         input_output = st.text_area("Model Output to Evaluate", default_output, height=90)
 
+        use_live_judge = st.checkbox(
+            "Use live Groq Teacher Judge (via .env)",
+            value=bool(os.getenv("GROQ_API_KEY")),
+            help="If unchecked or if API key is unavailable, runs in calibrated mock simulation mode."
+        )
+
         if st.button("Evaluate Live Output", type="primary"):
             from evaluation.local_scorer import LightweightStudentEvaluator
             from evaluation.teacher_judge import TeacherJudge
@@ -285,7 +297,10 @@ def main():
             evaluator = LightweightStudentEvaluator()
             res_local = evaluator.evaluate(input_output, input_prompt, input_context)
 
-            judge = TeacherJudge(rubric_path=BASE_DIR / "evaluation" / "rubrics" / "rubric_b.yaml", mock_mode=True)
+            judge = TeacherJudge(
+                rubric_path=BASE_DIR / "evaluation" / "rubrics" / "rubric_b.yaml",
+                mock_mode=not use_live_judge,
+            )
             res_judge = judge.evaluate_single(input_prompt, input_context, input_output)
 
             c1, c2 = st.columns(2)
@@ -320,37 +335,57 @@ def main():
         )
 
         # ---- Model selectors ----
-        st.markdown("#### ⚙️ Configuration")
+        from evaluation.pdf_qa_pipeline import (
+            get_available_models,
+            get_default_model_1,
+            get_default_model_2,
+            get_default_judge_model,
+        )
+
+        available_models = get_available_models()
+        def_m1 = get_default_model_1()
+        def_m2 = get_default_model_2()
+        def_judge = get_default_judge_model()
+
+        idx_m1 = available_models.index(def_m1) if def_m1 in available_models else 0
+        idx_m2 = available_models.index(def_m2) if def_m2 in available_models else (1 if len(available_models) > 1 else 0)
+        idx_judge = available_models.index(def_judge) if def_judge in available_models else 0
+
+        st.markdown("#### ⚙️ Configuration (from `.env` & Multi-LLM Selection)")
         cfg_col1, cfg_col2, cfg_col3 = st.columns(3)
         with cfg_col1:
             MODEL_A = st.selectbox(
                 "Model 1 (answering)",
-                ["llama-3.3-70b-versatile", "llama-3.1-8b-instant", "gemma2-9b-it", "mixtral-8x7b-32768"],
-                index=0,
+                available_models,
+                index=idx_m1,
                 key="bias_model_a",
             )
         with cfg_col2:
             MODEL_B = st.selectbox(
                 "Model 2 (answering)",
-                ["llama-3.1-8b-instant", "llama-3.3-70b-versatile", "gemma2-9b-it", "mixtral-8x7b-32768"],
-                index=0,
+                available_models,
+                index=idx_m2,
                 key="bias_model_b",
             )
         with cfg_col3:
             JUDGE_MODEL = st.selectbox(
                 "Judge Model",
-                ["llama-3.3-70b-versatile", "llama-3.1-8b-instant", "gemma2-9b-it"],
-                index=0,
+                available_models,
+                index=idx_judge,
                 key="bias_judge_model",
             )
 
         NUM_QUESTIONS = st.slider("Number of questions to generate", 3, 20, 5, key="bias_num_q")
 
         api_key_present = bool(os.getenv("GROQ_API_KEY", ""))
-        if not api_key_present:
+        if api_key_present:
+            st.success(
+                f"🔑 **Groq API Connected via `.env`** — Active: `{MODEL_A}` vs `{MODEL_B}` | Judge: `{JUDGE_MODEL}`"
+            )
+        else:
             st.warning(
                 "⚠️ No `GROQ_API_KEY` found — running in **Mock Mode** "
-                "(offline heuristic simulation). Set `GROQ_API_KEY` in your environment "
+                "(offline heuristic simulation). Set `GROQ_API_KEY` in your `.env` "
                 "or Streamlit Cloud secrets for live Groq inference."
             )
 

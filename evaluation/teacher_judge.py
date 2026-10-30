@@ -20,6 +20,14 @@ from typing import Any, Dict, List, Optional, Tuple
 import yaml
 from pydantic import BaseModel, Field, field_validator
 
+try:
+    from dotenv import load_dotenv
+    _env_path = Path(__file__).resolve().parent.parent / ".env"
+    if _env_path.exists():
+        load_dotenv(_env_path, override=False)
+except ImportError:
+    pass
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("TeacherJudge")
 
@@ -69,13 +77,13 @@ class TeacherJudge:
     def __init__(
         self,
         rubric_path: str | Path,
-        model_name: str = "llama-3.3-70b-versatile",
+        model_name: Optional[str] = None,
         api_key: Optional[str] = None,
         mock_mode: bool = False,
         max_retries: int = 3,
     ):
         self.rubric = load_rubric(rubric_path)
-        self.model_name = model_name
+        self.model_name = model_name or os.getenv("GROQ_JUDGE_MODEL") or os.getenv("GROQ_MODEL") or "llama-3.3-70b-versatile"
         self.api_key = api_key or os.getenv("GROQ_API_KEY")
         self.mock_mode = mock_mode or not bool(self.api_key)
         self.max_retries = max_retries

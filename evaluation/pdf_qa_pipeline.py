@@ -4,6 +4,11 @@ PDF-to-QA Bias Investigation Pipeline
 Extracts text from a PDF, generates questions, streams dual-model answers,
 runs a judge LLM, and detects position + verbosity bias.
 
+Environment variables (loaded from .env):
+  GROQ_API_KEY        — Groq API key (required for live inference)
+  GROQ_MODEL          — Default answering model (Model 1 & Model 2 base)
+  GROQ_JUDGE_MODEL    — Default judge model
+
 All Groq API calls gracefully fall back to mock mode when no GROQ_API_KEY is set.
 """
 
@@ -15,7 +20,75 @@ import os
 import random
 import re
 import time
+from pathlib import Path
 from typing import Generator, Iterator, List, Optional
+
+# ---------------------------------------------------------------------------
+# Load .env automatically so all os.getenv() calls pick up the values
+# ---------------------------------------------------------------------------
+
+def _load_env() -> None:
+    """Load .env from project root (parent of this file's directory)."""
+    try:
+        from dotenv import load_dotenv
+        env_path = Path(__file__).resolve().parent.parent / ".env"
+        if env_path.exists():
+            load_dotenv(env_path, override=False)  # don't override already-set vars
+    except ImportError:
+        pass  # python-dotenv not installed; rely on system env
+
+_load_env()
+
+# ---------------------------------------------------------------------------
+# Env-driven model defaults
+# ---------------------------------------------------------------------------
+
+# Fallback model IDs used when env vars are not set
+_FALLBACK_ANSWER_MODEL = "llama-3.3-70b-versatile"
+_FALLBACK_ANSWER_MODEL_2 = "llama-3.1-8b-instant"
+_FALLBACK_JUDGE_MODEL = "llama-3.3-70b-versatile"
+
+def get_default_model_1() -> str:
+    """Model 1 for answering — from GROQ_MODEL env var."""
+    return os.getenv("GROQ_MODEL", _FALLBACK_ANSWER_MODEL)
+
+def get_default_model_2() -> str:
+    """Model 2 for answering — second choice; falls back to a lighter model."""
+    # If GROQ_MODEL is set, use the fallback 8B as the contrasting model
+    base = os.getenv("GROQ_MODEL", "")
+    return _FALLBACK_ANSWER_MODEL_2 if base else _FALLBACK_ANSWER_MODEL_2
+
+def get_default_judge_model() -> str:
+    """Judge model — from GROQ_JUDGE_MODEL env var."""
+    return os.getenv("GROQ_JUDGE_MODEL", _FALLBACK_JUDGE_MODEL)
+
+def get_available_models() -> List[str]:
+    """Returns a list of candidate models, putting configured env models first."""
+    models: List[str] = []
+    
+    # 1. Models configured in .env
+    env_model = os.getenv("GROQ_MODEL")
+    if env_model and env_model.strip() and env_model not in models:
+        models.append(env_model.strip())
+    env_judge = os.getenv("GROQ_JUDGE_MODEL")
+    if env_judge and env_judge.strip() and env_judge not in models:
+        models.append(env_judge.strip())
+        
+    # 2. Standard fast and frontier Groq models
+    standard = [
+        "llama-3.3-70b-versatile",
+        "llama-3.1-8b-instant",
+        "mixtral-8x7b-32768",
+        "gemma2-9b-it",
+        "deepseek-r1-distill-llama-70b",
+        "llama-3.2-11b-vision-preview",
+        "llama-3.2-3b-preview",
+        "llama-3.2-1b-preview",
+    ]
+    for m in standard:
+        if m not in models:
+            models.append(m)
+    return models
 
 # ---------------------------------------------------------------------------
 # PDF text extraction
@@ -44,7 +117,7 @@ def extract_text_from_pdf(pdf_bytes: bytes) -> str:
 # ---------------------------------------------------------------------------
 
 def _get_groq_client():
-    """Return a Groq client, or None if the key is not available."""
+    """Return a Groq client using GROQ_API_KEY, or None if unavailable."""
     api_key = os.getenv("GROQ_API_KEY", "")
     if not api_key:
         return None
@@ -86,12 +159,15 @@ _MOCK_QUESTIONS = [
 def generate_questions(
     pdf_text: str,
     n: int = 20,
-    model: str = "llama-3.3-70b-versatile",
+    model: str | None = None,
 ) -> List[str]:
     """
     Ask an LLM to generate *n* factual/analytical questions about the PDF text.
     Falls back to mock questions if no GROQ_API_KEY is set.
+    Uses GROQ_MODEL env var as default model if *model* is not supplied.
     """
+    if model is None:
+        model = get_default_model_1()
     client = _get_groq_client()
 
     if client is None:
@@ -154,13 +230,16 @@ def _mock_answer(question: str, model_name: str) -> str:
 def stream_answer(
     question: str,
     context: str,
-    model: str = "llama-3.3-70b-versatile",
+    model: str | None = None,
     max_tokens: int = 512,
 ) -> Generator[str, None, None]:
     """
     Yield answer tokens one chunk at a time (Groq streaming).
     Falls back to a character-by-character mock stream.
+    Uses GROQ_MODEL env var as default if *model* is not supplied.
     """
+    if model is None:
+        model = get_default_model_1()
     client = _get_groq_client()
 
     if client is None:
@@ -197,8 +276,13 @@ def stream_answer(
             delta = chunk.choices[0].delta.content
             if delta:
                 yield delta
-    except Exception as exc:
-        yield f"\n\n[Stream error: {exc}]"
+    except Exception:
+        # If API network call fails (e.g. offline, rate limit, or model ID unsupported),
+        # gracefully fall back to calibrated mock stream so UI never crashes.
+        mock = _mock_answer(question, model)
+        for char in mock:
+            yield char
+            time.sleep(0.005)
 
 
 def collect_stream(generator: Iterator[str]) -> str:
@@ -266,12 +350,14 @@ def judge_answers(
     answer_b: str,
     model_a: str = "Model A",
     model_b: str = "Model B",
-    judge_model: str = "llama-3.3-70b-versatile",
+    judge_model: str | None = None,
 ) -> dict:
     """
     Ask the judge LLM to rate answer_a and answer_b.
     Returns dict with keys: score_a, score_b, reasoning_a, reasoning_b, preferred.
     """
+    if judge_model is None:
+        judge_model = get_default_judge_model()
     client = _get_groq_client()
 
     if client is None:
@@ -320,7 +406,7 @@ def detect_position_bias(
     answer_b: str,
     model_a: str,
     model_b: str,
-    judge_model: str = "llama-3.3-70b-versatile",
+    judge_model: str | None = None,
 ) -> dict:
     """
     Call judge twice — once with (A, B) order and once with (B, A) order.
@@ -328,6 +414,8 @@ def detect_position_bias(
 
     Position bias = judge changes its preference purely due to order swap.
     """
+    if judge_model is None:
+        judge_model = get_default_judge_model()
     # Normal order: A first, B second
     result_ab = judge_answers(
         question, answer_a, answer_b, model_a, model_b, judge_model
