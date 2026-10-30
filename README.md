@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Pydantic v2](https://img.shields.io/badge/Schema-Pydantic%20v2-E92063?logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
-[![Pytest](https://img.shields.io/badge/Tests-18%2F18%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
+[![Pytest](https://img.shields.io/badge/Tests-23%2F23%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
 [![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Groq 70B](https://img.shields.io/badge/Teacher%20Model-Llama--3--70B%20%7C%20Groq-F55036)](https://groq.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -96,11 +96,11 @@ Launch the interactive dashboard to inspect probes, view cross-evaluator compari
 ```
 
 ### Dashboard Features:
-1. **Probe Inspector:** Filter by financial domain (10-K, Credit Risk, Basel III, Macro) and compare 3 human raters, local heuristics, and Groq 70B CoT reasoning.
-2. **Disagreement Deep-Dive:** Interactive $|\Delta| > 0.30$ explorer with failure category breakdowns.
-3. **Research Figures Gallery:** Direct access to all 5 publication-ready charts.
-4. **Live Playground:** Real-time dual evaluation of custom financial text completions.
-5. **🔬 Bias Investigation — PDF Q&A:** Upload any PDF, generate questions, stream dual-model answers live, run judge + human ratings, and detect position & verbosity bias (see below).
+1. **📄 Real-Time PDF Dual-Model Evaluator & Bias Lab (Tab 1 Landing Screen):** Drag-and-drop PDF uploader, automated 10-question generator, side-by-side live streaming of 2 LLMs, 10-star AI Judge critiques, interactive 10-star human sliders, and on-the-fly position/verbosity bias detection.
+2. **🔍 200-Probe Benchmark Inspector (Tab 2):** Filter by financial domain (10-K, Credit Risk, Basel III, Macro) and compare 3 human raters, local heuristics, and Groq 70B CoT reasoning.
+3. **🚨 Failure Modes & Disagreements (Tab 3):** Interactive $|\Delta| > 0.30$ explorer with 4-way failure category decompositions.
+4. **📊 Statistical Alignment & Figures (Tab 4):** Direct access to all 5 publication-ready charts (Fleiss/Cohen Kappa, scatter correlations, prefilter trade-off curve).
+5. **⚡ Single-Probe Playground (Tab 5):** Live dual evaluation of custom text completions comparing the sub-millisecond local scorer against the Groq Teacher Judge.
 
 ---
 
@@ -108,37 +108,39 @@ Launch the interactive dashboard to inspect probes, view cross-evaluator compari
 
 ```
 JudgeLLM/
+├── .env.example                    # Environment variable configuration template
 ├── data/
-│   ├── probe_outputs_200.json       # 200 CIRCLE Stage 3-5 financial probe completions
-│   ├── human_annotations.json      # 3-annotator ground truth ratings + normalized consensus
-│   ├── label_studio_tasks.json     # Label Studio export/import tasks
-│   ├── local_scores.json           # Cached sub-millisecond heuristic evaluation results
-│   ├── agreement_metrics.json      # Full Fleiss & Cohen Kappa statistics
-│   ├── failure_modes_report.json   # Disagreement taxonomy decomposition
+│   ├── probe_outputs_200.json      # 200 CIRCLE Stage 3-5 financial probe completions
+│   ├── human_annotations.json     # 3-annotator ground truth ratings + normalized consensus
+│   ├── label_studio_tasks.json    # Label Studio export/import tasks
+│   ├── local_scores.json          # Cached sub-millisecond heuristic evaluation results
+│   ├── agreement_metrics.json     # Full Fleiss & Cohen Kappa statistics
+│   ├── failure_modes_report.json  # Disagreement taxonomy decomposition
 │   └── judge_scores/
-│       ├── rubric_a.json           # Groq 70B zero-shot baseline scores
-│       └── rubric_b.json           # Groq 70B CoT + exemplar scores
+│       ├── rubric_a.json          # Groq 70B zero-shot baseline scores
+│       └── rubric_b.json          # Groq 70B CoT + exemplar scores
 ├── evaluation/
-│   ├── local_scorer.py             # LightweightStudentEvaluator (TTR, n-gram, Jaccard)
-│   ├── teacher_judge.py            # Groq 70B engine with Pydantic v2 schema & retry loops
-│   ├── pdf_qa_pipeline.py          # PDF extraction, Q generation, dual-model streaming, bias detection
+│   ├── local_scorer.py            # LightweightStudentEvaluator (TTR, n-gram, Jaccard)
+│   ├── teacher_judge.py           # Groq 70B engine with Pydantic v2 schema & retry loops
+│   ├── pdf_qa_pipeline.py         # PDF parsing, Q-gen, dual-model streaming, bias detection
 │   └── rubrics/
-│       ├── rubric_a.yaml           # Zero-shot baseline prompt configuration
-│       └── rubric_b.yaml           # Chain-of-Thought + few-shot exemplar prompt
+│       ├── rubric_a.yaml          # Zero-shot baseline prompt configuration
+│       └── rubric_b.yaml          # Chain-of-Thought + few-shot exemplar prompt
 ├── analysis/
-│   ├── agreement_stats.py          # Fleiss's Kappa, Cohen's Kappa, Pearson r, Spearman rho
-│   ├── failure_breakdown.py        # Disagreement taxonomy classifier
-│   └── visualize.py                # Publication figures (Matplotlib / Seaborn)
+│   ├── agreement_stats.py         # Fleiss's Kappa, Cohen's Kappa, Pearson r, Spearman rho
+│   ├── failure_breakdown.py       # Disagreement taxonomy classifier
+│   └── visualize.py               # Publication figures (Matplotlib / Seaborn)
 ├── annotation/
-│   └── label_studio_export.py      # Label Studio conversion utilities
-├── figures/                        # Generated 300 DPI publication figures
+│   └── label_studio_export.py     # Label Studio conversion utilities
+├── figures/                       # Generated 300 DPI publication figures
 ├── tests/
-│   ├── test_phase1.py              # Phase 1 test suite (11 tests)
-│   └── test_phase2.py              # Phase 2 test suite (7 tests)
-├── OptimizationFix.md              # Before-vs-After benchmark improvements & resume metrics
-├── phases.md                       # Phase breakdown & engineering roadmap
-├── run_pipeline.py                 # End-to-end master orchestrator
-└── app.py                          # Interactive Streamlit dashboard
+│   ├── test_bias_pipeline.py      # PDF pipeline, bias detection, and .env multi-LLM tests (5 tests)
+│   ├── test_phase1.py             # Phase 1 test suite (11 tests)
+│   └── test_phase2.py             # Phase 2 test suite (7 tests)
+├── OptimizationFix.md             # Before-vs-After benchmark improvements & resume metrics
+├── phases.md                      # Phase breakdown & engineering roadmap
+├── run_pipeline.py                # End-to-end master orchestrator
+└── app.py                         # Interactive Streamlit dashboard
 ```
 
 ---
@@ -203,48 +205,60 @@ This feature extends the core alignment study with a live, interactive bias dete
 | **Position Bias** | Judge changes score/preference purely because answer order was swapped | Run judge twice (A→B order, then B→A order); compare scores and preferred winner |
 | **Verbosity Bias** | Judge rewards longer answers even when shorter answers are more accurate | Pearson correlation between answer word count and judge star rating; longer-answer win rate |
 
-### How to Use the Bias Investigation Tab
+### How to Use the Real-Time PDF Evaluation & Bias Lab (Tab 1)
 
-1. Open the dashboard → click **🔬 Bias Investigation — PDF Q&A**
-2. Select Model 1, Model 2, and Judge Model from the dropdowns
-3. Upload any PDF (annual report, research paper, policy document)
-4. Click **"Extract text & generate questions"** — N questions are generated from the PDF
-5. Click **"Answer all questions & run judge"** — both models stream answers live side-by-side
-6. Each question is automatically evaluated:
-   - ⚖️ Judge scores both answers (1–10 ⭐)
-   - 🔁 Position bias check fires (judge runs twice with swapped order)
-   - ⚠️ Alert shown if bias is detected
-7. Rate each answer yourself with sliders (1–10)
-8. View the **Bias Analysis Summary**:
-   - Position bias table (per question, with score delta and preference flip flag)
-   - Verbosity bias scatter plot (word count vs. judge score with regression line)
-   - Human vs. Judge alignment comparison table
+1. Open the dashboard via `streamlit run app.py` — it opens directly to **Tab 1: Real-Time PDF Dual-Model Evaluator & Bias Lab**.
+2. Select **Model 1**, **Model 2**, and the **Judge Model** from the configuration dropdowns (pre-populated from `.env`).
+3. Upload any PDF in the drag-and-drop placeholder *(or click **"Load Sample Financial Document"** to test immediately)*.
+4. Set the question count slider (defaults to **10 questions**) and click **"Extract PDF & Generate Questions"**.
+5. Click **"Start Real-Time Dual-Model Evaluation"**:
+   - Both models stream their answers **live side-by-side** in real time.
+   - The AI Judge evaluates both answers on a **10-star scale** (`⭐⭐⭐⭐⭐⭐⭐⭐ 8/10 Stars`) with full CoT critiques.
+   - Position bias check automatically runs with swapped presentation order.
+6. Rate each answer using the **interactive 10-star human sliders** (`1 to 10 Stars`).
+7. Review the **Executive Scorecard & Bias Report**:
+   - Model 1 vs. Model 2 average stars.
+   - Human–Judge alignment delta ($|\Delta|$).
+   - Position bias rate (% of questions affected by order).
+   - Verbosity bias regression plot (answer length vs. rating).
 
-### Mock Mode (No API Key Required)
+### Mock Mode & Live Groq API
 
-All Groq calls gracefully fall back to **offline mock simulation** when `GROQ_API_KEY` is not set — making the full bias detection workflow demonstrable without any API credits.
+- **Live Mode:** Set `GROQ_API_KEY` in `.env` or Streamlit Cloud Secrets for live multi-LLM generation and judging.
+- **Mock Mode:** If no key is set or when offline, the pipeline automatically runs in **calibrated mock mode** so the entire UI and bias investigation pipeline can be demonstrated without API credits.
 
 ---
 
 ## Installation & Usage
 
-### 1. Setup Virtual Environment
+### 1. Setup Virtual Environment & Install Dependencies
 ```powershell
 python -m venv .venv
 .venv\Scripts\pip.exe install -r requirements.txt
 ```
 
-### 2. Run End-to-End Evaluation Pipeline
+### 2. Configure Environment Variables
+Copy `.env.example` to `.env` and insert your Groq API credentials and preferred models:
+```powershell
+copy .env.example .env
+```
+```env
+GROQ_API_KEY=gsk_...
+GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_JUDGE_MODEL=llama-3.3-70b-versatile
+```
+
+### 3. Run Master Evaluation Pipeline (200 Financial Probes)
 ```powershell
 .venv\Scripts\python.exe run_pipeline.py
 ```
 
-### 3. Run Test Suite
+### 4. Run Test Suite (23 Tests)
 ```powershell
 .venv\Scripts\python.exe -m pytest -v
 ```
 
-### 4. Run Interactive Dashboard
+### 5. Launch Interactive Streamlit Dashboard
 ```powershell
 .venv\Scripts\python.exe -m streamlit run app.py
 ```
