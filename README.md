@@ -210,7 +210,9 @@ This feature extends the core alignment study with a live, interactive bias dete
 1. Open the dashboard via `streamlit run app.py` — it opens directly to **Tab 1: Real-Time PDF Dual-Model Evaluator & Bias Lab**.
 2. Select **Model 1**, **Model 2**, and the **Judge Model** from the configuration dropdowns (pre-populated from `.env`).
 3. Upload any PDF in the drag-and-drop placeholder *(or click **"Load Sample Financial Document"** to test immediately)*.
-4. Set the question count slider (defaults to **10 questions**) and click **"Extract PDF & Generate Questions"**.
+4. **Choose or Ask Questions:**
+   - **Option A (Default):** Click **"Generate 10 Questions"** to have the LLM produce 10 deep analytical questions from the document.
+   - **Option B (Custom Questions):** Type your own custom question in the input box and click **"Add to Question List"** or **"Set as Only Question"** to evaluate custom inquiries.
 5. Click **"Start Real-Time Dual-Model Evaluation"**:
    - Both models stream their answers **live side-by-side** in real time.
    - The AI Judge evaluates both answers on a **10-star scale** (`⭐⭐⭐⭐⭐⭐⭐⭐ 8/10 Stars`) with full CoT critiques.

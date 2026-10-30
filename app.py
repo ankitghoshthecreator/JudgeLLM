@@ -262,52 +262,127 @@ def main():
             st.markdown("**Quick Demo:**")
             if st.button("📄 Load Sample Financial Document", use_container_width=True, key="btn_sample_doc"):
                 st.session_state[SS_PDF_TEXT] = SAMPLE_FINANCIAL_TEXT
-                with st.spinner(f"Generating {NUM_QUESTIONS} questions from sample document..."):
-                    qs = generate_questions(SAMPLE_FINANCIAL_TEXT, n=NUM_QUESTIONS, model=MODEL_A)
+                with st.spinner("Generating 10 default questions from sample document..."):
+                    qs = generate_questions(SAMPLE_FINANCIAL_TEXT, n=10, model=MODEL_A)
                     st.session_state[SS_QUESTIONS] = qs
                     st.session_state[SS_ANSWERS] = {}
                     st.session_state[SS_JUDGE] = {}
                     st.session_state[SS_POSITION] = {}
                     st.session_state[SS_USER_SCORES] = {}
                     st.session_state[SS_SESSION_DATA] = []
-                st.success(f"✅ Generated {len(qs)} questions from sample document.")
+                st.success(f"✅ Loaded sample document and generated {len(qs)} questions.")
 
+        # Automatic extraction from uploaded PDF
         if uploaded_file is not None:
-            if st.button("🚀 Extract PDF & Generate Questions", type="primary", key="bias_gen_btn"):
-                with st.spinner("Extracting text from PDF..."):
-                    try:
-                        pdf_bytes = uploaded_file.read()
-                        pdf_text = extract_text_from_pdf(pdf_bytes)
-                        if not pdf_text.strip():
-                            st.error("No readable text could be extracted from this PDF.")
-                            st.stop()
-                        st.session_state[SS_PDF_TEXT] = pdf_text
-                        st.session_state[SS_ANSWERS] = {}
-                        st.session_state[SS_JUDGE] = {}
-                        st.session_state[SS_POSITION] = {}
-                        st.session_state[SS_USER_SCORES] = {}
-                        st.session_state[SS_SESSION_DATA] = []
-                    except Exception as e:
-                        st.error(f"Failed to parse PDF: {e}")
-                        st.stop()
+            file_sig = f"{uploaded_file.name}_{uploaded_file.size}"
+            if st.session_state.get("last_uploaded_sig") != file_sig:
+                try:
+                    pdf_bytes = uploaded_file.read()
+                    pdf_text_extracted = extract_text_from_pdf(pdf_bytes)
+                    if not pdf_text_extracted.strip():
+                        st.error("No readable text could be extracted from this PDF.")
+                    else:
+                        st.session_state[SS_PDF_TEXT] = pdf_text_extracted
+                        st.session_state["last_uploaded_sig"] = file_sig
+                        st.success(f"✅ Extracted PDF text ({len(pdf_text_extracted.split())} words) from '{uploaded_file.name}'.")
+                except Exception as e:
+                    st.error(f"Failed to parse PDF: {e}")
 
-                with st.spinner(f"Generating {NUM_QUESTIONS} analytical questions using {MODEL_A}..."):
-                    qs = generate_questions(st.session_state[SS_PDF_TEXT], n=NUM_QUESTIONS, model=MODEL_A)
-                    st.session_state[SS_QUESTIONS] = qs
-                st.success(f"✅ Extracted PDF text ({len(st.session_state[SS_PDF_TEXT].split())} words) and generated {len(qs)} questions.")
+        pdf_text = st.session_state.get(SS_PDF_TEXT, "")
+
+        # ---- Step 2: Questions (Default 10 LLM questions OR User Custom Question) ----
+        if pdf_text:
+            st.divider()
+            st.markdown("### ❓ Step 2: Choose or Ask Questions")
+            st.markdown(
+                "Choose **Option A** to generate **10 LLM questions** automatically, "
+                "or **Option B** to **ask your own custom question(s)** about this document."
+            )
+
+            q_tab_auto, q_tab_custom = st.tabs([
+                "🤖 Option A: Generate 10 Questions (Default)",
+                "✍️ Option B: Ask Your Own Question",
+            ])
+
+            with q_tab_auto:
+                st.markdown("Let the LLM generate analytical questions that test deep comprehension:")
+                col_g1, col_g2 = st.columns([3, 1])
+                with col_g1:
+                    num_q_slider = st.slider(
+                        "Number of questions to generate",
+                        min_value=1,
+                        max_value=20,
+                        value=10,
+                        step=1,
+                        key="auto_q_slider",
+                        help="Default is 10 questions."
+                    )
+                with col_g2:
+                    if st.button("🚀 Generate 10 Questions", type="primary", key="bias_gen_btn", use_container_width=True):
+                        with st.spinner(f"Generating {num_q_slider} analytical questions using {MODEL_A}..."):
+                            qs = generate_questions(pdf_text, n=num_q_slider, model=MODEL_A)
+                            st.session_state[SS_QUESTIONS] = qs
+                            st.session_state[SS_ANSWERS] = {}
+                            st.session_state[SS_JUDGE] = {}
+                            st.session_state[SS_POSITION] = {}
+                            st.session_state[SS_USER_SCORES] = {}
+                            st.session_state[SS_SESSION_DATA] = []
+                        st.success(f"✅ Generated {len(qs)} questions from document.")
+
+            with q_tab_custom:
+                st.markdown("Type your own custom question to test both models and get 10-star AI Judge ratings:")
+                custom_q_input = st.text_input(
+                    "Your Question about the document:",
+                    placeholder="e.g. What is the operating margin and what factors drove the performance?",
+                    key="custom_q_input_field",
+                )
+                cq_col1, cq_col2 = st.columns(2)
+                with cq_col1:
+                    if st.button("➕ Add to Question List", key="btn_add_custom_q", use_container_width=True):
+                        if custom_q_input.strip():
+                            curr = list(st.session_state.get(SS_QUESTIONS, []))
+                            curr.append(custom_q_input.strip())
+                            st.session_state[SS_QUESTIONS] = curr
+                            st.success(f"✅ Added custom question (Total questions: {len(curr)})")
+                        else:
+                            st.warning("Please type a question before adding.")
+                with cq_col2:
+                    if st.button("⚡ Set as Only Question", key="btn_set_single_q", use_container_width=True):
+                        if custom_q_input.strip():
+                            st.session_state[SS_QUESTIONS] = [custom_q_input.strip()]
+                            st.session_state[SS_ANSWERS] = {}
+                            st.session_state[SS_JUDGE] = {}
+                            st.session_state[SS_POSITION] = {}
+                            st.session_state[SS_USER_SCORES] = {}
+                            st.session_state[SS_SESSION_DATA] = []
+                            st.success(f"✅ Ready to evaluate your question: '{custom_q_input.strip()}'")
+                        else:
+                            st.warning("Please type a question before setting.")
+        else:
+            st.info("💡 **Upload a PDF above** (or click 'Load Sample Financial Document') to unlock question generation and asking.")
 
         questions = st.session_state.get(SS_QUESTIONS, [])
-        pdf_text = st.session_state.get(SS_PDF_TEXT, "")
 
         if questions:
             st.divider()
-            st.markdown(f"### ❓ Generated Questions ({len(questions)})")
-            
-            with st.expander("View all generated questions", expanded=True):
+            q_hdr_col1, q_hdr_col2 = st.columns([3, 1])
+            with q_hdr_col1:
+                st.markdown(f"### 📋 Active Evaluation Questions ({len(questions)})")
+            with q_hdr_col2:
+                if st.button("🗑️ Clear Question List", key="btn_clear_qs", use_container_width=True):
+                    st.session_state[SS_QUESTIONS] = []
+                    st.session_state[SS_ANSWERS] = {}
+                    st.session_state[SS_JUDGE] = {}
+                    st.session_state[SS_POSITION] = {}
+                    st.session_state[SS_USER_SCORES] = {}
+                    st.session_state[SS_SESSION_DATA] = []
+                    st.rerun()
+
+            with st.expander(f"View all {len(questions)} active questions", expanded=True):
                 for i, q in enumerate(questions):
                     st.markdown(f"**Q{i+1}:** {q}")
 
-            st.markdown("### 🤖 Step 2: Real-Time Dual-Model Answering & Judge Evaluation")
+            st.markdown("### 🤖 Step 3: Real-Time Dual-Model Answering & Judge Evaluation")
             st.info("Click the button below to watch Model 1 and Model 2 stream answers live on screen, followed by immediate 10-star AI Judge evaluation.")
 
             if st.button("▶️ Start Real-Time Dual-Model Evaluation", type="primary", key="bias_run_eval_btn"):
@@ -404,7 +479,7 @@ def main():
 
         if answers_dict and judge_dict:
             st.divider()
-            st.markdown("### 🧑‍⚖️ Step 3: Question-by-Question Evaluation & Your 10-Star Ratings")
+            st.markdown("### 🧑‍⚖️ Step 4: Question-by-Question Evaluation & Your 10-Star Ratings")
             st.markdown("Review the answers and AI judge ratings below. You can submit your own **10-star rating** for each model.")
 
             for idx, question in enumerate(questions):
@@ -467,7 +542,7 @@ def main():
             st.session_state[SS_USER_SCORES] = user_scores
 
             # ---- Step 4: Executive Scorecard & Bias Report ----
-            st.markdown("### 📊 Step 4: Executive Alignment Scorecard & Bias Report")
+            st.markdown("### 📊 Step 5: Executive Alignment Scorecard & Bias Report")
 
             avg_judge_a = sum(judge_dict[i]["score_a"] for i in judge_dict) / len(judge_dict)
             avg_judge_b = sum(judge_dict[i]["score_b"] for i in judge_dict) / len(judge_dict)
