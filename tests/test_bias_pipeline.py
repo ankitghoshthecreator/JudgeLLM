@@ -34,10 +34,19 @@ def test_env_loading_and_defaults():
 
 
 def test_mock_question_generation():
-    """Verify that mock question generation produces the requested number of questions."""
-    # Force mock mode by clearing API key temporarily if needed
-    qs = generate_questions("Mock financial text about revenue and margin.", n=5)
-    assert len(qs) == 5
+    """Verify that mock question generation produces the requested number of questions.
+
+    We temporarily remove GROQ_API_KEY from the environment so the function
+    always runs in offline/mock mode, independent of the developer's .env file.
+    """
+    saved_key = os.environ.pop("GROQ_API_KEY", None)
+    try:
+        qs = generate_questions("Mock financial text about revenue and margin.", n=5)
+    finally:
+        if saved_key is not None:
+            os.environ["GROQ_API_KEY"] = saved_key
+
+    assert len(qs) == 5, f"Expected 5 questions, got {len(qs)}: {qs}"
     assert all(isinstance(q, str) and len(q) > 5 for q in qs)
 
 

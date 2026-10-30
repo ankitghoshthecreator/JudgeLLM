@@ -199,6 +199,11 @@ def generate_questions(
             line = re.sub(r"^[-*]\s*", "", line)
             if len(line) > 10:
                 questions.append(line)
+        # If the LLM returned fewer than half the requested questions
+        # (e.g., it gave a refusal/apology instead of a numbered list),
+        # treat it as a failure and fall back to the mock bank.
+        if len(questions) < max(2, n // 2):
+            return _MOCK_QUESTIONS[:n]
         return questions[:n] if questions else _MOCK_QUESTIONS[:n]
     except Exception:
         return _MOCK_QUESTIONS[:n]
