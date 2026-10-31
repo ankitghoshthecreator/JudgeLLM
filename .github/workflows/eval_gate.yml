@@ -31,9 +31,10 @@ jobs:
         run: |
           python -m pytest -v
 
-      - name: Execute CI/CD Evaluation Gate
+      - name: Execute CI/CD Evaluation Gate (Mock Golden Subset)
         run: |
-          python evaluation/eval_gate.py --report eval_gate_report.md
+          # Enforce MOCK execution mode in PRs to guarantee zero flake, zero external secrets dependency
+          GROQ_API_KEY="" python evaluation/eval_gate.py --report eval_gate_report.md
 
       - name: Upload Gate Report Artifact
         if: always()

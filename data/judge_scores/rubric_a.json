@@ -3,2200 +3,2200 @@
     "id": "probe_001",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.985,
-      "instruction_adherence": 0.748,
-      "no_hallucination": 0.349
+      "coherence": 0.763,
+      "instruction_adherence": 0.677,
+      "no_hallucination": 0.372
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.99, Adherence=0.75, Grounding=0.35.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.76, Adherence=0.68, Grounding=0.37.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_002",
     "scores": {
-      "fluency": 0.277,
-      "coherence": 0.122,
-      "instruction_adherence": 0.591,
-      "no_hallucination": 0.634
+      "fluency": 0.188,
+      "coherence": 0.382,
+      "instruction_adherence": 0.597,
+      "no_hallucination": 0.614
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.28, Coherence=0.12, Adherence=0.59, Grounding=0.63.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.19, Coherence=0.38, Adherence=0.60, Grounding=0.61.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_003",
     "scores": {
-      "fluency": 0.709,
-      "coherence": 0.768,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.737
+      "fluency": 0.726,
+      "coherence": 0.975,
+      "instruction_adherence": 0.693,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.71, Coherence=0.77, Adherence=1.00, Grounding=0.74.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.98, Adherence=0.69, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_004",
     "scores": {
-      "fluency": 0.913,
+      "fluency": 0.971,
       "coherence": 1.0,
-      "instruction_adherence": 0.758,
-      "no_hallucination": 0.868
+      "instruction_adherence": 0.741,
+      "no_hallucination": 0.924
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.91, Coherence=1.00, Adherence=0.76, Grounding=0.87.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=1.00, Adherence=0.74, Grounding=0.92.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_005",
     "scores": {
-      "fluency": 0.81,
-      "coherence": 0.782,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.741
+      "fluency": 0.827,
+      "coherence": 0.989,
+      "instruction_adherence": 0.71,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=0.78, Adherence=1.00, Grounding=0.74.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.83, Coherence=0.99, Adherence=0.71, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_006",
     "scores": {
-      "fluency": 0.977,
-      "coherence": 1.0,
-      "instruction_adherence": 0.974,
-      "no_hallucination": 1.0
+      "fluency": 0.971,
+      "coherence": 0.959,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.905
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=1.00, Adherence=0.97, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.96, Adherence=1.00, Grounding=0.91.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_007",
     "scores": {
-      "fluency": 0.949,
-      "coherence": 0.958,
-      "instruction_adherence": 0.865,
-      "no_hallucination": 0.207
+      "fluency": 0.971,
+      "coherence": 0.934,
+      "instruction_adherence": 0.744,
+      "no_hallucination": 0.231
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.96, Adherence=0.87, Grounding=0.21.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.93, Adherence=0.74, Grounding=0.23.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_008",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.812,
-      "instruction_adherence": 0.961,
-      "no_hallucination": 0.837
+      "coherence": 0.671,
+      "instruction_adherence": 0.792,
+      "no_hallucination": 0.617
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.81, Adherence=0.96, Grounding=0.84.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.67, Adherence=0.79, Grounding=0.62.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_009",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.691,
-      "instruction_adherence": 1.0,
+      "coherence": 0.749,
+      "instruction_adherence": 0.814,
       "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.69, Adherence=1.00, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.75, Adherence=0.81, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_010",
     "scores": {
-      "fluency": 0.907,
-      "coherence": 0.352,
-      "instruction_adherence": 0.208,
-      "no_hallucination": 0.999
+      "fluency": 0.968,
+      "coherence": 0.188,
+      "instruction_adherence": 0.343,
+      "no_hallucination": 0.979
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.91, Coherence=0.35, Adherence=0.21, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.19, Adherence=0.34, Grounding=0.98.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_011",
     "scores": {
-      "fluency": 0.952,
-      "coherence": 0.991,
-      "instruction_adherence": 0.742,
-      "no_hallucination": 0.942
+      "fluency": 1.0,
+      "coherence": 0.976,
+      "instruction_adherence": 0.725,
+      "no_hallucination": 0.998
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.99, Adherence=0.74, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.98, Adherence=0.73, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_012",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.786,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.92
+      "coherence": 0.844,
+      "instruction_adherence": 0.871,
+      "no_hallucination": 0.965
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.79, Adherence=1.00, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.84, Adherence=0.87, Grounding=0.96.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_013",
     "scores": {
-      "fluency": 0.984,
+      "fluency": 1.0,
       "coherence": 1.0,
-      "instruction_adherence": 0.785,
-      "no_hallucination": 0.962
+      "instruction_adherence": 0.768,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=1.00, Adherence=0.79, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.77, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_014",
     "scores": {
-      "fluency": 0.728,
-      "coherence": 0.711,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.799
+      "fluency": 0.745,
+      "coherence": 0.918,
+      "instruction_adherence": 0.811,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.71, Adherence=1.00, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.74, Coherence=0.92, Adherence=0.81, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_015",
     "scores": {
-      "fluency": 0.715,
-      "coherence": 0.751,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.831
+      "fluency": 0.732,
+      "coherence": 0.958,
+      "instruction_adherence": 0.75,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.71, Coherence=0.75, Adherence=1.00, Grounding=0.83.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.96, Adherence=0.75, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_016",
     "scores": {
-      "fluency": 0.09,
-      "coherence": 0.346,
-      "instruction_adherence": 0.7,
-      "no_hallucination": 0.656
+      "fluency": 0.354,
+      "coherence": 0.514,
+      "instruction_adherence": 0.681,
+      "no_hallucination": 0.838
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.09, Coherence=0.35, Adherence=0.70, Grounding=0.66.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.35, Coherence=0.51, Adherence=0.68, Grounding=0.84.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_017",
     "scores": {
-      "fluency": 0.818,
-      "coherence": 0.666,
-      "instruction_adherence": 0.018,
-      "no_hallucination": 0.942
+      "fluency": 0.705,
+      "coherence": 0.646,
+      "instruction_adherence": 0.069,
+      "no_hallucination": 0.844
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.82, Coherence=0.67, Adherence=0.02, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.71, Coherence=0.65, Adherence=0.07, Grounding=0.84.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_018",
     "scores": {
-      "fluency": 0.713,
-      "coherence": 0.68,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.797
+      "fluency": 0.73,
+      "coherence": 0.887,
+      "instruction_adherence": 0.77,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.71, Coherence=0.68, Adherence=1.00, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.89, Adherence=0.77, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_019",
     "scores": {
-      "fluency": 0.807,
-      "coherence": 0.662,
-      "instruction_adherence": 0.775,
-      "no_hallucination": 0.53
+      "fluency": 0.718,
+      "coherence": 0.922,
+      "instruction_adherence": 0.781,
+      "no_hallucination": 0.51
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=0.66, Adherence=0.78, Grounding=0.53.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.72, Coherence=0.92, Adherence=0.78, Grounding=0.51.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_020",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.812,
-      "instruction_adherence": 0.971,
-      "no_hallucination": 0.297
+      "coherence": 0.671,
+      "instruction_adherence": 0.802,
+      "no_hallucination": 0.077
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.81, Adherence=0.97, Grounding=0.30.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.67, Adherence=0.80, Grounding=0.08.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_021",
     "scores": {
-      "fluency": 0.955,
-      "coherence": 1.0,
-      "instruction_adherence": 0.984,
-      "no_hallucination": 0.91
+      "fluency": 0.949,
+      "coherence": 0.901,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.804
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=1.00, Adherence=0.98, Grounding=0.91.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.90, Adherence=1.00, Grounding=0.80.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_022",
     "scores": {
-      "fluency": 0.986,
-      "coherence": 1.0,
-      "instruction_adherence": 0.366,
-      "no_hallucination": 0.971
+      "fluency": 0.98,
+      "coherence": 0.917,
+      "instruction_adherence": 0.54,
+      "no_hallucination": 0.865
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.37, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.92, Adherence=0.54, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_023",
     "scores": {
-      "fluency": 0.907,
-      "coherence": 0.912,
-      "instruction_adherence": 0.088,
-      "no_hallucination": 0.999
+      "fluency": 0.968,
+      "coherence": 0.748,
+      "instruction_adherence": 0.223,
+      "no_hallucination": 0.979
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.91, Coherence=0.91, Adherence=0.09, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.75, Adherence=0.22, Grounding=0.98.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_024",
     "scores": {
-      "fluency": 0.753,
-      "coherence": 0.679,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.763
+      "fluency": 0.77,
+      "coherence": 0.886,
+      "instruction_adherence": 0.717,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.75, Coherence=0.68, Adherence=1.00, Grounding=0.76.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.77, Coherence=0.89, Adherence=0.72, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_025",
     "scores": {
-      "fluency": 0.996,
-      "coherence": 1.0,
-      "instruction_adherence": 0.971,
-      "no_hallucination": 0.902
+      "fluency": 0.99,
+      "coherence": 0.995,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.796
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.97, Grounding=0.90.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=0.99, Adherence=1.00, Grounding=0.80.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_026",
     "scores": {
-      "fluency": 0.281,
-      "coherence": 0.447,
-      "instruction_adherence": 0.545,
-      "no_hallucination": 0.906
+      "fluency": 0.399,
+      "coherence": 0.354,
+      "instruction_adherence": 0.414,
+      "no_hallucination": 0.808
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.28, Coherence=0.45, Adherence=0.54, Grounding=0.91.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.40, Coherence=0.35, Adherence=0.41, Grounding=0.81.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_027",
     "scores": {
-      "fluency": 0.0,
-      "coherence": 0.834,
-      "instruction_adherence": 0.243,
-      "no_hallucination": 0.986
+      "fluency": 0.211,
+      "coherence": 0.823,
+      "instruction_adherence": 0.103,
+      "no_hallucination": 0.769
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.00, Coherence=0.83, Adherence=0.24, Grounding=0.99.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.21, Coherence=0.82, Adherence=0.10, Grounding=0.77.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_028",
     "scores": {
-      "fluency": 0.882,
-      "coherence": 0.738,
+      "fluency": 0.793,
+      "coherence": 0.998,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.921
+      "no_hallucination": 0.901
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.88, Coherence=0.74, Adherence=1.00, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=1.00, Adherence=1.00, Grounding=0.90.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_029",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.812,
-      "instruction_adherence": 0.961,
-      "no_hallucination": 0.837
+      "coherence": 0.671,
+      "instruction_adherence": 0.792,
+      "no_hallucination": 0.617
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.81, Adherence=0.96, Grounding=0.84.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.67, Adherence=0.79, Grounding=0.62.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_030",
     "scores": {
-      "fluency": 0.959,
-      "coherence": 0.986,
+      "fluency": 0.953,
+      "coherence": 0.875,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.92
+      "no_hallucination": 0.814
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.96, Coherence=0.99, Adherence=1.00, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.87, Adherence=1.00, Grounding=0.81.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_031",
     "scores": {
-      "fluency": 0.968,
-      "coherence": 0.0,
-      "instruction_adherence": 0.356,
-      "no_hallucination": 0.953
+      "fluency": 1.0,
+      "coherence": 0.267,
+      "instruction_adherence": 0.162,
+      "no_hallucination": 0.806
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.00, Adherence=0.36, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.27, Adherence=0.16, Grounding=0.81.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_032",
     "scores": {
-      "fluency": 0.926,
-      "coherence": 1.0,
+      "fluency": 0.92,
+      "coherence": 0.981,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.966
+      "no_hallucination": 0.86
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=1.00, Adherence=1.00, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.92, Coherence=0.98, Adherence=1.00, Grounding=0.86.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_033",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.812,
-      "instruction_adherence": 0.961,
-      "no_hallucination": 0.837
+      "coherence": 0.671,
+      "instruction_adherence": 0.792,
+      "no_hallucination": 0.617
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.81, Adherence=0.96, Grounding=0.84.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.67, Adherence=0.79, Grounding=0.62.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_034",
     "scores": {
-      "fluency": 0.896,
-      "coherence": 0.898,
-      "instruction_adherence": 0.636,
-      "no_hallucination": 0.571
+      "fluency": 0.89,
+      "coherence": 0.787,
+      "instruction_adherence": 0.81,
+      "no_hallucination": 0.465
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.90, Coherence=0.90, Adherence=0.64, Grounding=0.57.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.89, Coherence=0.79, Adherence=0.81, Grounding=0.47.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_035",
     "scores": {
-      "fluency": 0.346,
-      "coherence": 0.244,
-      "instruction_adherence": 0.8,
-      "no_hallucination": 0.672
+      "fluency": 0.257,
+      "coherence": 0.504,
+      "instruction_adherence": 0.806,
+      "no_hallucination": 0.652
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.35, Coherence=0.24, Adherence=0.80, Grounding=0.67.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.26, Coherence=0.50, Adherence=0.81, Grounding=0.65.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_036",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.789,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.974
+      "coherence": 0.847,
+      "instruction_adherence": 0.807,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.79, Adherence=1.00, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.85, Adherence=0.81, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_037",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.997,
-      "instruction_adherence": 0.82,
-      "no_hallucination": 0.22
+      "coherence": 0.775,
+      "instruction_adherence": 0.749,
+      "no_hallucination": 0.243
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.82, Grounding=0.22.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.77, Adherence=0.75, Grounding=0.24.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_038",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.847,
-      "instruction_adherence": 0.851,
-      "no_hallucination": 0.304
+      "coherence": 0.706,
+      "instruction_adherence": 0.682,
+      "no_hallucination": 0.084
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.85, Adherence=0.85, Grounding=0.30.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.71, Adherence=0.68, Grounding=0.08.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_039",
     "scores": {
-      "fluency": 0.862,
-      "coherence": 0.919,
-      "instruction_adherence": 0.48,
-      "no_hallucination": 0.522
+      "fluency": 0.92,
+      "coherence": 0.904,
+      "instruction_adherence": 0.463,
+      "no_hallucination": 0.578
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.86, Coherence=0.92, Adherence=0.48, Grounding=0.52.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.92, Coherence=0.90, Adherence=0.46, Grounding=0.58.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_040",
     "scores": {
       "fluency": 1.0,
-      "coherence": 1.0,
-      "instruction_adherence": 0.993,
-      "no_hallucination": 1.0
+      "coherence": 0.906,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.9
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.99, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.91, Adherence=1.00, Grounding=0.90.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_041",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.704,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.993
+      "coherence": 0.762,
+      "instruction_adherence": 0.763,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.70, Adherence=1.00, Grounding=0.99.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.76, Adherence=0.76, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_042",
     "scores": {
-      "fluency": 0.925,
-      "coherence": 0.76,
+      "fluency": 0.836,
+      "coherence": 1.0,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.863
+      "no_hallucination": 0.843
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=0.76, Adherence=1.00, Grounding=0.86.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.84, Coherence=1.00, Adherence=1.00, Grounding=0.84.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_043",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.812,
-      "instruction_adherence": 0.971,
-      "no_hallucination": 0.297
+      "coherence": 0.671,
+      "instruction_adherence": 0.802,
+      "no_hallucination": 0.077
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.81, Adherence=0.97, Grounding=0.30.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.67, Adherence=0.80, Grounding=0.08.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_044",
     "scores": {
-      "fluency": 0.927,
+      "fluency": 0.985,
       "coherence": 1.0,
-      "instruction_adherence": 0.787,
-      "no_hallucination": 0.962
+      "instruction_adherence": 0.77,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=1.00, Adherence=0.79, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=1.00, Adherence=0.77, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_045",
     "scores": {
-      "fluency": 0.406,
-      "coherence": 0.21,
-      "instruction_adherence": 0.597,
-      "no_hallucination": 0.881
+      "fluency": 0.199,
+      "coherence": 0.05,
+      "instruction_adherence": 0.433,
+      "no_hallucination": 0.885
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.41, Coherence=0.21, Adherence=0.60, Grounding=0.88.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.20, Coherence=0.05, Adherence=0.43, Grounding=0.88.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_046",
     "scores": {
-      "fluency": 0.804,
-      "coherence": 0.763,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.737
+      "fluency": 0.821,
+      "coherence": 0.97,
+      "instruction_adherence": 0.732,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.80, Coherence=0.76, Adherence=1.00, Grounding=0.74.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.82, Coherence=0.97, Adherence=0.73, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_047",
     "scores": {
-      "fluency": 0.947,
-      "coherence": 0.743,
+      "fluency": 0.858,
+      "coherence": 1.0,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.897
+      "no_hallucination": 0.877
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.74, Adherence=1.00, Grounding=0.90.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.86, Coherence=1.00, Adherence=1.00, Grounding=0.88.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_048",
     "scores": {
-      "fluency": 0.954,
-      "coherence": 0.986,
-      "instruction_adherence": 0.941,
-      "no_hallucination": 1.0
+      "fluency": 0.948,
+      "coherence": 0.875,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.905
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.99, Adherence=0.94, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.87, Adherence=1.00, Grounding=0.91.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_049",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.782,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.925
+      "coherence": 0.84,
+      "instruction_adherence": 0.794,
+      "no_hallucination": 0.97
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.78, Adherence=1.00, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.84, Adherence=0.79, Grounding=0.97.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_050",
     "scores": {
-      "fluency": 0.768,
-      "coherence": 0.731,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.786
+      "fluency": 0.785,
+      "coherence": 0.938,
+      "instruction_adherence": 0.713,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.77, Coherence=0.73, Adherence=1.00, Grounding=0.79.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.78, Coherence=0.94, Adherence=0.71, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_051",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.754,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.998
+      "coherence": 0.812,
+      "instruction_adherence": 0.798,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.75, Adherence=1.00, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.81, Adherence=0.80, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_052",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.686,
-      "instruction_adherence": 1.0,
+      "coherence": 0.744,
+      "instruction_adherence": 0.76,
       "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.69, Adherence=1.00, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.74, Adherence=0.76, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_053",
     "scores": {
-      "fluency": 0.823,
-      "coherence": 0.75,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.775
+      "fluency": 0.84,
+      "coherence": 0.957,
+      "instruction_adherence": 0.778,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.82, Coherence=0.75, Adherence=1.00, Grounding=0.78.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.84, Coherence=0.96, Adherence=0.78, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_054",
     "scores": {
-      "fluency": 1.0,
-      "coherence": 1.0,
-      "instruction_adherence": 0.998,
-      "no_hallucination": 1.0
+      "fluency": 0.999,
+      "coherence": 0.982,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.901
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=1.00, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.98, Adherence=1.00, Grounding=0.90.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_055",
     "scores": {
-      "fluency": 0.968,
-      "coherence": 0.495,
-      "instruction_adherence": 0.236,
-      "no_hallucination": 0.953
+      "fluency": 1.0,
+      "coherence": 0.827,
+      "instruction_adherence": 0.042,
+      "no_hallucination": 0.806
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.49, Adherence=0.24, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.83, Adherence=0.04, Grounding=0.81.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_056",
     "scores": {
-      "fluency": 0.799,
-      "coherence": 0.7,
-      "instruction_adherence": 0.918,
-      "no_hallucination": 0.714
+      "fluency": 0.829,
+      "coherence": 0.84,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.952
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.80, Coherence=0.70, Adherence=0.92, Grounding=0.71.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.83, Coherence=0.84, Adherence=1.00, Grounding=0.95.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_057",
     "scores": {
-      "fluency": 0.284,
-      "coherence": 0.298,
-      "instruction_adherence": 0.595,
-      "no_hallucination": 0.834
+      "fluency": 0.402,
+      "coherence": 0.205,
+      "instruction_adherence": 0.464,
+      "no_hallucination": 0.736
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.28, Coherence=0.30, Adherence=0.59, Grounding=0.83.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.40, Coherence=0.20, Adherence=0.46, Grounding=0.74.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_058",
     "scores": {
-      "fluency": 0.806,
-      "coherence": 0.731,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.836
+      "fluency": 0.823,
+      "coherence": 0.938,
+      "instruction_adherence": 0.791,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=0.73, Adherence=1.00, Grounding=0.84.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.82, Coherence=0.94, Adherence=0.79, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_059",
     "scores": {
-      "fluency": 0.986,
-      "coherence": 1.0,
-      "instruction_adherence": 0.366,
-      "no_hallucination": 0.971
+      "fluency": 0.98,
+      "coherence": 0.917,
+      "instruction_adherence": 0.54,
+      "no_hallucination": 0.865
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.37, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.92, Adherence=0.54, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_060",
     "scores": {
-      "fluency": 1.0,
-      "coherence": 0.99,
-      "instruction_adherence": 0.814,
-      "no_hallucination": 0.27
+      "fluency": 0.978,
+      "coherence": 0.768,
+      "instruction_adherence": 0.743,
+      "no_hallucination": 0.293
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.99, Adherence=0.81, Grounding=0.27.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.77, Adherence=0.74, Grounding=0.29.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_061",
     "scores": {
-      "fluency": 0.744,
-      "coherence": 0.68,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.762
+      "fluency": 0.761,
+      "coherence": 0.887,
+      "instruction_adherence": 0.722,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.74, Coherence=0.68, Adherence=1.00, Grounding=0.76.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.76, Coherence=0.89, Adherence=0.72, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_062",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.826,
-      "instruction_adherence": 0.188,
-      "no_hallucination": 0.959
+      "coherence": 0.835,
+      "instruction_adherence": 0.0,
+      "no_hallucination": 0.975
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.83, Adherence=0.19, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.84, Adherence=0.00, Grounding=0.97.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_063",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.764,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.949
+      "coherence": 0.822,
+      "instruction_adherence": 0.762,
+      "no_hallucination": 0.994
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.76, Adherence=1.00, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.82, Adherence=0.76, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_064",
     "scores": {
-      "fluency": 0.735,
-      "coherence": 0.728,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.799
+      "fluency": 0.752,
+      "coherence": 0.935,
+      "instruction_adherence": 0.803,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.73, Adherence=1.00, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.75, Coherence=0.94, Adherence=0.80, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_065",
     "scores": {
-      "fluency": 0.883,
+      "fluency": 0.941,
       "coherence": 1.0,
-      "instruction_adherence": 0.828,
-      "no_hallucination": 0.954
+      "instruction_adherence": 0.811,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.88, Coherence=1.00, Adherence=0.83, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=1.00, Adherence=0.81, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_066",
     "scores": {
-      "fluency": 0.987,
-      "coherence": 1.0,
-      "instruction_adherence": 0.915,
-      "no_hallucination": 0.927
+      "fluency": 0.981,
+      "coherence": 0.941,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.821
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.91, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.94, Adherence=1.00, Grounding=0.82.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_067",
     "scores": {
-      "fluency": 0.96,
-      "coherence": 1.0,
-      "instruction_adherence": 0.939,
-      "no_hallucination": 0.921
+      "fluency": 0.954,
+      "coherence": 0.952,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.815
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.96, Coherence=1.00, Adherence=0.94, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.95, Adherence=1.00, Grounding=0.82.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_068",
     "scores": {
-      "fluency": 0.986,
-      "coherence": 1.0,
-      "instruction_adherence": 0.366,
-      "no_hallucination": 0.971
+      "fluency": 0.98,
+      "coherence": 0.917,
+      "instruction_adherence": 0.54,
+      "no_hallucination": 0.865
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.37, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.92, Adherence=0.54, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_069",
     "scores": {
-      "fluency": 0.986,
-      "coherence": 1.0,
-      "instruction_adherence": 0.366,
-      "no_hallucination": 0.971
+      "fluency": 0.98,
+      "coherence": 0.917,
+      "instruction_adherence": 0.54,
+      "no_hallucination": 0.865
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.37, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.92, Adherence=0.54, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_070",
     "scores": {
-      "fluency": 0.995,
-      "coherence": 1.0,
-      "instruction_adherence": 0.764,
-      "no_hallucination": 0.891
+      "fluency": 1.0,
+      "coherence": 0.999,
+      "instruction_adherence": 0.747,
+      "no_hallucination": 0.947
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.76, Grounding=0.89.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.75, Grounding=0.95.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_071",
     "scores": {
       "fluency": 1.0,
-      "coherence": 1.0,
+      "coherence": 0.896,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.952
+      "no_hallucination": 0.846
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=1.00, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.90, Adherence=1.00, Grounding=0.85.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_072",
     "scores": {
-      "fluency": 0.952,
+      "fluency": 1.0,
       "coherence": 1.0,
-      "instruction_adherence": 0.775,
-      "no_hallucination": 0.93
+      "instruction_adherence": 0.758,
+      "no_hallucination": 0.986
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=1.00, Adherence=0.78, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.76, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_073",
     "scores": {
-      "fluency": 0.408,
-      "coherence": 0.205,
-      "instruction_adherence": 0.526,
-      "no_hallucination": 0.802
+      "fluency": 0.201,
+      "coherence": 0.045,
+      "instruction_adherence": 0.362,
+      "no_hallucination": 0.806
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.41, Coherence=0.21, Adherence=0.53, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.20, Coherence=0.04, Adherence=0.36, Grounding=0.81.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_074",
     "scores": {
-      "fluency": 0.461,
-      "coherence": 0.252,
-      "instruction_adherence": 0.58,
-      "no_hallucination": 0.898
+      "fluency": 0.254,
+      "coherence": 0.092,
+      "instruction_adherence": 0.416,
+      "no_hallucination": 0.902
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.46, Coherence=0.25, Adherence=0.58, Grounding=0.90.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.25, Coherence=0.09, Adherence=0.42, Grounding=0.90.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_075",
     "scores": {
-      "fluency": 0.39,
-      "coherence": 0.206,
-      "instruction_adherence": 0.566,
-      "no_hallucination": 0.912
+      "fluency": 0.183,
+      "coherence": 0.046,
+      "instruction_adherence": 0.402,
+      "no_hallucination": 0.916
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.39, Coherence=0.21, Adherence=0.57, Grounding=0.91.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.18, Coherence=0.05, Adherence=0.40, Grounding=0.92.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_076",
     "scores": {
-      "fluency": 0.968,
-      "coherence": 0.0,
-      "instruction_adherence": 0.356,
-      "no_hallucination": 0.953
+      "fluency": 1.0,
+      "coherence": 0.267,
+      "instruction_adherence": 0.162,
+      "no_hallucination": 0.806
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.00, Adherence=0.36, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.27, Adherence=0.16, Grounding=0.81.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_077",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.699,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.936
+      "coherence": 0.757,
+      "instruction_adherence": 0.845,
+      "no_hallucination": 0.981
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.70, Adherence=1.00, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.76, Adherence=0.84, Grounding=0.98.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_078",
     "scores": {
-      "fluency": 0.787,
-      "coherence": 0.635,
-      "instruction_adherence": 0.848,
-      "no_hallucination": 0.156
+      "fluency": 0.817,
+      "coherence": 0.775,
+      "instruction_adherence": 0.973,
+      "no_hallucination": 0.394
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.63, Adherence=0.85, Grounding=0.16.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.82, Coherence=0.77, Adherence=0.97, Grounding=0.39.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_079",
     "scores": {
-      "fluency": 0.884,
+      "fluency": 0.942,
       "coherence": 1.0,
-      "instruction_adherence": 0.794,
-      "no_hallucination": 0.904
+      "instruction_adherence": 0.777,
+      "no_hallucination": 0.96
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.88, Coherence=1.00, Adherence=0.79, Grounding=0.90.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=1.00, Adherence=0.78, Grounding=0.96.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_080",
     "scores": {
-      "fluency": 0.279,
-      "coherence": 0.103,
-      "instruction_adherence": 0.619,
-      "no_hallucination": 0.734
+      "fluency": 0.19,
+      "coherence": 0.363,
+      "instruction_adherence": 0.625,
+      "no_hallucination": 0.714
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.28, Coherence=0.10, Adherence=0.62, Grounding=0.73.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.19, Coherence=0.36, Adherence=0.63, Grounding=0.71.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_081",
     "scores": {
-      "fluency": 0.998,
-      "coherence": 0.805,
-      "instruction_adherence": 0.876,
-      "no_hallucination": 0.293
+      "fluency": 1.0,
+      "coherence": 0.664,
+      "instruction_adherence": 0.707,
+      "no_hallucination": 0.073
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.80, Adherence=0.88, Grounding=0.29.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.66, Adherence=0.71, Grounding=0.07.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_082",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.753,
-      "instruction_adherence": 0.943,
-      "no_hallucination": 0.196
+      "coherence": 0.612,
+      "instruction_adherence": 0.774,
+      "no_hallucination": 0.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.75, Adherence=0.94, Grounding=0.20.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.61, Adherence=0.77, Grounding=0.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_083",
     "scores": {
-      "fluency": 0.965,
-      "coherence": 0.972,
-      "instruction_adherence": 0.997,
-      "no_hallucination": 0.923
+      "fluency": 0.959,
+      "coherence": 0.861,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.817
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.96, Coherence=0.97, Adherence=1.00, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.96, Coherence=0.86, Adherence=1.00, Grounding=0.82.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_084",
     "scores": {
-      "fluency": 1.0,
-      "coherence": 1.0,
-      "instruction_adherence": 0.793,
-      "no_hallucination": 0.27
+      "fluency": 0.965,
+      "coherence": 0.784,
+      "instruction_adherence": 0.722,
+      "no_hallucination": 0.293
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.79, Grounding=0.27.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.78, Adherence=0.72, Grounding=0.29.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_085",
     "scores": {
-      "fluency": 0.385,
-      "coherence": 0.345,
-      "instruction_adherence": 0.61,
-      "no_hallucination": 0.929
+      "fluency": 0.178,
+      "coherence": 0.185,
+      "instruction_adherence": 0.446,
+      "no_hallucination": 0.933
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.39, Coherence=0.35, Adherence=0.61, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.18, Coherence=0.18, Adherence=0.45, Grounding=0.93.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_086",
     "scores": {
-      "fluency": 0.886,
-      "coherence": 0.898,
-      "instruction_adherence": 0.636,
-      "no_hallucination": 0.861
+      "fluency": 0.88,
+      "coherence": 0.787,
+      "instruction_adherence": 0.81,
+      "no_hallucination": 0.755
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.89, Coherence=0.90, Adherence=0.64, Grounding=0.86.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.88, Coherence=0.79, Adherence=0.81, Grounding=0.76.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_087",
     "scores": {
-      "fluency": 0.986,
-      "coherence": 1.0,
-      "instruction_adherence": 0.366,
-      "no_hallucination": 0.971
+      "fluency": 0.98,
+      "coherence": 0.917,
+      "instruction_adherence": 0.54,
+      "no_hallucination": 0.865
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.37, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.92, Adherence=0.54, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_088",
     "scores": {
-      "fluency": 0.869,
-      "coherence": 0.735,
+      "fluency": 0.78,
+      "coherence": 0.995,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.926
+      "no_hallucination": 0.906
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.87, Coherence=0.74, Adherence=1.00, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.78, Coherence=0.99, Adherence=1.00, Grounding=0.91.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_089",
     "scores": {
-      "fluency": 0.297,
-      "coherence": 0.142,
-      "instruction_adherence": 0.688,
-      "no_hallucination": 0.691
+      "fluency": 0.208,
+      "coherence": 0.402,
+      "instruction_adherence": 0.694,
+      "no_hallucination": 0.671
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.30, Coherence=0.14, Adherence=0.69, Grounding=0.69.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.21, Coherence=0.40, Adherence=0.69, Grounding=0.67.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_090",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.769,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.983
+      "coherence": 0.827,
+      "instruction_adherence": 0.878,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.77, Adherence=1.00, Grounding=0.98.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.83, Adherence=0.88, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_091",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.748,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.972
+      "coherence": 0.806,
+      "instruction_adherence": 0.853,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.75, Adherence=1.00, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.81, Adherence=0.85, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_092",
     "scores": {
-      "fluency": 0.929,
+      "fluency": 0.987,
       "coherence": 1.0,
-      "instruction_adherence": 0.822,
-      "no_hallucination": 0.867
+      "instruction_adherence": 0.805,
+      "no_hallucination": 0.923
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=1.00, Adherence=0.82, Grounding=0.87.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.81, Grounding=0.92.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_093",
     "scores": {
-      "fluency": 0.973,
-      "coherence": 1.0,
-      "instruction_adherence": 0.843,
-      "no_hallucination": 0.911
+      "fluency": 1.0,
+      "coherence": 0.992,
+      "instruction_adherence": 0.826,
+      "no_hallucination": 0.967
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=1.00, Adherence=0.84, Grounding=0.91.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.99, Adherence=0.83, Grounding=0.97.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_094",
     "scores": {
-      "fluency": 0.944,
+      "fluency": 1.0,
       "coherence": 1.0,
-      "instruction_adherence": 0.856,
-      "no_hallucination": 0.882
+      "instruction_adherence": 0.839,
+      "no_hallucination": 0.938
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=1.00, Adherence=0.86, Grounding=0.88.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.84, Grounding=0.94.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_095",
     "scores": {
-      "fluency": 0.729,
-      "coherence": 0.751,
-      "instruction_adherence": 0.734,
-      "no_hallucination": 0.151
+      "fluency": 0.699,
+      "coherence": 0.646,
+      "instruction_adherence": 0.704,
+      "no_hallucination": 0.405
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.75, Adherence=0.73, Grounding=0.15.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.70, Coherence=0.65, Adherence=0.70, Grounding=0.40.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_096",
     "scores": {
-      "fluency": 0.091,
-      "coherence": 0.359,
-      "instruction_adherence": 0.691,
-      "no_hallucination": 0.604
+      "fluency": 0.355,
+      "coherence": 0.527,
+      "instruction_adherence": 0.672,
+      "no_hallucination": 0.786
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.09, Coherence=0.36, Adherence=0.69, Grounding=0.60.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.35, Coherence=0.53, Adherence=0.67, Grounding=0.79.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_097",
     "scores": {
-      "fluency": 0.678,
-      "coherence": 0.689,
-      "instruction_adherence": 0.799,
-      "no_hallucination": 0.399
+      "fluency": 0.695,
+      "coherence": 0.896,
+      "instruction_adherence": 0.435,
+      "no_hallucination": 0.799
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.68, Coherence=0.69, Adherence=0.80, Grounding=0.40.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.69, Coherence=0.90, Adherence=0.44, Grounding=0.80.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_098",
     "scores": {
-      "fluency": 0.766,
-      "coherence": 0.789,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.766
+      "fluency": 0.783,
+      "coherence": 0.996,
+      "instruction_adherence": 0.814,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.77, Coherence=0.79, Adherence=1.00, Grounding=0.77.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.78, Coherence=1.00, Adherence=0.81, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_099",
     "scores": {
-      "fluency": 0.804,
-      "coherence": 0.802,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.754
+      "fluency": 0.821,
+      "coherence": 1.0,
+      "instruction_adherence": 0.712,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.80, Coherence=0.80, Adherence=1.00, Grounding=0.75.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.82, Coherence=1.00, Adherence=0.71, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_100",
     "scores": {
-      "fluency": 0.954,
-      "coherence": 1.0,
-      "instruction_adherence": 0.783,
-      "no_hallucination": 0.935
+      "fluency": 1.0,
+      "coherence": 0.996,
+      "instruction_adherence": 0.766,
+      "no_hallucination": 0.991
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=1.00, Adherence=0.78, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.77, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_101",
     "scores": {
-      "fluency": 0.953,
-      "coherence": 1.0,
-      "instruction_adherence": 0.998,
-      "no_hallucination": 0.91
+      "fluency": 0.947,
+      "coherence": 0.897,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.804
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=1.00, Adherence=1.00, Grounding=0.91.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.90, Adherence=1.00, Grounding=0.80.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_102",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.962,
-      "instruction_adherence": 0.838,
-      "no_hallucination": 0.905
+      "coherence": 0.74,
+      "instruction_adherence": 0.767,
+      "no_hallucination": 0.928
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.96, Adherence=0.84, Grounding=0.91.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.74, Adherence=0.77, Grounding=0.93.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_103",
     "scores": {
-      "fluency": 0.886,
-      "coherence": 0.988,
-      "instruction_adherence": 0.636,
-      "no_hallucination": 0.571
+      "fluency": 0.88,
+      "coherence": 0.877,
+      "instruction_adherence": 0.81,
+      "no_hallucination": 0.465
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.89, Coherence=0.99, Adherence=0.64, Grounding=0.57.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.88, Coherence=0.88, Adherence=0.81, Grounding=0.47.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_104",
     "scores": {
-      "fluency": 0.974,
-      "coherence": 0.914,
-      "instruction_adherence": 0.734,
-      "no_hallucination": 0.365
+      "fluency": 0.933,
+      "coherence": 0.692,
+      "instruction_adherence": 0.663,
+      "no_hallucination": 0.388
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.91, Adherence=0.73, Grounding=0.37.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=0.69, Adherence=0.66, Grounding=0.39.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_105",
     "scores": {
-      "fluency": 0.769,
-      "coherence": 0.712,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.762
+      "fluency": 0.786,
+      "coherence": 0.919,
+      "instruction_adherence": 0.737,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.77, Coherence=0.71, Adherence=1.00, Grounding=0.76.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.92, Adherence=0.74, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_106",
     "scores": {
-      "fluency": 0.786,
-      "coherence": 0.794,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.801
+      "fluency": 0.803,
+      "coherence": 1.0,
+      "instruction_adherence": 0.78,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.79, Adherence=1.00, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.80, Coherence=1.00, Adherence=0.78, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_107",
     "scores": {
-      "fluency": 0.97,
+      "fluency": 1.0,
       "coherence": 1.0,
-      "instruction_adherence": 0.806,
-      "no_hallucination": 0.854
+      "instruction_adherence": 0.789,
+      "no_hallucination": 0.91
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=1.00, Adherence=0.81, Grounding=0.85.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.79, Grounding=0.91.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_108",
     "scores": {
-      "fluency": 0.935,
-      "coherence": 0.708,
+      "fluency": 0.846,
+      "coherence": 0.968,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.97
+      "no_hallucination": 0.95
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=0.71, Adherence=1.00, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.85, Coherence=0.97, Adherence=1.00, Grounding=0.95.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_109",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.801,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.949
+      "coherence": 0.859,
+      "instruction_adherence": 0.815,
+      "no_hallucination": 0.994
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.80, Adherence=1.00, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.86, Adherence=0.81, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_110",
     "scores": {
-      "fluency": 0.858,
-      "coherence": 0.7,
+      "fluency": 0.769,
+      "coherence": 0.96,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.94
+      "no_hallucination": 0.92
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.86, Coherence=0.70, Adherence=1.00, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.77, Coherence=0.96, Adherence=1.00, Grounding=0.92.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_111",
     "scores": {
-      "fluency": 0.927,
-      "coherence": 1.0,
-      "instruction_adherence": 0.901,
-      "no_hallucination": 0.994
+      "fluency": 0.921,
+      "coherence": 0.892,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.888
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=1.00, Adherence=0.90, Grounding=0.99.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.92, Coherence=0.89, Adherence=1.00, Grounding=0.89.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_112",
     "scores": {
-      "fluency": 0.779,
-      "coherence": 0.727,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.772
+      "fluency": 0.796,
+      "coherence": 0.934,
+      "instruction_adherence": 0.709,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.78, Coherence=0.73, Adherence=1.00, Grounding=0.77.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.80, Coherence=0.93, Adherence=0.71, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_113",
     "scores": {
-      "fluency": 0.886,
-      "coherence": 0.898,
-      "instruction_adherence": 0.636,
-      "no_hallucination": 0.861
+      "fluency": 0.88,
+      "coherence": 0.787,
+      "instruction_adherence": 0.81,
+      "no_hallucination": 0.755
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.89, Coherence=0.90, Adherence=0.64, Grounding=0.86.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.88, Coherence=0.79, Adherence=0.81, Grounding=0.76.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_114",
     "scores": {
-      "fluency": 0.899,
+      "fluency": 0.957,
       "coherence": 1.0,
-      "instruction_adherence": 0.845,
-      "no_hallucination": 0.91
+      "instruction_adherence": 0.828,
+      "no_hallucination": 0.966
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.90, Coherence=1.00, Adherence=0.85, Grounding=0.91.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.96, Coherence=1.00, Adherence=0.83, Grounding=0.97.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_115",
     "scores": {
-      "fluency": 0.913,
-      "coherence": 1.0,
-      "instruction_adherence": 0.802,
-      "no_hallucination": 0.918
+      "fluency": 0.971,
+      "coherence": 0.996,
+      "instruction_adherence": 0.785,
+      "no_hallucination": 0.974
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.91, Coherence=1.00, Adherence=0.80, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=1.00, Adherence=0.79, Grounding=0.97.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_116",
     "scores": {
-      "fluency": 0.551,
-      "coherence": 0.293,
-      "instruction_adherence": 0.517,
-      "no_hallucination": 0.943
+      "fluency": 0.344,
+      "coherence": 0.133,
+      "instruction_adherence": 0.353,
+      "no_hallucination": 0.947
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.55, Coherence=0.29, Adherence=0.52, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.34, Coherence=0.13, Adherence=0.35, Grounding=0.95.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_117",
     "scores": {
       "fluency": 1.0,
-      "coherence": 1.0,
-      "instruction_adherence": 0.949,
-      "no_hallucination": 0.958
+      "coherence": 0.915,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.852
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.95, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.91, Adherence=1.00, Grounding=0.85.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_118",
     "scores": {
-      "fluency": 0.941,
-      "coherence": 1.0,
-      "instruction_adherence": 0.983,
-      "no_hallucination": 0.917
+      "fluency": 0.935,
+      "coherence": 0.941,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.811
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=1.00, Adherence=0.98, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=0.94, Adherence=1.00, Grounding=0.81.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_119",
     "scores": {
-      "fluency": 0.972,
-      "coherence": 0.882,
-      "instruction_adherence": 0.833,
-      "no_hallucination": 0.11
+      "fluency": 0.994,
+      "coherence": 0.858,
+      "instruction_adherence": 0.712,
+      "no_hallucination": 0.134
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.88, Adherence=0.83, Grounding=0.11.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=0.86, Adherence=0.71, Grounding=0.13.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_120",
     "scores": {
-      "fluency": 0.952,
-      "coherence": 0.509,
-      "instruction_adherence": 0.78,
-      "no_hallucination": 0.922
+      "fluency": 1.0,
+      "coherence": 0.494,
+      "instruction_adherence": 0.763,
+      "no_hallucination": 0.978
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.51, Adherence=0.78, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.49, Adherence=0.76, Grounding=0.98.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_121",
     "scores": {
-      "fluency": 0.358,
-      "coherence": 0.301,
-      "instruction_adherence": 0.614,
-      "no_hallucination": 0.797
+      "fluency": 0.476,
+      "coherence": 0.208,
+      "instruction_adherence": 0.483,
+      "no_hallucination": 0.699
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.36, Coherence=0.30, Adherence=0.61, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.48, Coherence=0.21, Adherence=0.48, Grounding=0.70.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_122",
     "scores": {
-      "fluency": 0.829,
-      "coherence": 0.791,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.758
+      "fluency": 0.846,
+      "coherence": 0.998,
+      "instruction_adherence": 0.813,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.83, Coherence=0.79, Adherence=1.00, Grounding=0.76.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.85, Coherence=1.00, Adherence=0.81, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_123",
     "scores": {
-      "fluency": 0.761,
-      "coherence": 0.861,
-      "instruction_adherence": 0.79,
-      "no_hallucination": 0.29
+      "fluency": 0.731,
+      "coherence": 0.756,
+      "instruction_adherence": 0.76,
+      "no_hallucination": 0.544
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.76, Coherence=0.86, Adherence=0.79, Grounding=0.29.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.76, Adherence=0.76, Grounding=0.54.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_124",
     "scores": {
-      "fluency": 0.974,
+      "fluency": 1.0,
       "coherence": 1.0,
-      "instruction_adherence": 0.78,
-      "no_hallucination": 0.932
+      "instruction_adherence": 0.763,
+      "no_hallucination": 0.988
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=1.00, Adherence=0.78, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.76, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_125",
     "scores": {
-      "fluency": 0.099,
-      "coherence": 0.502,
-      "instruction_adherence": 0.634,
-      "no_hallucination": 0.541
+      "fluency": 0.363,
+      "coherence": 0.67,
+      "instruction_adherence": 0.615,
+      "no_hallucination": 0.723
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.10, Coherence=0.50, Adherence=0.63, Grounding=0.54.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.36, Coherence=0.67, Adherence=0.62, Grounding=0.72.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_126",
     "scores": {
-      "fluency": 0.975,
-      "coherence": 1.0,
-      "instruction_adherence": 0.939,
-      "no_hallucination": 0.98
+      "fluency": 0.969,
+      "coherence": 0.958,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.874
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=1.00, Adherence=0.94, Grounding=0.98.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.96, Adherence=1.00, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_127",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.712,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.978
+      "coherence": 0.77,
+      "instruction_adherence": 0.844,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.71, Adherence=1.00, Grounding=0.98.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.77, Adherence=0.84, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_128",
     "scores": {
-      "fluency": 0.979,
-      "coherence": 0.783,
-      "instruction_adherence": 0.919,
-      "no_hallucination": 0.299
+      "fluency": 1.0,
+      "coherence": 0.642,
+      "instruction_adherence": 0.75,
+      "no_hallucination": 0.079
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.78, Adherence=0.92, Grounding=0.30.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.64, Adherence=0.75, Grounding=0.08.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_129",
     "scores": {
-      "fluency": 0.739,
-      "coherence": 0.765,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.756
+      "fluency": 0.756,
+      "coherence": 0.972,
+      "instruction_adherence": 0.722,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.74, Coherence=0.76, Adherence=1.00, Grounding=0.76.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.76, Coherence=0.97, Adherence=0.72, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_130",
     "scores": {
-      "fluency": 0.52,
-      "coherence": 0.342,
-      "instruction_adherence": 0.513,
-      "no_hallucination": 0.81
+      "fluency": 0.313,
+      "coherence": 0.182,
+      "instruction_adherence": 0.349,
+      "no_hallucination": 0.814
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.52, Coherence=0.34, Adherence=0.51, Grounding=0.81.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.31, Coherence=0.18, Adherence=0.35, Grounding=0.81.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_131",
     "scores": {
-      "fluency": 0.94,
-      "coherence": 0.683,
+      "fluency": 0.851,
+      "coherence": 0.943,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.877
+      "no_hallucination": 0.857
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=0.68, Adherence=1.00, Grounding=0.88.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.85, Coherence=0.94, Adherence=1.00, Grounding=0.86.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_132",
     "scores": {
-      "fluency": 0.699,
-      "coherence": 0.274,
-      "instruction_adherence": 0.243,
-      "no_hallucination": 0.986
+      "fluency": 0.931,
+      "coherence": 0.263,
+      "instruction_adherence": 0.103,
+      "no_hallucination": 0.769
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.70, Coherence=0.27, Adherence=0.24, Grounding=0.99.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=0.26, Adherence=0.10, Grounding=0.77.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_133",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.719,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.96
+      "coherence": 0.777,
+      "instruction_adherence": 0.843,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.72, Adherence=1.00, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.78, Adherence=0.84, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_134",
     "scores": {
-      "fluency": 0.791,
-      "coherence": 0.733,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.837
+      "fluency": 0.808,
+      "coherence": 0.94,
+      "instruction_adherence": 0.772,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.73, Adherence=1.00, Grounding=0.84.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=0.94, Adherence=0.77, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_135",
     "scores": {
-      "fluency": 0.937,
-      "coherence": 1.0,
-      "instruction_adherence": 0.931,
-      "no_hallucination": 0.972
+      "fluency": 0.931,
+      "coherence": 0.919,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.866
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=1.00, Adherence=0.93, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=0.92, Adherence=1.00, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_136",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.996,
-      "instruction_adherence": 0.936,
-      "no_hallucination": 0.959
+      "coherence": 0.885,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.853
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.94, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.88, Adherence=1.00, Grounding=0.85.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_137",
     "scores": {
-      "fluency": 1.0,
-      "coherence": 0.595,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.57
+      "fluency": 0.981,
+      "coherence": 0.653,
+      "instruction_adherence": 0.734,
+      "no_hallucination": 0.615
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.59, Adherence=1.00, Grounding=0.57.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.65, Adherence=0.73, Grounding=0.61.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_138",
     "scores": {
-      "fluency": 0.319,
-      "coherence": 0.467,
-      "instruction_adherence": 0.644,
-      "no_hallucination": 0.783
+      "fluency": 0.437,
+      "coherence": 0.374,
+      "instruction_adherence": 0.513,
+      "no_hallucination": 0.685
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.32, Coherence=0.47, Adherence=0.64, Grounding=0.78.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.44, Coherence=0.37, Adherence=0.51, Grounding=0.68.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_139",
     "scores": {
-      "fluency": 0.836,
-      "coherence": 0.748,
-      "instruction_adherence": 0.88,
-      "no_hallucination": 0.191
+      "fluency": 0.866,
+      "coherence": 0.888,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.429
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.84, Coherence=0.75, Adherence=0.88, Grounding=0.19.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.87, Coherence=0.89, Adherence=1.00, Grounding=0.43.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_140",
     "scores": {
-      "fluency": 0.883,
-      "coherence": 0.731,
+      "fluency": 0.794,
+      "coherence": 0.991,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.941
+      "no_hallucination": 0.921
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.88, Coherence=0.73, Adherence=1.00, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.99, Adherence=1.00, Grounding=0.92.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_141",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.671,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.904
+      "coherence": 0.729,
+      "instruction_adherence": 0.857,
+      "no_hallucination": 0.949
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.67, Adherence=1.00, Grounding=0.90.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.73, Adherence=0.86, Grounding=0.95.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_142",
     "scores": {
-      "fluency": 0.955,
-      "coherence": 0.688,
+      "fluency": 0.866,
+      "coherence": 0.948,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.884
+      "no_hallucination": 0.864
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.96, Coherence=0.69, Adherence=1.00, Grounding=0.88.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.87, Coherence=0.95, Adherence=1.00, Grounding=0.86.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_143",
     "scores": {
-      "fluency": 0.778,
-      "coherence": 0.189,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.799
+      "fluency": 0.795,
+      "coherence": 0.396,
+      "instruction_adherence": 0.735,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.78, Coherence=0.19, Adherence=1.00, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.40, Adherence=0.74, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_144",
     "scores": {
-      "fluency": 0.263,
-      "coherence": 0.502,
-      "instruction_adherence": 0.625,
-      "no_hallucination": 0.695
+      "fluency": 0.527,
+      "coherence": 0.67,
+      "instruction_adherence": 0.606,
+      "no_hallucination": 0.877
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.26, Coherence=0.50, Adherence=0.62, Grounding=0.70.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.53, Coherence=0.67, Adherence=0.61, Grounding=0.88.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_145",
     "scores": {
-      "fluency": 0.396,
-      "coherence": 0.394,
-      "instruction_adherence": 0.703,
-      "no_hallucination": 0.922
+      "fluency": 0.189,
+      "coherence": 0.234,
+      "instruction_adherence": 0.539,
+      "no_hallucination": 0.926
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.40, Coherence=0.39, Adherence=0.70, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.19, Coherence=0.23, Adherence=0.54, Grounding=0.93.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_146",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.97,
-      "instruction_adherence": 0.956,
-      "no_hallucination": 0.956
+      "coherence": 0.859,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.85
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.97, Adherence=0.96, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.86, Adherence=1.00, Grounding=0.85.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_147",
     "scores": {
-      "fluency": 0.92,
-      "coherence": 0.694,
+      "fluency": 0.831,
+      "coherence": 0.954,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.917
+      "no_hallucination": 0.897
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.92, Coherence=0.69, Adherence=1.00, Grounding=0.92.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.83, Coherence=0.95, Adherence=1.00, Grounding=0.90.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_148",
     "scores": {
-      "fluency": 0.778,
-      "coherence": 0.189,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.799
+      "fluency": 0.795,
+      "coherence": 0.396,
+      "instruction_adherence": 0.735,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.78, Coherence=0.19, Adherence=1.00, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.40, Adherence=0.74, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_149",
     "scores": {
-      "fluency": 0.791,
-      "coherence": 0.734,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.807
+      "fluency": 0.808,
+      "coherence": 0.941,
+      "instruction_adherence": 0.776,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.73, Adherence=1.00, Grounding=0.81.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=0.94, Adherence=0.78, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_150",
     "scores": {
-      "fluency": 0.862,
-      "coherence": 0.919,
-      "instruction_adherence": 0.48,
-      "no_hallucination": 0.522
+      "fluency": 0.92,
+      "coherence": 0.904,
+      "instruction_adherence": 0.463,
+      "no_hallucination": 0.578
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.86, Coherence=0.92, Adherence=0.48, Grounding=0.52.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.92, Coherence=0.90, Adherence=0.46, Grounding=0.58.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_151",
     "scores": {
-      "fluency": 0.391,
-      "coherence": 0.248,
-      "instruction_adherence": 0.622,
-      "no_hallucination": 0.855
+      "fluency": 0.184,
+      "coherence": 0.088,
+      "instruction_adherence": 0.458,
+      "no_hallucination": 0.859
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.39, Coherence=0.25, Adherence=0.62, Grounding=0.85.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.18, Coherence=0.09, Adherence=0.46, Grounding=0.86.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_152",
     "scores": {
-      "fluency": 0.326,
-      "coherence": 0.18,
-      "instruction_adherence": 0.722,
-      "no_hallucination": 0.775
+      "fluency": 0.237,
+      "coherence": 0.44,
+      "instruction_adherence": 0.728,
+      "no_hallucination": 0.755
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.33, Coherence=0.18, Adherence=0.72, Grounding=0.78.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.24, Coherence=0.44, Adherence=0.73, Grounding=0.75.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_153",
     "scores": {
-      "fluency": 0.761,
-      "coherence": 0.811,
-      "instruction_adherence": 0.79,
-      "no_hallucination": 0.83
+      "fluency": 0.731,
+      "coherence": 0.706,
+      "instruction_adherence": 0.76,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.76, Coherence=0.81, Adherence=0.79, Grounding=0.83.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.71, Adherence=0.76, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_154",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.973,
-      "instruction_adherence": 0.934,
-      "no_hallucination": 0.954
+      "coherence": 0.862,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.848
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.97, Adherence=0.93, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.86, Adherence=1.00, Grounding=0.85.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_155",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.741,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.943
+      "coherence": 0.799,
+      "instruction_adherence": 0.881,
+      "no_hallucination": 0.988
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.74, Adherence=1.00, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.80, Adherence=0.88, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_156",
     "scores": {
-      "fluency": 0.932,
-      "coherence": 1.0,
-      "instruction_adherence": 0.945,
-      "no_hallucination": 0.981
+      "fluency": 0.926,
+      "coherence": 0.976,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.875
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=1.00, Adherence=0.94, Grounding=0.98.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=0.98, Adherence=1.00, Grounding=0.88.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_157",
     "scores": {
-      "fluency": 0.778,
-      "coherence": 0.729,
-      "instruction_adherence": 0.529,
-      "no_hallucination": 0.799
+      "fluency": 0.795,
+      "coherence": 0.936,
+      "instruction_adherence": 0.165,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.78, Coherence=0.73, Adherence=0.53, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.94, Adherence=0.17, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_158",
     "scores": {
-      "fluency": 0.344,
-      "coherence": 0.113,
-      "instruction_adherence": 0.782,
-      "no_hallucination": 0.741
+      "fluency": 0.255,
+      "coherence": 0.373,
+      "instruction_adherence": 0.788,
+      "no_hallucination": 0.721
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.34, Coherence=0.11, Adherence=0.78, Grounding=0.74.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.25, Coherence=0.37, Adherence=0.79, Grounding=0.72.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_159",
     "scores": {
-      "fluency": 0.747,
-      "coherence": 0.731,
-      "instruction_adherence": 0.886,
-      "no_hallucination": 0.143
+      "fluency": 0.777,
+      "coherence": 0.871,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.381
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.75, Coherence=0.73, Adherence=0.89, Grounding=0.14.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.78, Coherence=0.87, Adherence=1.00, Grounding=0.38.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_160",
     "scores": {
-      "fluency": 0.295,
-      "coherence": 0.232,
-      "instruction_adherence": 0.602,
-      "no_hallucination": 0.803
+      "fluency": 0.206,
+      "coherence": 0.492,
+      "instruction_adherence": 0.608,
+      "no_hallucination": 0.783
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.30, Coherence=0.23, Adherence=0.60, Grounding=0.80.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.21, Coherence=0.49, Adherence=0.61, Grounding=0.78.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_161",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.747,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.932
+      "coherence": 0.805,
+      "instruction_adherence": 0.756,
+      "no_hallucination": 0.977
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.75, Adherence=1.00, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.80, Adherence=0.76, Grounding=0.98.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_162",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.674,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.943
+      "coherence": 0.732,
+      "instruction_adherence": 0.812,
+      "no_hallucination": 0.988
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.67, Adherence=1.00, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.73, Adherence=0.81, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_163",
     "scores": {
-      "fluency": 0.0,
-      "coherence": 0.834,
-      "instruction_adherence": 0.243,
-      "no_hallucination": 0.986
+      "fluency": 0.211,
+      "coherence": 0.823,
+      "instruction_adherence": 0.103,
+      "no_hallucination": 0.769
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.00, Coherence=0.83, Adherence=0.24, Grounding=0.99.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.21, Coherence=0.82, Adherence=0.10, Grounding=0.77.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_164",
     "scores": {
-      "fluency": 0.269,
-      "coherence": 0.428,
-      "instruction_adherence": 0.696,
-      "no_hallucination": 0.832
+      "fluency": 0.387,
+      "coherence": 0.335,
+      "instruction_adherence": 0.565,
+      "no_hallucination": 0.734
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.27, Coherence=0.43, Adherence=0.70, Grounding=0.83.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.39, Coherence=0.33, Adherence=0.56, Grounding=0.73.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_165",
     "scores": {
-      "fluency": 0.278,
-      "coherence": 0.494,
-      "instruction_adherence": 0.536,
-      "no_hallucination": 0.808
+      "fluency": 0.272,
+      "coherence": 0.383,
+      "instruction_adherence": 0.71,
+      "no_hallucination": 0.702
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.28, Coherence=0.49, Adherence=0.54, Grounding=0.81.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.27, Coherence=0.38, Adherence=0.71, Grounding=0.70.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_166",
     "scores": {
-      "fluency": 0.281,
-      "coherence": 0.414,
-      "instruction_adherence": 0.588,
-      "no_hallucination": 0.684
+      "fluency": 0.275,
+      "coherence": 0.303,
+      "instruction_adherence": 0.762,
+      "no_hallucination": 0.578
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.28, Coherence=0.41, Adherence=0.59, Grounding=0.68.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.28, Coherence=0.30, Adherence=0.76, Grounding=0.58.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_167",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.266,
-      "instruction_adherence": 0.308,
-      "no_hallucination": 0.959
+      "coherence": 0.275,
+      "instruction_adherence": 0.095,
+      "no_hallucination": 0.975
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.27, Adherence=0.31, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.28, Adherence=0.10, Grounding=0.97.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_168",
     "scores": {
-      "fluency": 0.799,
-      "coherence": 0.7,
-      "instruction_adherence": 0.928,
-      "no_hallucination": 0.174
+      "fluency": 0.829,
+      "coherence": 0.84,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.412
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.80, Coherence=0.70, Adherence=0.93, Grounding=0.17.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.83, Coherence=0.84, Adherence=1.00, Grounding=0.41.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_169",
     "scores": {
-      "fluency": 0.975,
-      "coherence": 1.0,
-      "instruction_adherence": 0.899,
-      "no_hallucination": 0.985
+      "fluency": 0.969,
+      "coherence": 0.942,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.879
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=1.00, Adherence=0.90, Grounding=0.99.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.94, Adherence=1.00, Grounding=0.88.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_170",
     "scores": {
-      "fluency": 0.771,
-      "coherence": 0.745,
-      "instruction_adherence": 0.83,
-      "no_hallucination": 0.189
+      "fluency": 0.801,
+      "coherence": 0.885,
+      "instruction_adherence": 0.955,
+      "no_hallucination": 0.427
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.77, Coherence=0.74, Adherence=0.83, Grounding=0.19.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.80, Coherence=0.88, Adherence=0.95, Grounding=0.43.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_171",
     "scores": {
-      "fluency": 0.957,
-      "coherence": 1.0,
-      "instruction_adherence": 0.919,
-      "no_hallucination": 1.0
+      "fluency": 0.951,
+      "coherence": 0.901,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.905
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.96, Coherence=1.00, Adherence=0.92, Grounding=1.00.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.90, Adherence=1.00, Grounding=0.91.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_172",
     "scores": {
-      "fluency": 0.927,
-      "coherence": 1.0,
-      "instruction_adherence": 0.983,
-      "no_hallucination": 0.946
+      "fluency": 0.921,
+      "coherence": 0.917,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.84
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=1.00, Adherence=0.98, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.92, Coherence=0.92, Adherence=1.00, Grounding=0.84.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_173",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.744,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.949
+      "coherence": 0.802,
+      "instruction_adherence": 0.841,
+      "no_hallucination": 0.994
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.74, Adherence=1.00, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.80, Adherence=0.84, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_174",
     "scores": {
-      "fluency": 0.953,
-      "coherence": 1.0,
-      "instruction_adherence": 0.899,
-      "no_hallucination": 0.962
+      "fluency": 0.947,
+      "coherence": 0.901,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.856
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=1.00, Adherence=0.90, Grounding=0.96.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.90, Adherence=1.00, Grounding=0.86.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_175",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.714,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.914
+      "coherence": 0.772,
+      "instruction_adherence": 0.826,
+      "no_hallucination": 0.959
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.71, Adherence=1.00, Grounding=0.91.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.77, Adherence=0.83, Grounding=0.96.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_176",
     "scores": {
-      "fluency": 0.893,
-      "coherence": 0.721,
+      "fluency": 0.804,
+      "coherence": 0.981,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.935
+      "no_hallucination": 0.915
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.89, Coherence=0.72, Adherence=1.00, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.80, Coherence=0.98, Adherence=1.00, Grounding=0.91.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_177",
     "scores": {
-      "fluency": 0.794,
-      "coherence": 0.766,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.762
+      "fluency": 0.811,
+      "coherence": 0.973,
+      "instruction_adherence": 0.689,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.77, Adherence=1.00, Grounding=0.76.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=0.97, Adherence=0.69, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_178",
     "scores": {
-      "fluency": 0.861,
-      "coherence": 0.662,
+      "fluency": 0.772,
+      "coherence": 0.922,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.868
+      "no_hallucination": 0.848
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.86, Coherence=0.66, Adherence=1.00, Grounding=0.87.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.77, Coherence=0.92, Adherence=1.00, Grounding=0.85.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_179",
     "scores": {
-      "fluency": 0.91,
+      "fluency": 0.968,
       "coherence": 1.0,
-      "instruction_adherence": 0.774,
-      "no_hallucination": 0.896
+      "instruction_adherence": 0.757,
+      "no_hallucination": 0.952
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.91, Coherence=1.00, Adherence=0.77, Grounding=0.90.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=1.00, Adherence=0.76, Grounding=0.95.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_180",
     "scores": {
-      "fluency": 0.952,
-      "coherence": 0.664,
+      "fluency": 0.863,
+      "coherence": 0.924,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.866
+      "no_hallucination": 0.846
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.66, Adherence=1.00, Grounding=0.87.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.86, Coherence=0.92, Adherence=1.00, Grounding=0.85.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_181",
     "scores": {
-      "fluency": 0.937,
+      "fluency": 0.995,
       "coherence": 1.0,
-      "instruction_adherence": 0.784,
-      "no_hallucination": 0.878
+      "instruction_adherence": 0.767,
+      "no_hallucination": 0.934
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.94, Coherence=1.00, Adherence=0.78, Grounding=0.88.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.77, Grounding=0.93.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_182",
     "scores": {
-      "fluency": 0.722,
-      "coherence": 0.764,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.792
+      "fluency": 0.739,
+      "coherence": 0.971,
+      "instruction_adherence": 0.762,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.72, Coherence=0.76, Adherence=1.00, Grounding=0.79.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.74, Coherence=0.97, Adherence=0.76, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_183",
     "scores": {
-      "fluency": 0.317,
-      "coherence": 0.702,
+      "fluency": 0.228,
+      "coherence": 0.962,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.93
+      "no_hallucination": 0.91
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.32, Coherence=0.70, Adherence=1.00, Grounding=0.93.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.23, Coherence=0.96, Adherence=1.00, Grounding=0.91.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_184",
     "scores": {
-      "fluency": 0.761,
-      "coherence": 0.811,
-      "instruction_adherence": 0.79,
-      "no_hallucination": 0.83
+      "fluency": 0.731,
+      "coherence": 0.706,
+      "instruction_adherence": 0.76,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.76, Coherence=0.81, Adherence=0.79, Grounding=0.83.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.71, Adherence=0.76, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_185",
     "scores": {
-      "fluency": 0.949,
-      "coherence": 0.908,
-      "instruction_adherence": 0.875,
-      "no_hallucination": 0.207
+      "fluency": 0.971,
+      "coherence": 0.884,
+      "instruction_adherence": 0.754,
+      "no_hallucination": 0.231
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.91, Adherence=0.88, Grounding=0.21.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.88, Adherence=0.75, Grounding=0.23.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_186",
     "scores": {
-      "fluency": 1.0,
-      "coherence": 0.908,
-      "instruction_adherence": 0.763,
-      "no_hallucination": 0.301
+      "fluency": 0.959,
+      "coherence": 0.686,
+      "instruction_adherence": 0.692,
+      "no_hallucination": 0.324
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.91, Adherence=0.76, Grounding=0.30.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.96, Coherence=0.69, Adherence=0.69, Grounding=0.32.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_187",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.743,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.943
+      "coherence": 0.801,
+      "instruction_adherence": 0.841,
+      "no_hallucination": 0.988
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.74, Adherence=1.00, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.80, Adherence=0.84, Grounding=0.99.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_188",
     "scores": {
-      "fluency": 0.986,
-      "coherence": 1.0,
-      "instruction_adherence": 0.366,
-      "no_hallucination": 0.971
+      "fluency": 0.98,
+      "coherence": 0.917,
+      "instruction_adherence": 0.54,
+      "no_hallucination": 0.865
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=1.00, Adherence=0.37, Grounding=0.97.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.92, Adherence=0.54, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_189",
     "scores": {
-      "fluency": 0.926,
-      "coherence": 1.0,
-      "instruction_adherence": 0.942,
-      "no_hallucination": 0.95
+      "fluency": 0.92,
+      "coherence": 0.901,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.844
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=1.00, Adherence=0.94, Grounding=0.95.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.92, Coherence=0.90, Adherence=1.00, Grounding=0.84.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_190",
     "scores": {
-      "fluency": 0.919,
-      "coherence": 1.0,
-      "instruction_adherence": 0.99,
-      "no_hallucination": 0.975
+      "fluency": 0.913,
+      "coherence": 0.902,
+      "instruction_adherence": 1.0,
+      "no_hallucination": 0.869
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.92, Coherence=1.00, Adherence=0.99, Grounding=0.98.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.91, Coherence=0.90, Adherence=1.00, Grounding=0.87.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_191",
     "scores": {
-      "fluency": 0.807,
-      "coherence": 0.572,
-      "instruction_adherence": 0.775,
-      "no_hallucination": 0.82
+      "fluency": 0.718,
+      "coherence": 0.832,
+      "instruction_adherence": 0.781,
+      "no_hallucination": 0.8
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=0.57, Adherence=0.78, Grounding=0.82.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.72, Coherence=0.83, Adherence=0.78, Grounding=0.80.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_192",
     "scores": {
-      "fluency": 0.934,
-      "coherence": 1.0,
-      "instruction_adherence": 0.843,
-      "no_hallucination": 0.941
+      "fluency": 0.992,
+      "coherence": 0.985,
+      "instruction_adherence": 0.826,
+      "no_hallucination": 0.997
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.93, Coherence=1.00, Adherence=0.84, Grounding=0.94.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.99, Coherence=0.98, Adherence=0.83, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_193",
     "scores": {
-      "fluency": 1.0,
-      "coherence": 0.685,
-      "instruction_adherence": 0.774,
-      "no_hallucination": 0.57
+      "fluency": 0.981,
+      "coherence": 0.743,
+      "instruction_adherence": 0.504,
+      "no_hallucination": 0.615
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.68, Adherence=0.77, Grounding=0.57.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.98, Coherence=0.74, Adherence=0.50, Grounding=0.61.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_194",
     "scores": {
-      "fluency": 0.951,
+      "fluency": 1.0,
       "coherence": 1.0,
-      "instruction_adherence": 0.831,
-      "no_hallucination": 0.894
+      "instruction_adherence": 0.814,
+      "no_hallucination": 0.95
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=1.00, Adherence=0.83, Grounding=0.89.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=1.00, Adherence=0.81, Grounding=0.95.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_195",
     "scores": {
       "fluency": 1.0,
-      "coherence": 0.689,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.991
+      "coherence": 0.747,
+      "instruction_adherence": 0.774,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.69, Adherence=1.00, Grounding=0.99.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=1.00, Coherence=0.75, Adherence=0.77, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_196",
     "scores": {
-      "fluency": 0.494,
-      "coherence": 0.294,
-      "instruction_adherence": 0.629,
-      "no_hallucination": 0.893
+      "fluency": 0.287,
+      "coherence": 0.134,
+      "instruction_adherence": 0.465,
+      "no_hallucination": 0.897
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.49, Coherence=0.29, Adherence=0.63, Grounding=0.89.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.29, Coherence=0.13, Adherence=0.46, Grounding=0.90.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_197",
     "scores": {
-      "fluency": 0.789,
-      "coherence": 0.79,
-      "instruction_adherence": 1.0,
-      "no_hallucination": 0.747
+      "fluency": 0.806,
+      "coherence": 0.997,
+      "instruction_adherence": 0.767,
+      "no_hallucination": 1.0
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.79, Coherence=0.79, Adherence=1.00, Grounding=0.75.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=1.00, Adherence=0.77, Grounding=1.00.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_198",
     "scores": {
-      "fluency": 0.949,
-      "coherence": 0.958,
-      "instruction_adherence": 0.865,
-      "no_hallucination": 0.207
+      "fluency": 0.971,
+      "coherence": 0.934,
+      "instruction_adherence": 0.744,
+      "no_hallucination": 0.231
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.95, Coherence=0.96, Adherence=0.87, Grounding=0.21.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.97, Coherence=0.93, Adherence=0.74, Grounding=0.23.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_199",
     "scores": {
-      "fluency": 0.817,
-      "coherence": 0.572,
-      "instruction_adherence": 0.775,
-      "no_hallucination": 0.53
+      "fluency": 0.728,
+      "coherence": 0.832,
+      "instruction_adherence": 0.781,
+      "no_hallucination": 0.51
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.82, Coherence=0.57, Adherence=0.78, Grounding=0.53.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.73, Coherence=0.83, Adherence=0.78, Grounding=0.51.",
     "rubric_version": "rubric_a"
   },
   {
     "id": "probe_200",
     "scores": {
-      "fluency": 0.897,
-      "coherence": 0.647,
+      "fluency": 0.808,
+      "coherence": 0.907,
       "instruction_adherence": 1.0,
-      "no_hallucination": 0.894
+      "no_hallucination": 0.874
     },
-    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.90, Coherence=0.65, Adherence=1.00, Grounding=0.89.",
+    "reasoning": "[Zero-Shot Baseline - Rubric A]: Direct rating without CoT deliberation. Fluency=0.81, Coherence=0.91, Adherence=1.00, Grounding=0.87.",
     "rubric_version": "rubric_a"
   }
 ]

@@ -175,6 +175,7 @@ def main():
         "🚨 Failure Modes & Disagreements",
         "📊 Statistical Alignment & Publication Figures",
         "⚡ Single-Probe Playground",
+        "📈 Judge Drift History",
     ])
 
     # =========================================================================
@@ -909,6 +910,65 @@ def main():
                     st.write(f"**Instruction Adherence:** `{res_judge.instruction_adherence:.3f}`")
                     st.write(f"**No Hallucination:** `{res_judge.no_hallucination:.3f}`")
                     st.info(f"**Reasoning:** {res_judge.reasoning}")
+
+    # =========================================================================
+    # TAB 6: JUDGE DRIFT HISTORY & CONTINUOUS MONITORING
+    # =========================================================================
+    with tabs[5]:
+        st.subheader("📈 LLM Judge Alignment Drift History")
+        st.markdown(
+            "Continuous monitoring of the 70B judge scored against a frozen golden set. "
+            "Tracks agreement ($\kappa$), mean score shifts, and flags statistically significant drift using bootstrap 95% CIs."
+        )
+
+        drift_log_path = DATA_DIR / "drift_history.jsonl"
+        if drift_log_path.exists():
+            records = []
+            with open(drift_log_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        records.append(json.loads(line))
+
+            if records:
+                df_history = pd.DataFrame([
+                    {
+                        "Timestamp": r.get("timestamp", "")[:19].replace("T", " "),
+                        "Commit": r.get("git_commit_hash", ""),
+                        "Model": r.get("judge_model", ""),
+                        "Overall Kappa": r.get("current_overall_kappa", 0.0),
+                        "CI Lower": r.get("current_kappa_ci_95", [0.0, 0.0])[0],
+                        "CI Upper": r.get("current_kappa_ci_95", [0.0, 0.0])[1],
+                        "Drift Flag": "🔴 DRIFT" if r.get("overall_drift_detected") else "🟢 STABLE",
+                        "Position Bias": r.get("position_bias_rate", 0.0),
+                    }
+                    for r in records
+                ])
+
+                # Metric summary cards
+                last_r = records[-1]
+                m_c1, m_c2, m_c3, m_c4 = st.columns(4)
+                with m_c1:
+                    st.metric("Latest Status", "🔴 DRIFT" if last_r.get("overall_drift_detected") else "🟢 STABLE")
+                with m_c2:
+                    st.metric("Current Kappa", f"{last_r.get('current_overall_kappa', 0.0):.3f}")
+                with m_c3:
+                    st.metric("Golden Probes Evaluated", last_r.get("n_samples", 0))
+                with m_c4:
+                    st.metric("Historical Audits Recorded", len(records))
+
+                st.markdown("#### Historical Audit Log")
+                st.dataframe(df_history, use_container_width=True)
+
+                # Time series chart
+                st.markdown("#### Overall Kappa Trend Over Time")
+                chart_df = df_history.set_index("Timestamp")[["Overall Kappa", "CI Lower", "CI Upper"]]
+                st.line_chart(chart_df)
+            else:
+                st.info("No audit entries recorded in `data/drift_history.jsonl` yet.")
+        else:
+            st.info("No drift history found. Run `python monitoring/drift.py` to record your first baseline.")
+
 
 
 if __name__ == "__main__":

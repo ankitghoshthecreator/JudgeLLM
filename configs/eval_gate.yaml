@@ -1,0 +1,17 @@
+# Production Evaluation Gate Configuration
+# CI-aware logic:
+#   PASS: 95% CI lower bound >= floor
+#   WARN: Point estimate >= floor, but CI lower bound overlaps below floor
+#   FAIL: 95% CI lies entirely below floor
+
+thresholds:
+  min_overall_kappa: 0.70        # RLAIF minimum bar (Cohen's Kappa against human consensus)
+  min_fluency_kappa: 0.75        # Fluency floor
+  max_disagreement_rate: 0.30     # Max fraction of samples with |Delta| > 0.30
+  max_false_positive_rate: 0.35   # False-positive ceiling in disagreement taxonomy
+  max_local_latency_ms: 0.15      # Heuristic SLA ceiling
+  max_position_bias_rate: 0.20    # Order-reversal flip tolerance
+
+ci_policy:
+  enforce_strict_ci: true        # If true, fail only when CI upper bound < floor; warn if CI overlaps
+  confidence_level: 0.95

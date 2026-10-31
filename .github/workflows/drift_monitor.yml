@@ -1,0 +1,74 @@
+name: Scheduled Judge Drift Monitoring & Alerting
+
+on:
+  schedule:
+    # Run every Monday at 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      limit_probes:
+        description: "Number of golden probes to evaluate"
+        required: false
+        default: "50"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  monitor-drift:
+    name: Audit Judge Alignment Drift
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Execute Drift Monitor
+        id: drift_check
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          LIMIT="${{ github.event.inputs.limit_probes || '50' }}"
+          echo "Running drift check on $LIMIT golden probes..."
+          # Uses live Groq API if secret present, otherwise falls back to calibrated mock
+          python monitoring/drift.py --limit "$LIMIT" --output-report drift_report.md
+        continue-on-error: true
+
+      - name: Post Drift Alert Issue on Failure
+        if: steps.drift_check.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = "## 🚨 Automated LLM Judge Drift Alert\n\nStatistically significant alignment degradation or score shift detected in weekly scheduled audit.";
+            if (fs.existsSync('drift_report.md')) {
+              body = fs.readFileSync('drift_report.md', 'utf8');
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '[ALERT] LLM Judge Alignment Drift Detected (' + new Date().toISOString().slice(0, 10) + ')',
+              body: body,
+              labels: ['drift-alert', 'reliability', 'automated']
+            });
+
+      - name: Upload Drift Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drift-audit-report
+          path: |
+            drift_report.md
+            data/drift_history.jsonl
