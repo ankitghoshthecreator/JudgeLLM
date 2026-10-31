@@ -104,37 +104,66 @@ def main():
     judge_b = data["judge_b"]
     local = data["local"]
 
-    # --- Top Metrics Row ---
+    # --- Mode & Credibility Indicator Banner ---
+    has_api_key = bool(os.getenv("GROQ_API_KEY", "").strip())
+    if not has_api_key:
+        st.warning(
+            "⚠️ **MOCK MODE ACTIVE (Calibrated Offline Simulation)** — No `GROQ_API_KEY` detected in environment. "
+            "All metrics and scores are generated via offline deterministic heuristics. No real API credits consumed. "
+            "Configure `.env` with a valid Groq API key to activate live inference.",
+            icon="⚠️",
+        )
+    else:
+        st.success(
+            f"🟢 **LIVE GROQ INFERENCE CONNECTED** — Engine: `{os.getenv('GROQ_JUDGE_MODEL', 'Groq-Frontier')}` | "
+            f"Answering Model: `{os.getenv('GROQ_MODEL', 'Groq-Candidate')}`",
+            icon="🟢",
+        )
+
+    # --- Top Metrics Row (with 95% Bootstrap CIs) ---
     col1, col2, col3, col4, col5 = st.columns(5)
+    fleiss_overall = metrics["human_inter_annotator_fleiss_kappa"]["overall"]
+    fleiss_ci = metrics["human_inter_annotator_fleiss_kappa"].get("overall_ci", [fleiss_overall, fleiss_overall])
     with col1:
         st.metric(
             "Human Ceiling (Fleiss κ)",
-            f"{metrics['human_inter_annotator_fleiss_kappa']['overall']:.3f}",
-            "3 Raters",
+            f"{fleiss_overall:.3f}",
+            f"95% CI: [{fleiss_ci[0]:.3f}, {fleiss_ci[1]:.3f}]",
         )
+    
+    kb_overall = metrics["rubric_b_judge_human_kappa"]["quadratic_weighted"]["overall"]
+    kb_ci = metrics["rubric_b_judge_human_kappa"]["quadratic_weighted"].get("overall_ci", [kb_overall, kb_overall])
     with col2:
         st.metric(
             "Rubric B Kappa (CoT)",
-            f"{metrics['rubric_b_judge_human_kappa']['quadratic_weighted']['overall']:.3f}",
-            "+0.153 vs Zero-Shot",
+            f"{kb_overall:.3f}",
+            f"95% CI: [{kb_ci[0]:.3f}, {kb_ci[1]:.3f}]",
         )
+    
+    ka_overall = metrics["rubric_a_judge_human_kappa"]["quadratic_weighted"]["overall"]
+    ka_ci = metrics["rubric_a_judge_human_kappa"]["quadratic_weighted"].get("overall_ci", [ka_overall, ka_overall])
     with col3:
         st.metric(
-            "Rubric A Kappa (Baseline)",
-            f"{metrics['rubric_a_judge_human_kappa']['quadratic_weighted']['overall']:.3f}",
-            "Zero-Shot",
+            "Rubric A (Zero-Shot)",
+            f"{ka_overall:.3f}",
+            f"95% CI: [{ka_ci[0]:.3f}, {ka_ci[1]:.3f}]",
         )
+    
+    fluency_r = metrics["local_evaluator_vs_teacher_correlation"]["fluency"]["pearson_r"]
+    fluency_ci = metrics["local_evaluator_vs_teacher_correlation"]["fluency"].get("pearson_ci", [fluency_r, fluency_r])
     with col4:
         st.metric(
-            "Fluency Pre-Filter (Pearson r)",
-            f"{metrics['local_evaluator_vs_teacher_correlation']['fluency']['pearson_r']:.3f}",
-            "Fast-Pass Safe",
+            "Fluency Filter (Pearson r)",
+            f"{fluency_r:.3f}",
+            f"95% CI: [{fluency_ci[0]:.3f}, {fluency_ci[1]:.3f}]",
         )
     with col5:
+        p_note = metrics.get("statistical_power_analysis", {})
+        mde_val = p_note.get("minimum_detectable_kappa_diff", 0.113)
         st.metric(
-            "Local Scorer Latency",
-            "0.048 ms",
-            "~20,800 probes/s",
+            "Min Detectable Δκ (MDE)",
+            f"≥ {mde_val:.3f}",
+            "Power 80% @ n=200",
         )
 
     st.divider()

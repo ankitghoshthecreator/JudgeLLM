@@ -29,22 +29,51 @@ FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def plot_agreement_comparison(metrics_path: Path, output_path: Path) -> None:
-    """Bar chart comparing Cohen's Kappa across axes for Rubric A vs Rubric B."""
+    """Bar chart comparing Cohen's Kappa across axes for Rubric A vs Rubric B with 95% bootstrap error bars."""
     with open(metrics_path, "r", encoding="utf-8") as f:
         metrics = json.load(f)
 
     axes_keys = ["fluency", "coherence", "instruction_adherence", "no_hallucination", "overall"]
     display_names = ["Fluency", "Coherence", "Instruction\nAdherence", "No\nHallucination", "Overall"]
 
-    rubric_a_kappas = [metrics["rubric_a_judge_human_kappa"]["quadratic_weighted"][k] for k in axes_keys]
-    rubric_b_kappas = [metrics["rubric_b_judge_human_kappa"]["quadratic_weighted"][k] for k in axes_keys]
+    rubric_a_dict = metrics["rubric_a_judge_human_kappa"]["quadratic_weighted"]
+    rubric_b_dict = metrics["rubric_b_judge_human_kappa"]["quadratic_weighted"]
+
+    rubric_a_kappas = [rubric_a_dict[k] for k in axes_keys]
+    rubric_b_kappas = [rubric_b_dict[k] for k in axes_keys]
+
+    # Asymmetric bootstrap error bars: [lower_err, upper_err]
+    err_a_low = [max(0.0, rubric_a_dict[k] - rubric_a_dict.get(f"{k}_ci", [rubric_a_dict[k], rubric_a_dict[k]])[0]) for k in axes_keys]
+    err_a_high = [max(0.0, rubric_a_dict.get(f"{k}_ci", [rubric_a_dict[k], rubric_a_dict[k]])[1] - rubric_a_dict[k]) for k in axes_keys]
+    err_b_low = [max(0.0, rubric_b_dict[k] - rubric_b_dict.get(f"{k}_ci", [rubric_b_dict[k], rubric_b_dict[k]])[0]) for k in axes_keys]
+    err_b_high = [max(0.0, rubric_b_dict.get(f"{k}_ci", [rubric_b_dict[k], rubric_b_dict[k]])[1] - rubric_b_dict[k]) for k in axes_keys]
 
     x = np.arange(len(axes_keys))
     width = 0.35
 
-    fig, ax = plt.subplots(figsize=(9, 5.5), dpi=300)
-    rects1 = ax.bar(x - width / 2, rubric_a_kappas, width, label="Rubric A (Zero-Shot)", color="#4A90E2", alpha=0.9, edgecolor="#1B4F72")
-    rects2 = ax.bar(x + width / 2, rubric_b_kappas, width, label="Rubric B (CoT + Exemplars)", color="#2ECC71", alpha=0.9, edgecolor="#145A32")
+    fig, ax = plt.subplots(figsize=(10, 5.8), dpi=300)
+    rects1 = ax.bar(
+        x - width / 2,
+        rubric_a_kappas,
+        width,
+        yerr=[err_a_low, err_a_high],
+        capsize=4,
+        label="Rubric A (Zero-Shot Baseline)",
+        color="#4A90E2",
+        alpha=0.9,
+        edgecolor="#1B4F72",
+    )
+    rects2 = ax.bar(
+        x + width / 2,
+        rubric_b_kappas,
+        width,
+        yerr=[err_b_low, err_b_high],
+        capsize=4,
+        label="Rubric B (CoT + Exemplars)",
+        color="#2ECC71",
+        alpha=0.9,
+        edgecolor="#145A32",
+    )
 
     # Add RLAIF feasibility threshold line
     ax.axhline(0.70, color="#E74C3C", linestyle="--", linewidth=1.5, label="RLAIF Viability Threshold (κ ≥ 0.70)")

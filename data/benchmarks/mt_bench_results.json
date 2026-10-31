@@ -1,0 +1,56 @@
+{
+  "benchmark": "MT-Bench",
+  "total_samples": 3,
+  "concordant_pairs": 3,
+  "observed_accuracy": 1.0,
+  "observed_cohens_kappa": 1.0,
+  "published_literature_baseline": {
+    "published_baseline_accuracy": 0.832,
+    "citation": "Zheng et al., NeurIPS 2023 (Table 2: GPT-4 pairwise agreement with human judgment = 83.2%)",
+    "reference_url": "https://arxiv.org/abs/2306.05685"
+  },
+  "records": [
+    {
+      "sample_id": "mt_bench_turn1_reasoning_01",
+      "category": "Reasoning",
+      "human_preferred": "A",
+      "judge_preferred": "A",
+      "score_a": 7,
+      "score_b": 6,
+      "agreement": true,
+      "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+      "metadata": {
+        "source_citation": "Zheng et al., 2023 (NeurIPS). Published human agreement ~83.2%",
+        "turn": 1
+      }
+    },
+    {
+      "sample_id": "mt_bench_turn1_math_02",
+      "category": "Math",
+      "human_preferred": "A",
+      "judge_preferred": "A",
+      "score_a": 7,
+      "score_b": 6,
+      "agreement": true,
+      "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+      "metadata": {
+        "source_citation": "Zheng et al., 2023 (NeurIPS)",
+        "turn": 1
+      }
+    },
+    {
+      "sample_id": "mt_bench_turn1_writing_03",
+      "category": "Writing",
+      "human_preferred": "A",
+      "judge_preferred": "A",
+      "score_a": 7,
+      "score_b": 6,
+      "agreement": true,
+      "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+      "metadata": {
+        "source_citation": "Zheng et al., 2023 (NeurIPS)",
+        "turn": 1
+      }
+    }
+  ]
+}

@@ -165,9 +165,12 @@ def run_evaluation_gates(
     all_passed = all(c.passed for c in checks)
 
     # Build Markdown Report
+    has_key = bool(os.getenv("GROQ_API_KEY", "").strip())
+    exec_mode_badge = "🟢 LIVE API" if has_key else "⚠️ MOCK SIMULATED"
     lines = [
         "## ⚖️ LLM-as-a-Judge CI/CD Quality Gate Report",
         "",
+        f"**Execution Mode:** `{exec_mode_badge}`",
         f"**Status:** {'✅ PASSED (All Quality Gates Satisfied)' if all_passed else '❌ FAILED (Regression Detected)'}",
         f"**Timestamp:** {time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())}",
         f"**Total Samples Evaluated:** {total_samples}",

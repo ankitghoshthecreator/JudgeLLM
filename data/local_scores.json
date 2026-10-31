@@ -11,7 +11,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1351,
-      "latency_ms": 0.1488
+      "latency_ms": 0.1294
     }
   },
   {
@@ -26,7 +26,7 @@
       "ttr": 0.7143,
       "repetition_penalty": 0.0641,
       "jaccard_overlap": 0.2727,
-      "latency_ms": 0.0615
+      "latency_ms": 0.08
     }
   },
   {
@@ -41,7 +41,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0662
+      "latency_ms": 0.106
     }
   },
   {
@@ -56,7 +56,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.1021
+      "latency_ms": 0.0905
     }
   },
   {
@@ -71,7 +71,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0651
+      "latency_ms": 0.0902
     }
   },
   {
@@ -86,7 +86,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0536
+      "latency_ms": 0.0825
     }
   },
   {
@@ -101,7 +101,7 @@
       "ttr": 0.95,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1613,
-      "latency_ms": 0.0519
+      "latency_ms": 0.0826
     }
   },
   {
@@ -116,7 +116,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0451
+      "latency_ms": 0.071
     }
   },
   {
@@ -131,7 +131,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0493
+      "latency_ms": 0.0771
     }
   },
   {
@@ -146,7 +146,7 @@
       "ttr": 0.8387,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.5769,
-      "latency_ms": 0.0626
+      "latency_ms": 0.0967
     }
   },
   {
@@ -161,7 +161,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0461
+      "latency_ms": 0.0706
     }
   },
   {
@@ -176,7 +176,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0446
+      "latency_ms": 0.0654
     }
   },
   {
@@ -191,7 +191,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0442
+      "latency_ms": 0.0658
     }
   },
   {
@@ -206,7 +206,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0568
+      "latency_ms": 0.0862
     }
   },
   {
@@ -221,7 +221,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.048
+      "latency_ms": 0.0718
     }
   },
   {
@@ -236,7 +236,7 @@
       "ttr": 0.5,
       "repetition_penalty": 0.0364,
       "jaccard_overlap": 0.2222,
-      "latency_ms": 0.0377
+      "latency_ms": 0.0569
     }
   },
   {
@@ -251,7 +251,7 @@
       "ttr": 0.9583,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1667,
-      "latency_ms": 0.0477
+      "latency_ms": 0.0743
     }
   },
   {
@@ -266,7 +266,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0479
+      "latency_ms": 0.0784
     }
   },
   {
@@ -281,7 +281,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1111,
-      "latency_ms": 0.0386
+      "latency_ms": 0.0616
     }
   },
   {
@@ -296,7 +296,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0383
+      "latency_ms": 0.073
     }
   },
   {
@@ -311,7 +311,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0479
+      "latency_ms": 0.0726
     }
   },
   {
@@ -326,7 +326,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0435
+      "latency_ms": 0.0638
     }
   },
   {
@@ -341,7 +341,7 @@
       "ttr": 0.8387,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.5769,
-      "latency_ms": 0.0615
+      "latency_ms": 0.0927
     }
   },
   {
@@ -356,7 +356,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0505
+      "latency_ms": 0.0796
     }
   },
   {
@@ -371,7 +371,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0436
+      "latency_ms": 0.0636
     }
   },
   {
@@ -386,7 +386,7 @@
       "ttr": 0.7222,
       "repetition_penalty": 0.0235,
       "jaccard_overlap": 0.3333,
-      "latency_ms": 0.0438
+      "latency_ms": 0.0612
     }
   },
   {
@@ -401,7 +401,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0741,
-      "latency_ms": 0.0291
+      "latency_ms": 0.0439
     }
   },
   {
@@ -416,7 +416,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0961
+      "latency_ms": 0.0553
     }
   },
   {
@@ -431,7 +431,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0754
+      "latency_ms": 0.0543
     }
   },
   {
@@ -446,7 +446,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0903
+      "latency_ms": 0.0612
     }
   },
   {
@@ -461,7 +461,7 @@
       "ttr": 0.8696,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1562,
-      "latency_ms": 0.0918
+      "latency_ms": 0.0701
     }
   },
   {
@@ -476,7 +476,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0789
+      "latency_ms": 0.0544
     }
   },
   {
@@ -491,7 +491,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0701
+      "latency_ms": 0.0503
     }
   },
   {
@@ -506,7 +506,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0968,
-      "latency_ms": 0.0741
+      "latency_ms": 0.054
     }
   },
   {
@@ -521,7 +521,7 @@
       "ttr": 0.7143,
       "repetition_penalty": 0.0641,
       "jaccard_overlap": 0.2727,
-      "latency_ms": 0.0699
+      "latency_ms": 0.0518
     }
   },
   {
@@ -536,7 +536,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0842
+      "latency_ms": 0.0624
     }
   },
   {
@@ -551,7 +551,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1351,
-      "latency_ms": 0.075
+      "latency_ms": 0.0565
     }
   },
   {
@@ -566,7 +566,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0683
+      "latency_ms": 0.0497
     }
   },
   {
@@ -581,7 +581,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0,
-      "latency_ms": 0.0804
+      "latency_ms": 0.0579
     }
   },
   {
@@ -596,7 +596,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0783
+      "latency_ms": 0.0537
     }
   },
   {
@@ -611,7 +611,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0765
+      "latency_ms": 0.0535
     }
   },
   {
@@ -626,7 +626,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0651
+      "latency_ms": 0.0471
     }
   },
   {
@@ -641,7 +641,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0661
+      "latency_ms": 0.0466
     }
   },
   {
@@ -656,7 +656,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0844
+      "latency_ms": 0.0599
     }
   },
   {
@@ -671,7 +671,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0901
+      "latency_ms": 0.0624
     }
   },
   {
@@ -686,7 +686,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0981
+      "latency_ms": 0.07
     }
   },
   {
@@ -701,7 +701,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0857
+      "latency_ms": 0.0449
     }
   },
   {
@@ -716,7 +716,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0859
+      "latency_ms": 0.057
     }
   },
   {
@@ -731,7 +731,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0825
+      "latency_ms": 0.0526
     }
   },
   {
@@ -746,7 +746,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.1028
+      "latency_ms": 0.0645
     }
   },
   {
@@ -761,7 +761,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0807
+      "latency_ms": 0.048
     }
   },
   {
@@ -776,7 +776,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0781
+      "latency_ms": 0.0551
     }
   },
   {
@@ -791,7 +791,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0986
+      "latency_ms": 0.0617
     }
   },
   {
@@ -806,7 +806,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0847
+      "latency_ms": 0.0562
     }
   },
   {
@@ -821,7 +821,7 @@
       "ttr": 0.8696,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1562,
-      "latency_ms": 0.0938
+      "latency_ms": 0.0569
     }
   },
   {
@@ -836,7 +836,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1053,
-      "latency_ms": 0.0925
+      "latency_ms": 0.0546
     }
   },
   {
@@ -851,7 +851,7 @@
       "ttr": 0.7222,
       "repetition_penalty": 0.0235,
       "jaccard_overlap": 0.3333,
-      "latency_ms": 0.0846
+      "latency_ms": 0.048
     }
   },
   {
@@ -866,7 +866,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.098
+      "latency_ms": 0.0553
     }
   },
   {
@@ -881,7 +881,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0838
+      "latency_ms": 0.1181
     }
   },
   {
@@ -896,7 +896,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1351,
-      "latency_ms": 0.0792
+      "latency_ms": 0.0477
     }
   },
   {
@@ -911,7 +911,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0988
+      "latency_ms": 0.0561
     }
   },
   {
@@ -926,7 +926,7 @@
       "ttr": 0.8644,
       "repetition_penalty": 0.0034,
       "jaccard_overlap": 0.5,
-      "latency_ms": 0.2667
+      "latency_ms": 0.0856
     }
   },
   {
@@ -941,7 +941,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0834
+      "latency_ms": 0.0485
     }
   },
   {
@@ -956,7 +956,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0985
+      "latency_ms": 0.0588
     }
   },
   {
@@ -971,7 +971,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0914
+      "latency_ms": 0.0537
     }
   },
   {
@@ -986,7 +986,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.098
+      "latency_ms": 0.0522
     }
   },
   {
@@ -1001,7 +1001,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0828
+      "latency_ms": 0.0469
     }
   },
   {
@@ -1016,7 +1016,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0809
+      "latency_ms": 0.0437
     }
   },
   {
@@ -1031,7 +1031,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.2168
+      "latency_ms": 0.0423
     }
   },
   {
@@ -1046,7 +1046,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0938
+      "latency_ms": 0.0509
     }
   },
   {
@@ -1061,7 +1061,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0858
+      "latency_ms": 0.1363
     }
   },
   {
@@ -1076,7 +1076,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0835
+      "latency_ms": 0.0624
     }
   },
   {
@@ -1091,7 +1091,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0911
+      "latency_ms": 0.0553
     }
   },
   {
@@ -1106,7 +1106,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0864
+      "latency_ms": 0.1151
     }
   },
   {
@@ -1121,7 +1121,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0835
+      "latency_ms": 0.0571
     }
   },
   {
@@ -1136,7 +1136,7 @@
       "ttr": 0.8696,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1562,
-      "latency_ms": 0.0931
+      "latency_ms": 0.0555
     }
   },
   {
@@ -1151,7 +1151,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0835
+      "latency_ms": 0.0495
     }
   },
   {
@@ -1166,7 +1166,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1053,
-      "latency_ms": 0.0879
+      "latency_ms": 0.0549
     }
   },
   {
@@ -1181,7 +1181,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0819
+      "latency_ms": 0.0515
     }
   },
   {
@@ -1196,7 +1196,7 @@
       "ttr": 0.7143,
       "repetition_penalty": 0.0641,
       "jaccard_overlap": 0.2727,
-      "latency_ms": 0.0731
+      "latency_ms": 0.0541
     }
   },
   {
@@ -1211,7 +1211,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0714
+      "latency_ms": 0.04
     }
   },
   {
@@ -1226,7 +1226,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0694
+      "latency_ms": 0.0341
     }
   },
   {
@@ -1241,7 +1241,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.084
+      "latency_ms": 0.047
     }
   },
   {
@@ -1256,7 +1256,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1351,
-      "latency_ms": 0.0782
+      "latency_ms": 0.0422
     }
   },
   {
@@ -1271,7 +1271,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0913
+      "latency_ms": 0.0502
     }
   },
   {
@@ -1286,7 +1286,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0968,
-      "latency_ms": 0.0794
+      "latency_ms": 0.0416
     }
   },
   {
@@ -1301,7 +1301,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0969
+      "latency_ms": 0.0417
     }
   },
   {
@@ -1316,7 +1316,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0669
+      "latency_ms": 0.0369
     }
   },
   {
@@ -1331,7 +1331,7 @@
       "ttr": 0.7143,
       "repetition_penalty": 0.0641,
       "jaccard_overlap": 0.2727,
-      "latency_ms": 0.1328
+      "latency_ms": 0.0348
     }
   },
   {
@@ -1346,7 +1346,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0789
+      "latency_ms": 0.043
     }
   },
   {
@@ -1361,7 +1361,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0763
+      "latency_ms": 0.0383
     }
   },
   {
@@ -1376,7 +1376,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.1151
+      "latency_ms": 0.0504
     }
   },
   {
@@ -1391,7 +1391,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.1415
+      "latency_ms": 0.0436
     }
   },
   {
@@ -1406,7 +1406,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.1401
+      "latency_ms": 0.0417
     }
   },
   {
@@ -1421,7 +1421,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0,
-      "latency_ms": 0.145
+      "latency_ms": 0.0446
     }
   },
   {
@@ -1436,7 +1436,7 @@
       "ttr": 0.5,
       "repetition_penalty": 0.0364,
       "jaccard_overlap": 0.2222,
-      "latency_ms": 0.1255
+      "latency_ms": 0.0379
     }
   },
   {
@@ -1451,7 +1451,7 @@
       "ttr": 0.9444,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1176,
-      "latency_ms": 0.2611
+      "latency_ms": 0.0447
     }
   },
   {
@@ -1466,7 +1466,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.148
+      "latency_ms": 0.0538
     }
   },
   {
@@ -1481,7 +1481,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0629
+      "latency_ms": 0.0457
     }
   },
   {
@@ -1496,7 +1496,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0625
+      "latency_ms": 0.0454
     }
   },
   {
@@ -1511,7 +1511,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0499
+      "latency_ms": 0.0455
     }
   },
   {
@@ -1526,7 +1526,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1351,
-      "latency_ms": 0.0452
+      "latency_ms": 0.0404
     }
   },
   {
@@ -1541,7 +1541,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0968,
-      "latency_ms": 0.0421
+      "latency_ms": 0.0407
     }
   },
   {
@@ -1556,7 +1556,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1351,
-      "latency_ms": 0.039
+      "latency_ms": 0.0378
     }
   },
   {
@@ -1571,7 +1571,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0535
+      "latency_ms": 0.0516
     }
   },
   {
@@ -1586,7 +1586,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0459
+      "latency_ms": 0.0485
     }
   },
   {
@@ -1601,7 +1601,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0458
+      "latency_ms": 0.0473
     }
   },
   {
@@ -1616,7 +1616,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0386
+      "latency_ms": 0.0416
     }
   },
   {
@@ -1631,7 +1631,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.1601
+      "latency_ms": 0.0412
     }
   },
   {
@@ -1646,7 +1646,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0748
+      "latency_ms": 0.0354
     }
   },
   {
@@ -1661,7 +1661,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0858
+      "latency_ms": 0.0439
     }
   },
   {
@@ -1676,7 +1676,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0982
+      "latency_ms": 0.0475
     }
   },
   {
@@ -1691,7 +1691,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0968,
-      "latency_ms": 0.0759
+      "latency_ms": 0.0385
     }
   },
   {
@@ -1706,7 +1706,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0871
+      "latency_ms": 0.043
     }
   },
   {
@@ -1721,7 +1721,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.08
+      "latency_ms": 0.04
     }
   },
   {
@@ -1736,7 +1736,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0898
+      "latency_ms": 0.0469
     }
   },
   {
@@ -1751,7 +1751,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0803
+      "latency_ms": 0.0422
     }
   },
   {
@@ -1766,7 +1766,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0763
+      "latency_ms": 0.0386
     }
   },
   {
@@ -1781,7 +1781,7 @@
       "ttr": 0.95,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1613,
-      "latency_ms": 0.0817
+      "latency_ms": 0.0609
     }
   },
   {
@@ -1796,7 +1796,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0865
+      "latency_ms": 0.0778
     }
   },
   {
@@ -1811,7 +1811,7 @@
       "ttr": 0.7222,
       "repetition_penalty": 0.0235,
       "jaccard_overlap": 0.3333,
-      "latency_ms": 0.0792
+      "latency_ms": 0.0796
     }
   },
   {
@@ -1826,7 +1826,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0921
+      "latency_ms": 0.0951
     }
   },
   {
@@ -1841,7 +1841,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0,
-      "latency_ms": 0.0781
+      "latency_ms": 0.0796
     }
   },
   {
@@ -1856,7 +1856,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0797
+      "latency_ms": 0.0915
     }
   },
   {
@@ -1871,7 +1871,7 @@
       "ttr": 0.5,
       "repetition_penalty": 0.0364,
       "jaccard_overlap": 0.2222,
-      "latency_ms": 0.0697
+      "latency_ms": 0.0714
     }
   },
   {
@@ -1886,7 +1886,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0778
+      "latency_ms": 0.065
     }
   },
   {
@@ -1901,7 +1901,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0763
+      "latency_ms": 0.0532
     }
   },
   {
@@ -1916,7 +1916,7 @@
       "ttr": 0.9333,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1923,
-      "latency_ms": 0.0934
+      "latency_ms": 0.0511
     }
   },
   {
@@ -1931,7 +1931,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.1029
+      "latency_ms": 0.0654
     }
   },
   {
@@ -1946,7 +1946,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0984
+      "latency_ms": 0.0608
     }
   },
   {
@@ -1961,7 +1961,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0737
+      "latency_ms": 0.0463
     }
   },
   {
@@ -1976,7 +1976,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0741,
-      "latency_ms": 0.0641
+      "latency_ms": 0.0406
     }
   },
   {
@@ -1991,7 +1991,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0847
+      "latency_ms": 0.0545
     }
   },
   {
@@ -2006,7 +2006,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.1032
+      "latency_ms": 0.0668
     }
   },
   {
@@ -2021,7 +2021,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.085
+      "latency_ms": 0.0649
     }
   },
   {
@@ -2036,7 +2036,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0839
+      "latency_ms": 0.0526
     }
   },
   {
@@ -2051,7 +2051,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3514,
-      "latency_ms": 0.0993
+      "latency_ms": 0.0653
     }
   },
   {
@@ -2066,7 +2066,7 @@
       "ttr": 0.7222,
       "repetition_penalty": 0.0235,
       "jaccard_overlap": 0.3333,
-      "latency_ms": 0.0848
+      "latency_ms": 0.0564
     }
   },
   {
@@ -2081,7 +2081,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1053,
-      "latency_ms": 0.0902
+      "latency_ms": 0.0597
     }
   },
   {
@@ -2096,7 +2096,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.1095
+      "latency_ms": 0.0496
     }
   },
   {
@@ -2111,7 +2111,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0526
+      "latency_ms": 0.0541
     }
   },
   {
@@ -2126,7 +2126,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0446
+      "latency_ms": 0.0459
     }
   },
   {
@@ -2141,7 +2141,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.054
+      "latency_ms": 0.0506
     }
   },
   {
@@ -2156,7 +2156,7 @@
       "ttr": 0.5,
       "repetition_penalty": 0.0364,
       "jaccard_overlap": 0.2222,
-      "latency_ms": 0.0386
+      "latency_ms": 0.0363
     }
   },
   {
@@ -2171,7 +2171,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0513
+      "latency_ms": 0.0498
     }
   },
   {
@@ -2186,7 +2186,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.046
+      "latency_ms": 0.0452
     }
   },
   {
@@ -2201,7 +2201,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0354
+      "latency_ms": 0.0352
     }
   },
   {
@@ -2216,7 +2216,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0489
+      "latency_ms": 0.0525
     }
   },
   {
@@ -2231,7 +2231,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0451
+      "latency_ms": 0.0678
     }
   },
   {
@@ -2246,7 +2246,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0,
-      "latency_ms": 0.042
+      "latency_ms": 0.0589
     }
   },
   {
@@ -2261,7 +2261,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0477
+      "latency_ms": 0.1908
     }
   },
   {
@@ -2276,7 +2276,7 @@
       "ttr": 0.7143,
       "repetition_penalty": 0.0641,
       "jaccard_overlap": 0.2727,
-      "latency_ms": 0.0386
+      "latency_ms": 0.0564
     }
   },
   {
@@ -2291,7 +2291,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0,
-      "latency_ms": 0.0448
+      "latency_ms": 0.0641
     }
   },
   {
@@ -2306,7 +2306,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0432
+      "latency_ms": 0.0556
     }
   },
   {
@@ -2321,7 +2321,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0433
+      "latency_ms": 0.0572
     }
   },
   {
@@ -2336,7 +2336,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0508
+      "latency_ms": 0.0516
     }
   },
   {
@@ -2351,7 +2351,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0571
+      "latency_ms": 0.0692
     }
   },
   {
@@ -2366,7 +2366,7 @@
       "ttr": 0.7143,
       "repetition_penalty": 0.0641,
       "jaccard_overlap": 0.2727,
-      "latency_ms": 0.0403
+      "latency_ms": 0.0499
     }
   },
   {
@@ -2381,7 +2381,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1053,
-      "latency_ms": 0.0514
+      "latency_ms": 0.0703
     }
   },
   {
@@ -2396,7 +2396,7 @@
       "ttr": 0.7143,
       "repetition_penalty": 0.0641,
       "jaccard_overlap": 0.2727,
-      "latency_ms": 0.0355
+      "latency_ms": 0.036
     }
   },
   {
@@ -2411,7 +2411,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0421
+      "latency_ms": 0.0438
     }
   },
   {
@@ -2426,7 +2426,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.228
+      "latency_ms": 0.0375
     }
   },
   {
@@ -2441,7 +2441,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0741,
-      "latency_ms": 0.071
+      "latency_ms": 0.0317
     }
   },
   {
@@ -2456,7 +2456,7 @@
       "ttr": 0.7222,
       "repetition_penalty": 0.0235,
       "jaccard_overlap": 0.3333,
-      "latency_ms": 0.0831
+      "latency_ms": 0.0418
     }
   },
   {
@@ -2471,7 +2471,7 @@
       "ttr": 0.5833,
       "repetition_penalty": 0.0364,
       "jaccard_overlap": 0.1154,
-      "latency_ms": 0.0804
+      "latency_ms": 0.0414
     }
   },
   {
@@ -2486,7 +2486,7 @@
       "ttr": 0.5833,
       "repetition_penalty": 0.0364,
       "jaccard_overlap": 0.1154,
-      "latency_ms": 0.0709
+      "latency_ms": 0.0353
     }
   },
   {
@@ -2501,7 +2501,7 @@
       "ttr": 0.8644,
       "repetition_penalty": 0.0034,
       "jaccard_overlap": 0.5,
-      "latency_ms": 0.1362
+      "latency_ms": 0.0752
     }
   },
   {
@@ -2516,7 +2516,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1053,
-      "latency_ms": 0.0849
+      "latency_ms": 0.0463
     }
   },
   {
@@ -2531,7 +2531,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0802
+      "latency_ms": 0.0444
     }
   },
   {
@@ -2546,7 +2546,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1053,
-      "latency_ms": 0.0799
+      "latency_ms": 0.0437
     }
   },
   {
@@ -2561,7 +2561,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0774
+      "latency_ms": 0.0402
     }
   },
   {
@@ -2576,7 +2576,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0779
+      "latency_ms": 0.0377
     }
   },
   {
@@ -2591,7 +2591,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0779
+      "latency_ms": 0.0414
     }
   },
   {
@@ -2606,7 +2606,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0754
+      "latency_ms": 0.0384
     }
   },
   {
@@ -2621,7 +2621,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0751
+      "latency_ms": 0.0373
     }
   },
   {
@@ -2636,7 +2636,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0675
+      "latency_ms": 0.0387
     }
   },
   {
@@ -2651,7 +2651,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.0952
+      "latency_ms": 0.0527
     }
   },
   {
@@ -2666,7 +2666,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0656
+      "latency_ms": 0.0353
     }
   },
   {
@@ -2681,7 +2681,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0868
+      "latency_ms": 0.0474
     }
   },
   {
@@ -2696,7 +2696,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0645
+      "latency_ms": 0.0392
     }
   },
   {
@@ -2711,7 +2711,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0813
+      "latency_ms": 0.0431
     }
   },
   {
@@ -2726,7 +2726,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.1068
+      "latency_ms": 0.0509
     }
   },
   {
@@ -2741,7 +2741,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0679
+      "latency_ms": 0.0331
     }
   },
   {
@@ -2756,7 +2756,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.0,
-      "latency_ms": 0.0866
+      "latency_ms": 0.0423
     }
   },
   {
@@ -2771,7 +2771,7 @@
       "ttr": 0.95,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1613,
-      "latency_ms": 0.092
+      "latency_ms": 0.0454
     }
   },
   {
@@ -2786,7 +2786,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1351,
-      "latency_ms": 0.0816
+      "latency_ms": 0.0405
     }
   },
   {
@@ -2801,7 +2801,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0824
+      "latency_ms": 0.0403
     }
   },
   {
@@ -2816,7 +2816,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0856
+      "latency_ms": 0.043
     }
   },
   {
@@ -2831,7 +2831,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0837
+      "latency_ms": 0.0393
     }
   },
   {
@@ -2846,7 +2846,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.2414,
-      "latency_ms": 0.0814
+      "latency_ms": 0.0376
     }
   },
   {
@@ -2861,7 +2861,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1111,
-      "latency_ms": 0.0745
+      "latency_ms": 0.0403
     }
   },
   {
@@ -2876,7 +2876,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0913
+      "latency_ms": 0.0452
     }
   },
   {
@@ -2891,7 +2891,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3514,
-      "latency_ms": 0.0978
+      "latency_ms": 0.0481
     }
   },
   {
@@ -2906,7 +2906,7 @@
       "ttr": 0.9,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.36,
-      "latency_ms": 0.0883
+      "latency_ms": 0.0416
     }
   },
   {
@@ -2921,7 +2921,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.4194,
-      "latency_ms": 0.0815
+      "latency_ms": 0.059
     }
   },
   {
@@ -2936,7 +2936,7 @@
       "ttr": 0.48,
       "repetition_penalty": 0.2339,
       "jaccard_overlap": 0.4286,
-      "latency_ms": 0.0976
+      "latency_ms": 0.0913
     }
   },
   {
@@ -2951,7 +2951,7 @@
       "ttr": 0.9655,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.6429,
-      "latency_ms": 0.1023
+      "latency_ms": 0.1018
     }
   },
   {
@@ -2966,7 +2966,7 @@
       "ttr": 0.95,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1613,
-      "latency_ms": 0.0891
+      "latency_ms": 0.0954
     }
   },
   {
@@ -2981,7 +2981,7 @@
       "ttr": 1.0,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.1111,
-      "latency_ms": 0.0747
+      "latency_ms": 0.071
     }
   },
   {
@@ -2996,7 +2996,7 @@
       "ttr": 0.9167,
       "repetition_penalty": 0.0,
       "jaccard_overlap": 0.3182,
-      "latency_ms": 0.0708
+      "latency_ms": 0.0654
     }
   }
 ]

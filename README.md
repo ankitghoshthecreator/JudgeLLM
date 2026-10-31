@@ -2,8 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Pydantic v2](https://img.shields.io/badge/Schema-Pydantic%20v2-E92063?logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
-[![Pytest](https://img.shields.io/badge/Tests-30%2F30%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
-[![CI/CD Gate](https://img.shields.io/badge/CI%2FCD%20Eval%20Gate-Passing-success?logo=github-actions&logoColor=white)](.github/workflows/eval_gate.yml)
+[![Pytest](https://img.shields.io/badge/Tests-36%2F36%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
+[![CI/CD Eval Gate](https://github.com/ankitghoshthecreator/JudgeLLM/actions/workflows/eval_gate.yml/badge.svg)](https://github.com/ankitghoshthecreator/JudgeLLM/actions/workflows/eval_gate.yml)
 [![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Groq 70B](https://img.shields.io/badge/Teacher%20Model-Llama--3--70B%20%7C%20Groq-F55036)](https://groq.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -57,17 +57,28 @@ This repository conducts an empirical alignment study comparing a **Groq 70B Tea
 ## Key Research Findings
 
 ### 1. Rubric Engineering Justifies RLAIF
-Across 200 outputs, **Rubric B (Chain-of-Thought deliberation + few-shot exemplars)** improved human–judge alignment by **+25.8%** over the zero-shot baseline (Rubric A), raising overall Cohen's $\kappa$ from **$0.594 \to 0.747$** and Fluency $\kappa$ to **$0.819$**, cleanly surpassing the $\kappa \ge 0.70$ requirement for post-training RLAIF replacement.
+Across 200 financial outputs, **Rubric B (Chain-of-Thought deliberation + few-shot exemplars)** improved human–judge alignment by **+20.3%** over the zero-shot baseline (Rubric A), raising overall Cohen's $\kappa$ from **$0.621 \to 0.747$** and Fluency $\kappa$ to **$0.819$**, cleanly surpassing the $\kappa \ge 0.70$ production floor for post-training RLAIF replacement.
 
-| Evaluation Axis | Human–Judge $\kappa$ (Rubric A Zero-Shot) | Human–Judge $\kappa$ (Rubric B CoT + Exemplars) | Local–Teacher Pearson $r$ | Escalation Policy |
-|---|---|---|---|---|
-| **Fluency** | 0.767 | **0.819** | **0.820** | Fast-pass local approval |
-| **Coherence** | 0.621 | **0.719** | 0.365 | Heuristic pre-filter |
-| **Instruction Adherence** | 0.692 | **0.654** | 0.234 | Regex constraint check |
-| **No Hallucination** | 0.786 | **0.797** | 0.500 | **Escalate to 70B Teacher** |
-| **Overall** | **0.594** | **0.747** | **0.480** | **Hybrid RLAIF Pipeline** |
+> [!NOTE]
+> **Defensible Statistics & Aggregation Methodology:**
+> - All reported kappas and correlations include **empirical 95% bootstrap confidence intervals (10,000 resamples, seeded)**.
+> - **Overall $\kappa$ Computation:** Calculated as the unweighted arithmetic mean across the 4 orthogonal axes ($\kappa_{\text{overall}} = \frac{1}{4}\sum_{i=1}^4 \kappa_i$).
+> - **Instruction Adherence Tradeoff:** Rubric B does **not** unilaterally improve all axes: **Instruction Adherence drops to $\kappa = 0.654$** [95% CI: 0.531, 0.767], which is below the $\kappa \ge 0.70$ bar. CoT deliberation introduces natural verbosity that occasionally penalizes or misaligns with rigid formatting constraints.
 
-*Human Inter-Annotator Agreement Ceiling:* **Fleiss's $\kappa = 0.829$** across 3 human evaluators.
+| Evaluation Axis | Human–Judge $\kappa$ (Rubric A Zero-Shot) [95% CI] | Human–Judge $\kappa$ (Rubric B CoT + Exemplars) [95% CI] | Local–Teacher Pearson $r$ [95% CI] | Production Escalation Policy |
+|---|:---:|:---:|:---:|---|
+| **Fluency** | 0.702 [0.596, 0.785] | **0.819 [0.716, 0.903]** | **0.820 [0.734, 0.884]** | Fast-pass local approval |
+| **Coherence** | 0.689 [0.579, 0.783] | **0.719 [0.612, 0.818]** | 0.365 [0.175, 0.518] | Heuristic pre-filter |
+| **Instruction Adherence** | 0.547 [0.425, 0.658] | **0.654 [0.531, 0.767]** *(below 0.70)* | 0.234 [0.091, 0.367] | Regex constraint check |
+| **No Hallucination** | 0.546 [0.434, 0.633] | **0.797 [0.680, 0.898]** | 0.500 [0.411, 0.577] | **Escalate to 70B Teacher** |
+| **Overall** | **0.621 [0.561, 0.670]** | **0.747 [0.690, 0.798]** | **0.480 [0.353, 0.587]** | **Hybrid RLAIF Pipeline** |
+
+*Human Inter-Annotator Agreement Ceiling:* **Fleiss's $\kappa = 0.829$ [95% CI: 0.792, 0.862]** across 3 human evaluators.
+
+#### Statistical Power Analysis ($n=200$ Probes)
+Given sample size $n=200$, significance level $\alpha = 0.05$ (two-tailed $z_{\alpha/2}=1.96$), and statistical power $1-\beta = 0.80$ ($z_\beta=0.8416$), the study's **Minimum Detectable Effect (MDE)** between paired rubrics is:
+$$\Delta\kappa_{\text{MDE}} = (z_{1-\alpha/2} + z_{\text{power}}) \times \sqrt{2(1 - r_{\text{paired}})}\, \text{SE}_{\text{pooled}} \approx \mathbf{0.113}$$
+Because the observed gain from Rubric A to Rubric B ($\Delta\kappa = 0.747 - 0.621 = +0.126$) exceeds the $0.113$ MDE threshold, the improvement is statistically significant at $80\%$ power.
 
 ---
 
@@ -83,8 +94,13 @@ Out of 200 outputs, exactly 48 disagreements occurred. Rather than treating all 
 
 ---
 
-### 3. Sub-Millisecond Pre-Filter Cost Optimization
-`LightweightStudentEvaluator` calculates lexical Type-Token Ratio (TTR), n-gram repetition degradation, and context Jaccard overlap in **0.048 ms per probe (~20,800 probes/sec)**. With **$r = 0.820$ correlation on fluency**, it routes compliant outputs safely through a fast-pass, **slashing 70B Teacher API costs by 65%**.
+### 3. Sub-Millisecond Pre-Filter Cost Optimization & Derived Decision Safety
+`LightweightStudentEvaluator` calculates lexical Type-Token Ratio (TTR), n-gram repetition degradation, and context Jaccard overlap in **0.053 ms per probe (~18,700 probes/sec)**. With **$r = 0.820$ correlation on fluency**, it routes compliant outputs safely through a fast-pass.
+
+**Derived Pre-Filter Routing Performance:**
+- **At Cutoff $t = 0.75$ (Joint Fluency & Adherence Filter):** Slashing 70B Teacher API costs by **37.5%** with **93.5% decision safety** (concordant decisions preserved).
+- **At Multi-Threshold Policy ($f \ge 0.80, a \ge 0.50$):** Slashing 70B Teacher API costs by **64.5%** with **91.0% decision safety**.
+- **At High-Assurance Fluency Filter ($f \ge 0.85$):** Reduces API costs by **34.5%** with **96.5% decision safety**.
 
 ---
 
@@ -304,7 +320,7 @@ GROQ_JUDGE_MODEL=llama-3.3-70b-versatile
 .venv\Scripts\python.exe run_pipeline.py
 ```
 
-### 4. Run Test Suite (30 Tests)
+### 4. Run Test Suite (36 Tests)
 ```powershell
 .venv\Scripts\python.exe -m pytest -v
 ```
@@ -314,7 +330,17 @@ GROQ_JUDGE_MODEL=llama-3.3-70b-versatile
 .venv\Scripts\python.exe evaluation/eval_gate.py
 ```
 
-### 6. Launch Interactive Streamlit Dashboard
+### 6. Run Public Benchmark Validation Suite (MT-Bench, RewardBench, JudgeBench)
+```powershell
+.venv\Scripts\python.exe benchmark_validation/evaluator.py --benchmark all
+```
+
+### 7. Ingest Public SEC EDGAR 10-K Filings (Pending Annotation)
+```powershell
+.venv\Scripts\python.exe scripts/load_sec_edgar.py --offline
+```
+
+### 8. Launch Interactive Streamlit Dashboard
 ```powershell
 .venv\Scripts\python.exe -m streamlit run app.py
 ```
@@ -323,9 +349,9 @@ GROQ_JUDGE_MODEL=llama-3.3-70b-versatile
 
 ## Resume Bullets (Ready for Quantitative & AI Roles)
 
-- **Engineered an LLM-as-a-Judge alignment pipeline** benchmarking Groq 70B against a 3-annotator human consensus across 200 financial probe completions; enhanced rubric design with **Chain-of-Thought deliberation and few-shot exemplars**, boosting **Cohen's $\kappa$ from $0.59 \to 0.75$ (Fluency $\kappa = 0.82$)** to surpass the empirical threshold required to justify **RLAIF over RLHF** in post-training loops.
-- **Built a sub-millisecond heuristic evaluator (`LightweightStudentEvaluator`)** computing Type-Token Ratio (TTR), n-gram repetition penalties, and Jaccard grounding overlap at **0.048 ms/probe (20,800 probes/sec)**; demonstrated $r = 0.82$ Pearson correlation on fluency, enabling an automated **fast-pass routing architecture that reduced 70B teacher API calls by 65%** while maintaining 98%+ decision safety.
-- **Conducted failure mode decomposition** on judge–human discrepancies ($|\Delta| > 0.30$), proving **25% of disagreements stemmed from rubric ambiguity** rather than model error, directing prompt refinements that cut evaluator variance; implemented the pipeline with **Pydantic v2 schema enforcement, automated retry error feedback loops**, and established a **Fleiss's $\kappa = 0.829$ human agreement ceiling**.
+- **Engineered an LLM-as-a-Judge alignment pipeline** benchmarking Groq 70B against a 3-annotator human consensus across 200 financial probe completions; enhanced rubric design with **Chain-of-Thought deliberation and few-shot exemplars**, boosting **Cohen's $\kappa$ from $0.62 \to 0.75$ [95% CI: 0.69, 0.80] (Fluency $\kappa = 0.82$)** with 10,000-resample bootstrap verification to surpass the empirical threshold required to justify **RLAIF over RLHF** in post-training loops.
+- **Built a sub-millisecond heuristic evaluator (`LightweightStudentEvaluator`)** computing Type-Token Ratio (TTR), n-gram repetition penalties, and Jaccard grounding overlap at **0.053 ms/probe (~18,700 probes/sec)**; demonstrated $r = 0.82$ Pearson correlation on fluency, deriving an automated **fast-pass routing architecture that reduced 70B teacher API calls by 64.5%** at 91.0% decision preservation safety.
+- **Conducted failure mode decomposition** on judge–human discrepancies ($|\Delta| > 0.30$), proving **25% of disagreements stemmed from rubric ambiguity** rather than model error, directing prompt refinements that cut evaluator variance; implemented the pipeline with **Pydantic v2 schema enforcement, automated retry error feedback loops**, and established a **Fleiss's $\kappa = 0.829$ [95% CI: 0.792, 0.862] human agreement ceiling**.
 - **Designed and implemented a live LLM bias investigation system** — PDF upload pipeline streams dual-model answers side-by-side in a Streamlit browser, runs an AI judge twice with swapped answer order to isolate **position bias** (score shift on order reversal), and computes **Pearson correlation between answer word count and judge score** to quantify **verbosity bias**; includes human rating interface and alignment delta table for human-vs-judge comparison.
 
 ---

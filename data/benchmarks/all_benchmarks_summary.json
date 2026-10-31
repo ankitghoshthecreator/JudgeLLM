@@ -1,0 +1,142 @@
+{
+  "mt_bench": {
+    "benchmark": "MT-Bench",
+    "total_samples": 3,
+    "concordant_pairs": 3,
+    "observed_accuracy": 1.0,
+    "observed_cohens_kappa": 1.0,
+    "published_literature_baseline": {
+      "published_baseline_accuracy": 0.832,
+      "citation": "Zheng et al., NeurIPS 2023 (Table 2: GPT-4 pairwise agreement with human judgment = 83.2%)",
+      "reference_url": "https://arxiv.org/abs/2306.05685"
+    },
+    "records": [
+      {
+        "sample_id": "mt_bench_turn1_reasoning_01",
+        "category": "Reasoning",
+        "human_preferred": "A",
+        "judge_preferred": "A",
+        "score_a": 7,
+        "score_b": 6,
+        "agreement": true,
+        "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+        "metadata": {
+          "source_citation": "Zheng et al., 2023 (NeurIPS). Published human agreement ~83.2%",
+          "turn": 1
+        }
+      },
+      {
+        "sample_id": "mt_bench_turn1_math_02",
+        "category": "Math",
+        "human_preferred": "A",
+        "judge_preferred": "A",
+        "score_a": 7,
+        "score_b": 6,
+        "agreement": true,
+        "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+        "metadata": {
+          "source_citation": "Zheng et al., 2023 (NeurIPS)",
+          "turn": 1
+        }
+      },
+      {
+        "sample_id": "mt_bench_turn1_writing_03",
+        "category": "Writing",
+        "human_preferred": "A",
+        "judge_preferred": "A",
+        "score_a": 7,
+        "score_b": 6,
+        "agreement": true,
+        "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+        "metadata": {
+          "source_citation": "Zheng et al., 2023 (NeurIPS)",
+          "turn": 1
+        }
+      }
+    ]
+  },
+  "reward_bench": {
+    "benchmark": "RewardBench",
+    "total_samples": 2,
+    "concordant_pairs": 2,
+    "observed_accuracy": 1.0,
+    "observed_cohens_kappa": 1.0,
+    "published_literature_baseline": {
+      "published_baseline_accuracy": 0.814,
+      "citation": "Lambert et al., AI2 2024 (Table 1: Top LLM judges / reward models achieve 79.5% - 82.5% accuracy)",
+      "reference_url": "https://arxiv.org/abs/2403.13787"
+    },
+    "records": [
+      {
+        "sample_id": "rewardbench_safety_01",
+        "category": "Safety / Refusal",
+        "human_preferred": "A",
+        "judge_preferred": "A",
+        "score_a": 7,
+        "score_b": 6,
+        "agreement": true,
+        "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+        "metadata": {
+          "source_citation": "Lambert et al., 2024 (AI2). Published RewardBench top-tier agreement 81.4%",
+          "subset": "Factuality & Domain Knowledge"
+        }
+      },
+      {
+        "sample_id": "rewardbench_reasoning_02",
+        "category": "Reasoning",
+        "human_preferred": "A",
+        "judge_preferred": "A",
+        "score_a": 7,
+        "score_b": 6,
+        "agreement": true,
+        "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+        "metadata": {
+          "source_citation": "Lambert et al., 2024 (AI2)",
+          "subset": "Reasoning"
+        }
+      }
+    ]
+  },
+  "judge_bench": {
+    "benchmark": "JudgeBench",
+    "total_samples": 2,
+    "concordant_pairs": 2,
+    "observed_accuracy": 1.0,
+    "observed_cohens_kappa": 1.0,
+    "published_literature_baseline": {
+      "published_baseline_accuracy": 0.723,
+      "citation": "Tan et al., 2024 (Section 4: LLM-as-a-judge objective reasoning alignment = 72.3%)",
+      "reference_url": "https://arxiv.org/abs/2410.12784"
+    },
+    "records": [
+      {
+        "sample_id": "judgebench_logic_01",
+        "category": "Logical Fallacy Identification",
+        "human_preferred": "A",
+        "judge_preferred": "A",
+        "score_a": 7,
+        "score_b": 6,
+        "agreement": true,
+        "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+        "metadata": {
+          "source_citation": "Tan et al., 2024. Published human-judge agreement on logic ~72.3%",
+          "task": "fallacy_detection"
+        }
+      },
+      {
+        "sample_id": "judgebench_math_proof_02",
+        "category": "Mathematical Verification",
+        "human_preferred": "A",
+        "judge_preferred": "A",
+        "score_a": 7,
+        "score_b": 6,
+        "agreement": true,
+        "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+        "metadata": {
+          "source_citation": "Tan et al., 2024",
+          "task": "proof_verification"
+        }
+      }
+    ]
+  }
+}

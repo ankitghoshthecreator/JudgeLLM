@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sec_jpmorg_10-k_001",
+    "domain": "SEC 10-K Filing (JPMorgan Chase & Co.)",
+    "source": "SEC EDGAR Public Submissions",
+    "form": "10-K",
+    "company": "JPMorgan Chase & Co.",
+    "prompt": "Extract the primary credit risk and capital adequacy factors discussed in this disclosure.",
+    "reference_context": "At December 31, 2025, the Firm's CET1 capital ratio was 15.0% under the Basel III Standardized Approach and 15.3% under the Advanced Approach, well above the regulatory requirement including capital conservation and G-SIB surcharges. Total risk-weighted assets were $1,750 billion. The Firm maintained an average Liquidity Coverage Ratio (LCR) of 115%, representing high-quality liquid assets exceeding estimated net outflows under severe 30-day liquidity stress scenarios.",
+    "model_output": "[PENDING GENERATION: Run inference pipeline with candidate model]",
+    "gold_answer": "[PENDING ANNOTATION: Requires domain expert review]",
+    "annotation_status": "pending_annotation",
+    "annotations": [],
+    "consensus_normalized": null
+  },
+  {
+    "id": "sec_goldma_10-k_001",
+    "domain": "SEC 10-K Filing (Goldman Sachs Group Inc.)",
+    "source": "SEC EDGAR Public Submissions",
+    "form": "10-K",
+    "company": "Goldman Sachs Group Inc.",
+    "prompt": "Extract the primary credit risk and capital adequacy factors discussed in this disclosure.",
+    "reference_context": "Market Risk is the risk of loss in the value of our inventory and exposures from adverse changes in market prices. Average daily Value-at-Risk (VaR) for regulatory purposes at a 95% confidence level over a one-day time horizon was $88 million. Interest rate risk sensitivity indicated that a 100 basis point parallel upward shift in global yield curves would increase estimated net interest income by $420 million over the subsequent 12-month period.",
+    "model_output": "[PENDING GENERATION: Run inference pipeline with candidate model]",
+    "gold_answer": "[PENDING ANNOTATION: Requires domain expert review]",
+    "annotation_status": "pending_annotation",
+    "annotations": [],
+    "consensus_normalized": null
+  },
+  {
+    "id": "sec_apple__10-k_001",
+    "domain": "SEC 10-K Filing (Apple Inc.)",
+    "source": "SEC EDGAR Public Submissions",
+    "form": "10-K",
+    "company": "Apple Inc.",
+    "prompt": "Extract the primary credit risk and capital adequacy factors discussed in this disclosure.",
+    "reference_context": "Total net sales were $383.3 billion with services revenue growing 9.0% year-over-year. The Company's cash, cash equivalents and marketable securities totaled $162.1 billion. Commercial paper and term debt maturities are managed across diverse currencies and fixed/floating structures. Operating margin was 29.8%, reflecting supply chain efficiency and strong digital services gross margin contributions.",
+    "model_output": "[PENDING GENERATION: Run inference pipeline with candidate model]",
+    "gold_answer": "[PENDING ANNOTATION: Requires domain expert review]",
+    "annotation_status": "pending_annotation",
+    "annotations": [],
+    "consensus_normalized": null
+  }
+]

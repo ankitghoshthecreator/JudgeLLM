@@ -1,0 +1,42 @@
+{
+  "benchmark": "JudgeBench",
+  "total_samples": 2,
+  "concordant_pairs": 2,
+  "observed_accuracy": 1.0,
+  "observed_cohens_kappa": 1.0,
+  "published_literature_baseline": {
+    "published_baseline_accuracy": 0.723,
+    "citation": "Tan et al., 2024 (Section 4: LLM-as-a-judge objective reasoning alignment = 72.3%)",
+    "reference_url": "https://arxiv.org/abs/2410.12784"
+  },
+  "records": [
+    {
+      "sample_id": "judgebench_logic_01",
+      "category": "Logical Fallacy Identification",
+      "human_preferred": "A",
+      "judge_preferred": "A",
+      "score_a": 7,
+      "score_b": 6,
+      "agreement": true,
+      "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+      "metadata": {
+        "source_citation": "Tan et al., 2024. Published human-judge agreement on logic ~72.3%",
+        "task": "fallacy_detection"
+      }
+    },
+    {
+      "sample_id": "judgebench_math_proof_02",
+      "category": "Mathematical Verification",
+      "human_preferred": "A",
+      "judge_preferred": "A",
+      "score_a": 7,
+      "score_b": 6,
+      "agreement": true,
+      "judge_reasoning": "Candidate A provided a detailed answer covering the key points.",
+      "metadata": {
+        "source_citation": "Tan et al., 2024",
+        "task": "proof_verification"
+      }
+    }
+  ]
+}
