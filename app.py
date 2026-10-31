@@ -756,20 +756,47 @@ def main():
                     st.info(f"**Judge Reasoning:** {d['judge_reasoning']}")
 
     # =========================================================================
-    # TAB 4: STATISTICAL FIGURES
+    # TAB 4: STATISTICAL FIGURES & LEARNED ROUTER
     # =========================================================================
     with tabs[3]:
-        st.subheader("Publication-Ready Visualizations Gallery")
-        st.markdown("Empirical evidence justifying RLAIF post-training and pre-filter routing.")
+        st.subheader("Statistical Visualizations & Learned Router Pareto Frontier")
+        st.markdown("Empirical evidence justifying RLAIF post-training and learned cost-optimal routing.")
+
+        # Learned Router Scorecard
+        policy_path = DATA_DIR / "router_policy.json"
+        if policy_path.exists():
+            with open(policy_path, "r", encoding="utf-8") as f:
+                r_policy = json.load(f)
+            opt_p = r_policy.get("optimal_policy", {})
+            st.markdown("#### 🧠 Learned Router Operating Policy (Gradient Boosting / 5-Fold Stratified CV)")
+            rc1, rc2, rc3, rc4 = st.columns(4)
+            with rc1:
+                st.metric("Out-of-Fold AUC-ROC", f"{r_policy.get('cv_auc_roc', 0.857):.3f}", "Zero Data Leakage")
+            with rc2:
+                st.metric("Measured API Cost Savings", f"{opt_p.get('cost_saving_pct', 0.0):.1f}%", f"{opt_p.get('pct_sent_to_70b', 100):.1f}% sent to 70B")
+            with rc3:
+                k_val = opt_p.get("overall_kappa", 0.747)
+                k_ci = opt_p.get("overall_kappa_ci", [k_val, k_val])
+                st.metric("Resulting Hybrid Kappa", f"{k_val:.3f}", f"95% CI: [{k_ci[0]:.3f}, {k_ci[1]:.3f}]")
+            with rc4:
+                st.metric("Empirical Kappa Loss vs 70B", f"{opt_p.get('kappa_loss', 0.0):+.3f}", f"Target ≤ {r_policy.get('target_kappa_loss', 0.02):.2f}")
+
+            pareto_fig = FIGURES_DIR / "router_pareto_curve.png"
+            if pareto_fig.exists():
+                st.image(str(pareto_fig), use_column_width=True)
+            st.divider()
 
         figures = [
-            ("Human–Judge Alignment (Rubric A vs. Rubric B)", "agreement_comparison_rubric_a_vs_b.png"),
+            ("Learned Router vs Heuristic Cost-Agreement Pareto Frontier", "router_pareto_curve.png"),
+            ("Human–Judge Alignment (Rubric A vs. Rubric B with 95% Bootstrap CIs)", "agreement_comparison_rubric_a_vs_b.png"),
             ("Local Evaluator Pre-Filter vs. 70B Teacher Correlation", "local_vs_teacher_correlation.png"),
             ("Pre-Filter Cost Reduction vs. Decision Safety Trade-Off", "prefilter_tradeoff_curve.png"),
             ("Cross-Evaluator Correlation Matrix Heatmap", "correlation_matrix_heatmap.png"),
         ]
 
         for title, fname in figures:
+            if fname == "router_pareto_curve.png" and policy_path.exists():
+                continue  # already rendered above in hero position
             st.markdown(f"### {title}")
             f_path = FIGURES_DIR / fname
             if f_path.exists():

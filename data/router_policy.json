@@ -1,0 +1,29 @@
+{
+  "model_type": "gradient_boosting",
+  "cv_auc_roc": 0.857,
+  "target_kappa_loss": 0.05,
+  "full_70b_kappa": 0.747,
+  "optimal_policy": {
+    "threshold": 0.0179,
+    "cost_saving_pct": 7.0,
+    "pct_sent_to_70b": 93.0,
+    "overall_kappa": 0.698,
+    "overall_kappa_ci": [
+      0.621,
+      0.745
+    ],
+    "kappa_loss": 0.049,
+    "per_axis_kappas": {
+      "fluency": 0.768,
+      "coherence": 0.685,
+      "instruction_adherence": 0.578,
+      "no_hallucination": 0.76
+    },
+    "per_axis_losses": {
+      "fluency": 0.051,
+      "coherence": 0.034,
+      "instruction_adherence": 0.076,
+      "no_hallucination": 0.037
+    }
+  }
+}

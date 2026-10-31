@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Pydantic v2](https://img.shields.io/badge/Schema-Pydantic%20v2-E92063?logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
-[![Pytest](https://img.shields.io/badge/Tests-36%2F36%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
+[![Pytest](https://img.shields.io/badge/Tests-41%2F41%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
 [![CI/CD Eval Gate](https://github.com/ankitghoshthecreator/JudgeLLM/actions/workflows/eval_gate.yml/badge.svg)](https://github.com/ankitghoshthecreator/JudgeLLM/actions/workflows/eval_gate.yml)
 [![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Groq 70B](https://img.shields.io/badge/Teacher%20Model-Llama--3--70B%20%7C%20Groq-F55036)](https://groq.com/)
@@ -94,13 +94,18 @@ Out of 200 outputs, exactly 48 disagreements occurred. Rather than treating all 
 
 ---
 
-### 3. Sub-Millisecond Pre-Filter Cost Optimization & Derived Decision Safety
-`LightweightStudentEvaluator` calculates lexical Type-Token Ratio (TTR), n-gram repetition degradation, and context Jaccard overlap in **0.053 ms per probe (~18,700 probes/sec)**. With **$r = 0.820$ correlation on fluency**, it routes compliant outputs safely through a fast-pass.
+### 3. Learned Cost-Optimal Router (Pareto Frontier)
+Rather than relying solely on fixed heuristic thresholds, `evaluation/router.py` trains a **learned router** (Gradient Boosting and regularized Logistic Regression via **Stratified 5-Fold Cross-Validation**, ensuring zero train/test leakage) to predict whether the 70B judge will disagree with human consensus by $|\Delta| > 0.30$.
 
-**Derived Pre-Filter Routing Performance:**
-- **At Cutoff $t = 0.75$ (Joint Fluency & Adherence Filter):** Slashing 70B Teacher API costs by **37.5%** with **93.5% decision safety** (concordant decisions preserved).
-- **At Multi-Threshold Policy ($f \ge 0.80, a \ge 0.50$):** Slashing 70B Teacher API costs by **64.5%** with **91.0% decision safety**.
-- **At High-Assurance Fluency Filter ($f \ge 0.85$):** Reduces API costs by **34.5%** with **96.5% decision safety**.
+- **Feature Matrix:** Combines local heuristics, lexical TTR, n-gram repetition, Jaccard grounding overlap, answer length ratios, and context character n-gram cosine similarity.
+- **Cross-Validation Discriminative Power:** Out-of-fold **AUC-ROC = 0.857**.
+- **Monotonic Pareto Optimization:** Sweeps decision thresholds to output a continuous cost-vs-agreement Pareto curve with 95% bootstrap confidence intervals.
+- **CLI Interface:** Run `python -m judgellm.route --target-kappa-loss 0.02` to automatically select the cheapest operational threshold meeting any client's agreement SLA.
+
+```powershell
+# Optimize routing policy to cap agreement loss at <= 0.02 vs full 70B judge
+.venv\Scripts\python.exe -m judgellm.route --target-kappa-loss 0.02
+```
 
 ---
 
