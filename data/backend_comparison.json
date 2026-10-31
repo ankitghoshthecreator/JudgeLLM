@@ -1,0 +1,119 @@
+{
+  "Groq-Llama-3.3-70B (Cloud/Hosted)": {
+    "overall_kappa": 0.7472,
+    "axis_kappas": {
+      "fluency": {
+        "kappa": 0.819,
+        "ci_95": [
+          0.727,
+          0.903
+        ]
+      },
+      "coherence": {
+        "kappa": 0.719,
+        "ci_95": [
+          0.614,
+          0.815
+        ]
+      },
+      "instruction_adherence": {
+        "kappa": 0.654,
+        "ci_95": [
+          0.533,
+          0.764
+        ]
+      },
+      "no_hallucination": {
+        "kappa": 0.797,
+        "ci_95": [
+          0.679,
+          0.904
+        ]
+      }
+    },
+    "latency_p50_ms": 0.01,
+    "latency_p95_ms": 0.01,
+    "cost_per_1k_judgments_usd": 0.3603,
+    "backend_type": "mock",
+    "model_name": "llama-3.3-70b-versatile",
+    "n_evaluated": 200
+  },
+  "vLLM-Llama-3.3-70B (On-Premises / Air-Gapped)": {
+    "overall_kappa": 0.7472,
+    "axis_kappas": {
+      "fluency": {
+        "kappa": 0.819,
+        "ci_95": [
+          0.727,
+          0.903
+        ]
+      },
+      "coherence": {
+        "kappa": 0.719,
+        "ci_95": [
+          0.614,
+          0.815
+        ]
+      },
+      "instruction_adherence": {
+        "kappa": 0.654,
+        "ci_95": [
+          0.533,
+          0.764
+        ]
+      },
+      "no_hallucination": {
+        "kappa": 0.797,
+        "ci_95": [
+          0.679,
+          0.904
+        ]
+      }
+    },
+    "latency_p50_ms": 0.01,
+    "latency_p95_ms": 0.01,
+    "cost_per_1k_judgments_usd": 0.0,
+    "backend_type": "mock",
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "n_evaluated": 200
+  },
+  "Ollama-Qwen-2.5-72B (On-Premises Local)": {
+    "overall_kappa": 0.7472,
+    "axis_kappas": {
+      "fluency": {
+        "kappa": 0.819,
+        "ci_95": [
+          0.727,
+          0.903
+        ]
+      },
+      "coherence": {
+        "kappa": 0.719,
+        "ci_95": [
+          0.614,
+          0.815
+        ]
+      },
+      "instruction_adherence": {
+        "kappa": 0.654,
+        "ci_95": [
+          0.533,
+          0.764
+        ]
+      },
+      "no_hallucination": {
+        "kappa": 0.797,
+        "ci_95": [
+          0.679,
+          0.904
+        ]
+      }
+    },
+    "latency_p50_ms": 0.01,
+    "latency_p95_ms": 0.01,
+    "cost_per_1k_judgments_usd": 0.0,
+    "backend_type": "mock",
+    "model_name": "qwen2.5:72b-instruct",
+    "n_evaluated": 200
+  }
+}

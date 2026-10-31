@@ -1,0 +1,13 @@
+# Offline mock evaluation configuration (zero network access, deterministic testing)
+judge_backend:
+  type: mock
+  model_name: mock-calibrated-70b
+  mock_mode: true
+  pricing:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+
+evaluation:
+  rubric_path: evaluation/rubrics/rubric_b.yaml
+  temperature: 0.1
+  max_retries: 3

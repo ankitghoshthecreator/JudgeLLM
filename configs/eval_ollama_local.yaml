@@ -1,0 +1,15 @@
+# On-premises evaluation configuration using local Ollama (OpenAI compatible)
+# Ollama serves an OpenAI-compatible endpoint at http://localhost:11434/v1
+judge_backend:
+  type: openai_compatible
+  base_url: http://localhost:11434/v1
+  model_name: llama3.3:70b
+  api_key: ollama
+  pricing:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+
+evaluation:
+  rubric_path: evaluation/rubrics/rubric_b.yaml
+  temperature: 0.1
+  max_retries: 3

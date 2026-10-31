@@ -20,6 +20,9 @@ from typing import Any, Dict, List, Optional, Tuple
 import yaml
 from pydantic import BaseModel, Field, field_validator
 
+from evaluation.backends.base import JudgeBackend
+from evaluation.backends.factory import create_backend, load_backend_from_config
+
 try:
     from dotenv import load_dotenv
     _env_path = Path(__file__).resolve().parent.parent / ".env"
@@ -81,24 +84,41 @@ class TeacherJudge:
         api_key: Optional[str] = None,
         mock_mode: bool = False,
         max_retries: int = 3,
+        backend: Optional[JudgeBackend] = None,
+        base_url: Optional[str] = None,
+        backend_type: Optional[str] = None,
     ):
         self.rubric = load_rubric(rubric_path)
-        self.model_name = model_name or os.getenv("GROQ_JUDGE_MODEL") or os.getenv("GROQ_MODEL") or "llama-3.3-70b-versatile"
-        self.api_key = api_key or os.getenv("GROQ_API_KEY")
-        self.mock_mode = mock_mode or not bool(self.api_key)
         self.max_retries = max_retries
-        self.client = None
 
-        if not self.mock_mode:
-            try:
-                from groq import Groq
-                self.client = Groq(api_key=self.api_key)
-                logger.info("Initialized Groq client for model '%s'", self.model_name)
-            except Exception as e:
-                logger.warning("Groq client initialization failed (%s). Falling back to mock mode.", e)
-                self.mock_mode = True
+        if backend is not None:
+            self.backend = backend
+            self.model_name = backend.model_name
+            self.mock_mode = (backend.backend_type == "mock")
         else:
+            self.model_name = (
+                model_name
+                or os.getenv("GROQ_JUDGE_MODEL")
+                or os.getenv("GROQ_MODEL")
+                or "llama-3.3-70b-versatile"
+            )
+            self.api_key = api_key or os.getenv("GROQ_API_KEY")
+            is_mock = mock_mode or (not bool(self.api_key) and not base_url and backend_type != "openai_compatible")
+            self.mock_mode = is_mock
+
+            self.backend = create_backend(
+                backend_type=backend_type,
+                model_name=self.model_name,
+                api_key=self.api_key,
+                base_url=base_url,
+                mock_mode=self.mock_mode,
+            )
+
+        self.client = getattr(self.backend, "client", None)
+        if self.mock_mode:
             logger.info("Running in Mock Mode (offline heuristic teacher simulation).")
+        else:
+            logger.info("Initialized backend '%s' with model '%s'", self.backend.backend_type, self.backend.model_name)
 
     def _format_prompt(self, prompt: str, reference_context: str, model_output: str) -> str:
         template = self.rubric.prompt_template
@@ -318,13 +338,11 @@ class TeacherJudge:
         last_error = ""
         for attempt in range(1, self.max_retries + 1):
             try:
-                response = self.client.chat.completions.create(
-                    model=self.model_name,
+                raw_content = self.backend.generate_judgment(
                     messages=messages,
                     temperature=0.1,
-                    response_format={"type": "json_object"},
+                    json_mode=True,
                 )
-                raw_content = response.choices[0].message.content
                 parsed_json = self._extract_json(raw_content)
                 parsed_json["rubric_version"] = self.rubric.name
                 

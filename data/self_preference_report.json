@@ -1,0 +1,55 @@
+{
+  "judge_model": "llama-3.3-70b-versatile",
+  "backend_type": "mock",
+  "n_pairs_evaluated": 30,
+  "mean_same_family_score": 0.8275,
+  "mean_diff_family_score": 0.8275,
+  "self_preference_score_gap": 0.0,
+  "ci_95": [
+    0.0,
+    0.0
+  ],
+  "statistically_significant_bias": false,
+  "detailed_sample_comparisons": [
+    {
+      "id": "pair_001_c0",
+      "same_model": "llama-3-8b-instruct",
+      "diff_model": "mistral-7b-instruct-v0.3",
+      "same_composite": 0.8275,
+      "diff_composite": 0.8275,
+      "delta": 0.0
+    },
+    {
+      "id": "pair_002_c0",
+      "same_model": "llama-3-8b-instruct",
+      "diff_model": "qwen2.5-7b-instruct",
+      "same_composite": 0.8275,
+      "diff_composite": 0.8275,
+      "delta": 0.0
+    },
+    {
+      "id": "pair_003_c0",
+      "same_model": "llama-3-8b-instruct",
+      "diff_model": "mistral-7b-instruct-v0.3",
+      "same_composite": 0.8275,
+      "diff_composite": 0.8275,
+      "delta": 0.0
+    },
+    {
+      "id": "pair_004_c0",
+      "same_model": "llama-3-8b-instruct",
+      "diff_model": "qwen2.5-7b-instruct",
+      "same_composite": 0.8275,
+      "diff_composite": 0.8275,
+      "delta": 0.0
+    },
+    {
+      "id": "pair_005_c0",
+      "same_model": "llama-3-8b-instruct",
+      "diff_model": "mistral-7b-instruct-v0.3",
+      "same_composite": 0.8275,
+      "diff_composite": 0.8275,
+      "delta": 0.0
+    }
+  ]
+}

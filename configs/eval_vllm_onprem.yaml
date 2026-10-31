@@ -1,0 +1,15 @@
+# On-premises evaluation configuration using vLLM
+# vLLM serves OpenAI-compatible API at http://localhost:8000/v1
+judge_backend:
+  type: openai_compatible
+  base_url: http://localhost:8000/v1
+  model_name: meta-llama/Llama-3.3-70B-Instruct
+  api_key: token-local-vllm
+  pricing:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+
+evaluation:
+  rubric_path: evaluation/rubrics/rubric_b.yaml
+  temperature: 0.1
+  max_retries: 3
