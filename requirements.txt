@@ -10,4 +10,5 @@ pytest>=8.0.0
 python-dotenv>=1.0.0
 streamlit>=1.30.0
 pypdf2>=3.0.0
+scikit-learn>=1.4.0
 
