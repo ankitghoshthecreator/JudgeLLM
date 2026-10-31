@@ -2,11 +2,11 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Pydantic v2](https://img.shields.io/badge/Schema-Pydantic%20v2-E92063?logo=pydantic&logoColor=white)](https://docs.pydantic.dev/)
-[![Pytest](https://img.shields.io/badge/Tests-41%2F41%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
+[![Pytest](https://img.shields.io/badge/Tests-60%2F60%20Passed-brightgreen?logo=pytest&logoColor=white)](https://pytest.org/)
 [![CI/CD Eval Gate](https://github.com/ankitghoshthecreator/JudgeLLM/actions/workflows/eval_gate.yml/badge.svg)](https://github.com/ankitghoshthecreator/JudgeLLM/actions/workflows/eval_gate.yml)
-[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Groq 70B](https://img.shields.io/badge/Teacher%20Model-Llama--3--70B%20%7C%20Groq-F55036)](https://groq.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Judge Drift Monitor](https://github.com/ankitghoshthecreator/JudgeLLM/actions/workflows/drift_monitor.yml/badge.svg)](https://github.com/ankitghoshthecreator/JudgeLLM/actions/workflows/drift_monitor.yml)
+[![FastAPI](https://img.shields.io/badge/Service-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/Deployment-Docker%20Compose-2496ED?logo=docker&logoColor=white)](https://docker.com/)
 
 > **Focus:** Post-Training Evaluation · LLM-as-a-Judge Alignment · Position & Verbosity Bias Detection
 
@@ -325,27 +325,57 @@ GROQ_JUDGE_MODEL=llama-3.3-70b-versatile
 .venv\Scripts\python.exe run_pipeline.py
 ```
 
-### 4. Run Test Suite (36 Tests)
+### 4. Run Test Suite (60 Tests, 100% Passing)
 ```powershell
 .venv\Scripts\python.exe -m pytest -v
 ```
 
-### 5. Run CI/CD Evaluation Gate
+### 5. CLI Audit & Reliability Toolkit
+Audit any LLM judge against labeled human consensus with one command:
+```powershell
+# Runs full statistical audit with bootstrap CIs, bias metrics, router policy, and taxonomy
+.venv\Scripts\python.exe -m judgellm.cli audit \
+  --traces data/probe_outputs_200.json \
+  --labels data/human_annotations.json \
+  --config configs/eval_mock.yaml \
+  --output-dir data/audit_results
+```
+
+### 6. Run CI-Aware Quality Gate
+Evaluates observed metrics with 3-tier CI awareness (`PASS`, `WARN`, `FAIL`):
 ```powershell
 .venv\Scripts\python.exe evaluation/eval_gate.py
 ```
 
-### 6. Run Public Benchmark Validation Suite (MT-Bench, RewardBench, JudgeBench)
+### 7. Judge Alignment Drift Monitoring
+Re-score golden set against stored baseline and detect statistical shift:
+```powershell
+.venv\Scripts\python.exe monitoring/drift.py --limit 50 --output-report data/drift_report.md
+```
+
+### 8. Run Production FastAPI Service
+```powershell
+.venv\Scripts\python.exe -m judgellm.cli serve --port 8000 --host 0.0.0.0
+```
+- Interactive Docs: `http://localhost:8000/docs`
+- Healthcheck: `GET /health` (reports backend model, active rubric ID/version, and git commit hash)
+- Prometheus Metrics: `GET /metrics`
+- Cached Evaluation: `POST /judge` and `POST /judge/batch`
+
+### 9. Multi-Backend & On-Premises Benchmarking
+Benchmark across cloud Groq and air-gapped local endpoints (vLLM / Ollama):
+```powershell
+.venv\Scripts\python.exe scripts/benchmark_backends.py --mock-only
+.venv\Scripts\python.exe scripts/self_preference_test.py --backend mock
+```
+*(See [`docs/ONPREM.md`](docs/ONPREM.md) for complete air-gapped, sovereign deployment instructions).*
+
+### 10. Public Benchmark Validation Suite (MT-Bench, RewardBench, JudgeBench)
 ```powershell
 .venv\Scripts\python.exe benchmark_validation/evaluator.py --benchmark all
 ```
 
-### 7. Ingest Public SEC EDGAR 10-K Filings (Pending Annotation)
-```powershell
-.venv\Scripts\python.exe scripts/load_sec_edgar.py --offline
-```
-
-### 8. Launch Interactive Streamlit Dashboard
+### 11. Launch Interactive Streamlit Dashboard (Includes Drift Tab)
 ```powershell
 .venv\Scripts\python.exe -m streamlit run app.py
 ```
