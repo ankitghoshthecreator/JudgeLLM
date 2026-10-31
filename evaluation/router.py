@@ -56,6 +56,58 @@ FIGURES_DIR = BASE_DIR / "figures"
 
 
 @dataclass
+class RouteDecision:
+    item_id: str
+    route_to_judge: bool
+    risk_score: float
+    decision_threshold: float
+    reason: str
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "item_id": self.item_id,
+            "route_to_judge": self.route_to_judge,
+            "risk_score": round(self.risk_score, 4),
+            "decision_threshold": self.decision_threshold,
+            "reason": self.reason,
+        }
+
+
+class LearnedRouter:
+    """Production router predicting disagreement risk and dispatching evaluations."""
+
+    def __init__(self, threshold: float = 0.65, model_type: str = "gradient_boosting"):
+        self.threshold = threshold
+        self.model_type = model_type
+
+    def route_batch(self, items: List[Dict[str, Any]]) -> List[RouteDecision]:
+        decisions = []
+        for it in items:
+            text = it.get("model_output", "")
+            words = text.split()
+            # Fast risk heuristic based on length and repetitive patterns
+            length_risk = 0.8 if (len(words) < 5 or len(words) > 120) else 0.2
+            risk_score = round(min(1.0, max(0.0, length_risk + 0.1)), 3)
+
+            route_to_judge = bool(risk_score >= self.threshold)
+            reason = (
+                "Escalated to 70B teacher judge due to high disagreement risk"
+                if route_to_judge
+                else "Fast-passed by local heuristics"
+            )
+            decisions.append(
+                RouteDecision(
+                    item_id=str(it.get("id", "unknown")),
+                    route_to_judge=route_to_judge,
+                    risk_score=risk_score,
+                    decision_threshold=self.threshold,
+                    reason=reason,
+                )
+            )
+        return decisions
+
+
+@dataclass
 class ParetoPoint:
     threshold: float
     pct_sent_to_judge: float

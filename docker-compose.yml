@@ -1,0 +1,59 @@
+version: "3.8"
+
+services:
+  # JudgeLLM FastAPI evaluation service
+  judgellm-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: judgellm-api
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - LOCAL_BASE_URL=http://ollama:11434/v1
+      - JUDGE_BACKEND=mock
+      - PORT=8000
+    volumes:
+      - ./data:/app/data
+      - cache_data:/app/.cache/judgellm
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  # JudgeLLM Streamlit interactive dashboard
+  judgellm-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: judgellm-dashboard
+    entrypoint: ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    ports:
+      - "8501:8501"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+    volumes:
+      - ./data:/app/data
+      - ./figures:/app/figures
+    depends_on:
+      - judgellm-api
+    restart: unless-stopped
+
+  # Optional local on-premise Ollama instance for sovereign execution
+  ollama:
+    image: ollama/ollama:latest
+    container_name: judgellm-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+    profiles:
+      - onprem
+
+volumes:
+  cache_data:
+  ollama_models:

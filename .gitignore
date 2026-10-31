@@ -27,3 +27,6 @@ env/
 # data/ (tracked for deployment)
 outputs/
 .tmp/
+
+.cache/
+data/audit_results/
